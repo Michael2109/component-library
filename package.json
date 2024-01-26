@@ -1,0 +1,48 @@
+{
+  "name": "components-library",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/components-library.umd.cjs",
+  "module": "./dist/components-library.js",
+  "exports": {
+    ".": {
+      "import": "./dist/components-library.js",
+      "require": "./dist/components-library.umd.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "types": "vue-tsc ",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@storybook/preset-typescript": "^3.0.0",
+    "vue": "^3.3.11"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.10",
+    "@storybook/addon-interactions": "^7.6.10",
+    "@storybook/addon-links": "^7.6.10",
+    "@storybook/blocks": "^7.6.10",
+    "@storybook/test": "^7.6.10",
+    "@storybook/vue3": "^7.6.10",
+    "@storybook/vue3-vite": "^7.6.10",
+    "@types/node": "^20.11.7",
+    "@vitejs/plugin-vue": "^4.5.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.70.0",
+    "storybook": "^7.6.10",
+    "storybook-addon-vue-slots": "^0.9.29",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8",
+    "vite-plugin-dts": "^3.7.2",
+    "vue-tsc": "^1.8.25"
+  }
+}
