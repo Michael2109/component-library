@@ -30,13 +30,14 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
+    type: "primary"
   },
 
 };
 
-export const Secondary: Story = {
+export const Text: Story = {
   args: {
-
+    type: "text"
   },
 };
 
