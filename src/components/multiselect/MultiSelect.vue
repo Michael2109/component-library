@@ -1,8 +1,8 @@
 <script setup lang="ts">
 
-import {computed, defineModel, ref, watch} from "vue";
+import {computed, defineModel, PropType, ref, watch} from "vue";
 
-const model = defineModel<Boolean>()
+const model = defineModel<Array<string>>()
 
 const emits = defineEmits(["change"])
 
@@ -11,25 +11,37 @@ const props = defineProps({
     type: String,
     required: false,
     default: undefined
+  },
+  id: {
+    type: String,
+    required: false,
+    default: undefined
+  },
+  name: {
+    type: String,
+    required: false,
+    default: undefined
+  },
+  options: {
+    type: Object as PropType<Array<AutoCompleteOption>>,
+    required: false,
+    default: []
   }
 })
 
 const visible = ref(false)
 
-watch(model, (enabled: Boolean) => {
-  emits("change",enabled )
-})
-
 const className = computed(() => {
-  console.log({
-    "dropdown-check-list": true,
-    visible: visible
-  })
   return {
     "dropdown-check-list": true,
     visible: visible.value
   }
 })
+
+function onOptionChange(event){
+  console.log(event.target)
+  //model.push()
+}
 
 </script>
 
@@ -37,13 +49,7 @@ const className = computed(() => {
   <div id="list1" :class="className" tabindex="100">
     <span class="anchor" @click="visible = !visible">Select Fruits</span>
     <ul class="items">
-      <li><input type="checkbox" />Apple </li>
-      <li><input type="checkbox" />Orange</li>
-      <li><input type="checkbox" />Grapes </li>
-      <li><input type="checkbox" />Berry </li>
-      <li><input type="checkbox" />Mango </li>
-      <li><input type="checkbox" />Banana </li>
-      <li><input type="checkbox" />Tomato</li>
+      <li v-for="option in options" :key="option.value"><input type="checkbox" @change="onOptionChange" />{{ option.title }} </li>
     </ul>
   </div>
 </template>

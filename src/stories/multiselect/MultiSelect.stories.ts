@@ -1,28 +1,25 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
-import Checkbox from "../../components/checkbox/Checkbox.vue";
-import Input from "../../components/input/Input.vue";
-import Chip from "../../components/chip/Chip.vue";
+import type {Meta, StoryObj} from '@storybook/vue3';
 import MultiSelect from "../../components/multiselect/MultiSelect.vue";
 
 const meta = {
-  title: 'Input/MultiSelect',
-  component: MultiSelect,
-  tags: ['autodocs'],
-  argTypes: {
-
-  },
-  args: {
-  }, // default value
-  parameters: {
-
-  }
+    title: 'Input/MultiSelect',
+    component: MultiSelect,
+    tags: ['autodocs'],
+    argTypes: {},
+    args: {
+        options: [
+            {title: "Example 1", value: "example1"},
+            {title: "Example 2", value: "example2"},
+            {title: "Example 3", value: "example3"}
+        ]
+    }, // default value
+    parameters: {}
 } satisfies Meta<typeof MultiSelect>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const InputStory: Story = {
-  args: {
-  },
+    args: {},
 
 };
