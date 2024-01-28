@@ -38,5 +38,5 @@ watch(model, (enabled: Boolean) => {
 </template>
 
 <style scoped lang="sass">
-@import "select"
+@import "auto-complete"
 </style>
