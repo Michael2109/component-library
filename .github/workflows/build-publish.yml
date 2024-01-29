@@ -17,4 +17,5 @@ jobs:
       - run: npm run build
       - run: cp ./package.json ./dist/package.json
       - run: cp ./package-lock.json ./dist/package-lock.json
+      - run: auto info
       - run: auto shipit --dry-run
