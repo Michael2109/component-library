@@ -38,7 +38,7 @@ const className = computed(() => {
   }
 })
 
-function onOptionChange(event){
+function onOptionChange(event: any){
   console.log(event.target)
   //model.push()
 }

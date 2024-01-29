@@ -20,7 +20,7 @@ type Story = StoryObj<typeof meta>;
 
 export const CheckboxStory: Story = {
   args: {
-    label: "Checkbox"
+
   },
 
 };

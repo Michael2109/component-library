@@ -24,7 +24,7 @@ const props = defineProps({
   }
 })
 
-watch(model, (enabled: Boolean) => {
+watch(model, (enabled: any) => {
   emits("change",enabled )
 })
 </script>
@@ -32,7 +32,7 @@ watch(model, (enabled: Boolean) => {
 <template>
   <div class="select-container">
     <select :id="id" :name="name" v-model="model">
-      <option v-for="option in options" :key="option" :value="option.value">{{ option.title }}</option>
+      <option v-for="option in options" :key="option.value" :value="option.value">{{ option.title }}</option>
     </select>
   </div>
 </template>

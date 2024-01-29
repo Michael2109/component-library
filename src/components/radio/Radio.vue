@@ -14,7 +14,7 @@ const props = defineProps({
   }
 })
 
-watch(model, (enabled: Boolean) => {
+watch(model, (enabled: any) => {
   emits("change",enabled )
 })
 </script>

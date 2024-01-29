@@ -1,0 +1,15 @@
+{
+  "author": {
+    "name": "Michael2109",
+    "email": "michael.jhaywoods@gmail.com"
+  },
+  "plugins": [
+    [
+      "npm",
+      {
+        "setRcToken": false,
+        "publishFolder": "./dist"
+      }
+    ]
+  ]
+}
