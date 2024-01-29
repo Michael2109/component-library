@@ -23,11 +23,12 @@
   "dependencies": {
     "@fontsource/mulish": "^5.0.16",
     "@storybook/preset-typescript": "^3.0.0",
-    "auto": "^11.0.4",
+
     "object-to-css-variables": "^0.2.1",
     "vue": "^3.3.11"
   },
   "devDependencies": {
+    "auto": "^11.0.4",
     "@storybook/addon-essentials": "^7.6.10",
     "@storybook/addon-interactions": "^7.6.10",
     "@storybook/addon-links": "^7.6.10",
