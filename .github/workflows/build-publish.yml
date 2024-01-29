@@ -5,7 +5,8 @@ jobs:
   build-aploy:
     runs-on: ubuntu-latest
     env:
-      VITE_APP_SERVER_URL: https://fermstorm-prod-af3b26e015c9.herokuapp.com/
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3

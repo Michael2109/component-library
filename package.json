@@ -28,7 +28,6 @@
     "vue": "^3.3.11"
   },
   "devDependencies": {
-    "auto": "^11.0.4",
     "@storybook/addon-essentials": "^7.6.10",
     "@storybook/addon-interactions": "^7.6.10",
     "@storybook/addon-links": "^7.6.10",
