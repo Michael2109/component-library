@@ -19,7 +19,6 @@ const props = defineProps({
 			<slot name="bottom" />
 		</div>
 	</div>
-	<div class="sidebar"></div>
 </template>
 
 <style scoped lang="sass">

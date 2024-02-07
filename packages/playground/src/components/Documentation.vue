@@ -1,15 +1,10 @@
 <template>
-	<h1 class="text-green-600 text-3xl mb-3">{{ msg }}</h1>
-	<button @click="count++">count is: {{ count }}</button>
-	<p>
-		Edit <code>components/HelloWorld.vue</code> to test hot module replacement.
-	</p>
-
-	<OtherComponent example123="123"></OtherComponent>
-	<NewComp example="gsgf"></NewComp>
-	<Button variant="solid">Text</Button>
-	<ExtraComp exampleabc="sgfgidofj"></ExtraComp>
-	<Sidebar><div>Test</div></Sidebar>
+	<Sidebar>
+		<template #top>
+			<div>Test</div>
+		</template>
+	</Sidebar>
+	<div class="app-layout"></div>
 </template>
 
 <script setup lang="ts">
@@ -20,3 +15,11 @@ defineProps<{
 }>()
 const count = ref(0)
 </script>
+
+<style lang="sass">
+.app-layout
+	width: calc(100% - 250px)
+	height: 100%
+	margin-top: 0
+	margin-left: 250px
+</style>
