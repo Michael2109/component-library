@@ -1,0 +1,41 @@
+.sidebar
+  height: 100%
+  width: 200px
+  position: fixed
+  background-color: #333
+  padding-top: 20px
+
+.menu
+  list-style-type: none
+  padding: 0
+  background-color: #dcdcdc
+
+.menu
+  text-decoration: none
+  color: black
+  display: block
+  padding: 10px
+  position: relative
+
+.menu .submenu
+  display: none
+  position: absolute
+  top: 0
+  left: 100%
+  background-color: #545454
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+.menu .submenu li
+  padding: 10px
+
+.menu:hover .submenu
+  display: block
+
+.menu a:hover
+  background-color: #555
+
+.content
+  margin-left: 200px
+  padding: 16px

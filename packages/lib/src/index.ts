@@ -1,4 +1,5 @@
 import { baseTheme } from './theme/base-theme'
+import Sidebar from './components/sidebar/Sidebar.vue'
 import MyComponent from './Component.vue'
 import OtherComponent from './OtherComponent.vue'
 import TestComponent from './TestComponent.vue'
@@ -12,6 +13,7 @@ import ComponentsPlugin from './plugins/components-plugin'
 
 export {
 	baseTheme,
+	Sidebar,
 	MyComponent,
 	OtherComponent,
 	TestComponent,

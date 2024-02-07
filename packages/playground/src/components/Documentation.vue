@@ -4,11 +4,12 @@
 	<p>
 		Edit <code>components/HelloWorld.vue</code> to test hot module replacement.
 	</p>
-	<MyComponent message=""></MyComponent>
+
 	<OtherComponent example123="123"></OtherComponent>
 	<NewComp example="gsgf"></NewComp>
 	<Button variant="solid">Text</Button>
 	<ExtraComp exampleabc="sgfgidofj"></ExtraComp>
+	<Sidebar><div>Test</div></Sidebar>
 </template>
 
 <script setup lang="ts">

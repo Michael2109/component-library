@@ -1,106 +1,105 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import type { PropType } from 'vue'
-import {
-	backgroundColorToCssVariable,
-	calculateFontColor,
-} from '../../common/color-to-css-variable'
-import type { Theme } from '../../theme/theme'
-import { useTheme } from '../../plugins/components-plugin'
 
-type ButtonType = 'default' | 'text'
+import {computed, PropType} from "vue";
+import {backgroundColorToCssVariable, calculateFontColor} from "../../common/color-to-css-variable";
+import {useTheme} from "../../plugins/components-plugin";
+import {Theme} from "../../theme/theme";
+
+type ButtonType = "default" | "text"
 
 const props = defineProps({
-	type: {
-		type: String as PropType<ButtonType>,
-		require: false,
-		default: 'default',
-	},
-	size: {
-		type: String as PropType<'xs' | 'sm' | 'md' | 'lg' | 'xlg'>,
-		require: false,
-		default: 'md',
-	},
-	variant: {
-		type: String as PropType<'solid' | 'outlined' | 'text' | 'link'>,
-		require: false,
-		default: 'solid',
-	},
-	color: {
-		type: String,
-		require: false,
-		default: 'default',
-	},
-	disabled: {
-		type: Boolean,
-		require: false,
-		default: false,
-	},
-	loading: {
-		type: Boolean,
-		require: false,
-		default: false,
-	},
-	icon: {
-		type: String,
-		require: false,
-		default: undefined,
-	},
-	iconPosition: {
-		type: String as PropType<'left' | 'right'>,
-		require: false,
-		default: 'left',
-	},
+  type: {
+    type: String as PropType<ButtonType>,
+    require: false,
+    default: "default"
+  },
+  size: {
+    type: String as PropType<"xs" | "sm" | "md" | "lg" | "xlg">,
+    require: false,
+    default: "md"
+  },
+  variant: {
+    type: String as PropType<"solid" | "outlined" | "text" | "link">,
+    require: false,
+    default: "solid"
+  },
+  color: {
+    type: String,
+    require: false,
+    default: "default"
+  },
+  disabled: {
+    type: Boolean,
+    require: false,
+    default: false
+  },
+  loading: {
+    type: Boolean,
+    require: false,
+    default: false
+  },
+  icon: {
+    type: String,
+    require: false,
+    default: undefined
+  },
+  iconPosition: {
+    type: String as PropType<"left" | "right">,
+    require: false,
+    default: "left"
+  }
 })
 
-const emits = defineEmits(['click'])
+const emits = defineEmits(["click"])
 
 const slots = defineSlots()
 
 const className = computed(() => {
-	return {
-		button: true,
-		'button-xlg': props.size === 'xlg',
-		'button-lg': props.size === 'lg',
-		'button-sm': props.size === 'sm',
-		'button-xsm': props.size === 'xs',
-		'button-solid': props.variant === 'solid',
-		'button-outlined': props.variant === 'outlined',
-		'button-text': props.variant === 'text',
-		'button-link': props.variant === 'link',
-	}
+  return {
+    'button': true,
+    'button-xlg': props.size === "xlg",
+    'button-lg': props.size === "lg",
+    'button-sm': props.size === "sm",
+    'button-xsm': props.size === "xs",
+    'button-solid': props.variant === "solid",
+    'button-outlined': props.variant === "outlined",
+    'button-text': props.variant === "text",
+    'button-link': props.variant === "link"
+  }
 })
 
 const backgroundColorCssVariable = computed(() => {
-	return `var(${backgroundColorToCssVariable(
-		props.color
-	)}, var(--color-primary))`
+  if (props.color === undefined) {
+    return undefined
+  }
+  return `var(${backgroundColorToCssVariable(props.color)}, var(--color-primary))`
 })
 
 const fontColorCssVariable = computed(() => {
-	const theme: Theme = useTheme().global()
+  const theme: Theme = useTheme().global()
 
-	const rgb = (theme.color as any)[props.color]
+  const rgb = (theme.color as any)[props.color]
 
-	return `var(${calculateFontColor(rgb)}`
+  return `var(${calculateFontColor(rgb)}`
 })
+
 </script>
 
 <template>
-	<button @click="emits('click')" :class="className">
-		<slot name="leftIcon"></slot>
-		<div v-if="loading && iconPosition === 'left'" class="button-icon">
-			<div class="mdi mdi-loading button-loading" />
-		</div>
-		<slot name="prepend" />
-		<slot />
-		<slot name="append" />
+  <button @click="emits('click')" :class="className">
+      <slot name="leftIcon"></slot>
+      <div v-if="loading && iconPosition==='left'" class="button-icon">
+        <div class="mdi mdi-loading button-loading"/>
+      </div>
+    <slot name="prepend"/>
+    <slot/>
+    <slot name="append"/>
 
-		<div v-if="iconPosition === 'right'" class="button-icon">
-			<div class="mdi mdi-loading button-loading" />
-		</div>
-		<slot name="rightIcon"></slot>
-	</button>
+      <div v-if="iconPosition==='right' " class="button-icon">
+        <div class="mdi mdi-loading button-loading"/>
+      </div>
+    <slot name="rightIcon"></slot>
+  </button>
 </template>
 
 <style scoped lang="sass">
