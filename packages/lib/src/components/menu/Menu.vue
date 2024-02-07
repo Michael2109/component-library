@@ -1,23 +1,17 @@
 <script setup lang="ts">
 import { defineModel, PropType } from 'vue'
-import MenuItem from './menu-item'
-
-const model = defineModel<Boolean>()
+import type { MenuItem } from './menu-item'
 
 const emits = defineEmits(['change'])
 
-const props = defineProps({
-	items: {
-		type: Object as PropType<Array<MenuItem>>,
-		required: false,
-		default: undefined,
-	},
-})
+const model = defineModel<Array<MenuItem>>()
 </script>
 
 <template>
 	<ul class="menu">
-		<li v-for="item in items">Home</li>
+		<li v-for="item in model" @click="item.command()" :key="item.key">
+			{{ item.label }}
+		</li>
 		<!--		<li>
 			<a>About</a>
 			<ul class="submenu">

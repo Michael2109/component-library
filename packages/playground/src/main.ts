@@ -3,11 +3,6 @@ import {
 	baseTheme,
 	Button,
 	ComponentsPlugin,
-	NewComp,
-	ExtraComp,
-	AbcComp,
-	DefComp,
-	OtherComponent,
 	Sidebar,
 	Menu,
 } from '@linusborg/lib'
@@ -22,10 +17,5 @@ app.use(ComponentsPlugin, {
 
 app.component('Sidebar', Sidebar)
 app.component('Menu', Menu)
-app.component('OtherComponent', OtherComponent)
-app.component('NewComp', NewComp)
 app.component('Button', Button)
-app.component('AbcComp', AbcComp)
-app.component('DefComp', DefComp)
-app.component('ExtraComp', ExtraComp)
 app.mount('#app')

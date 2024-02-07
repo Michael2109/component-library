@@ -1,6 +1,7 @@
 interface MenuItem {
 	key: string
-	title: string
+	label: string
+	command: () => void
 }
 
 export type { MenuItem }
