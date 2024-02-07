@@ -8,6 +8,7 @@
 	<OtherComponent example123="123"></OtherComponent>
 	<NewComp example="gsgf"></NewComp>
 	<Button variant="solid">Text</Button>
+	<ExtraComp exampleabc="sgfgidofj"></ExtraComp>
 </template>
 
 <script setup lang="ts">
