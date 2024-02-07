@@ -1,6 +1,6 @@
 interface MenuItem {
-    key: string,
-    title: string
+	key: string
+	title: string
 }
 
-export default MenuItem
+export type { MenuItem }

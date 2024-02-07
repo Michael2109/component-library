@@ -17,8 +17,8 @@ const props = defineProps({
 
 <template>
 	<ul class="menu">
-		<li>Home</li>
-		<li>
+		<li v-for="item in items">Home</li>
+		<!--		<li>
 			<a>About</a>
 			<ul class="submenu">
 				<li>Company</li>
@@ -32,7 +32,7 @@ const props = defineProps({
 				<li>Design</li>
 			</ul>
 		</li>
-		<li>Contact</li>
+		<li>Contact</li>-->
 	</ul>
 </template>
 
