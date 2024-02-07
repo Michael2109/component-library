@@ -1,7 +1,8 @@
 import { createApp } from 'vue'
 import {
+	baseTheme,
 	Button,
-	install as MyLibPLugin,
+	ComponentsPlugin,
 	NewComp,
 	ExtraComp,
 	AbcComp,
@@ -13,7 +14,10 @@ import './index.css'
 
 const app = createApp(App)
 
-app.use(MyLibPLugin)
+app.use(ComponentsPlugin, {
+	theme: baseTheme,
+})
+
 app.component('OtherComponent', OtherComponent)
 app.component('NewComp', NewComp)
 app.component('Button', Button)

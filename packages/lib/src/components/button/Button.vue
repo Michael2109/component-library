@@ -5,7 +5,6 @@ import {
 	backgroundColorToCssVariable,
 	calculateFontColor,
 } from '../../common/color-to-css-variable'
-//import { useTheme } from '../../plugins/components-plugin'
 import type { Theme } from '../../theme/theme'
 import { useTheme } from '../../plugins/components-plugin'
 

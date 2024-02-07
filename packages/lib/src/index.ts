@@ -1,4 +1,5 @@
 import type { App } from 'vue'
+import { baseTheme } from './theme/base-theme.ts'
 import MyComponent from './Component.vue'
 import OtherComponent from './OtherComponent.vue'
 import TestComponent from './TestComponent.vue'
@@ -8,11 +9,10 @@ import ExtraComp from './ExtraComp.vue'
 import Button from './components/button/Button.vue'
 
 import AbcComp from './AbcComp.vue'
-function install(app: App) {
-	app.component('MyComponent', MyComponent)
-}
+import ComponentsPlugin from './plugins/components-plugin.ts'
 
 export {
+	baseTheme,
 	MyComponent,
 	OtherComponent,
 	TestComponent,
@@ -21,5 +21,5 @@ export {
 	AbcComp,
 	DefComp,
 	ExtraComp,
-	install,
+	ComponentsPlugin,
 }
