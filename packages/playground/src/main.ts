@@ -9,6 +9,7 @@ import {
 	DefComp,
 	OtherComponent,
 	Sidebar,
+	Menu,
 } from '@linusborg/lib'
 import App from './App.vue'
 import './index.css'
@@ -20,6 +21,7 @@ app.use(ComponentsPlugin, {
 })
 
 app.component('Sidebar', Sidebar)
+app.component('Menu', Menu)
 app.component('OtherComponent', OtherComponent)
 app.component('NewComp', NewComp)
 app.component('Button', Button)

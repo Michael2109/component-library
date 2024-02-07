@@ -2,19 +2,13 @@
 	<Sidebar>
 		<template #top>
 			<div>Test</div>
+			<Menu></Menu>
 		</template>
 	</Sidebar>
 	<div class="app-layout"></div>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue'
-
-defineProps<{
-	msg: string
-}>()
-const count = ref(0)
-</script>
+<script setup lang="ts"></script>
 
 <style lang="sass">
 .app-layout
