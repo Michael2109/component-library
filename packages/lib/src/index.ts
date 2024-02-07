@@ -1,5 +1,4 @@
-import type { App } from 'vue'
-import { baseTheme } from './theme/base-theme.ts'
+import { baseTheme } from './theme/base-theme'
 import MyComponent from './Component.vue'
 import OtherComponent from './OtherComponent.vue'
 import TestComponent from './TestComponent.vue'
@@ -9,7 +8,7 @@ import ExtraComp from './ExtraComp.vue'
 import Button from './components/button/Button.vue'
 
 import AbcComp from './AbcComp.vue'
-import ComponentsPlugin from './plugins/components-plugin.ts'
+import ComponentsPlugin from './plugins/components-plugin'
 
 export {
 	baseTheme,
