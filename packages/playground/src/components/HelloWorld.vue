@@ -6,6 +6,8 @@
 	</p>
 	<MyComponent message=""></MyComponent>
 	<OtherComponent example123="123"></OtherComponent>
+	<NewComp example="gsgf"></NewComp>
+	<Button variant="solid">Text</Button>
 </template>
 
 <script setup lang="ts">
