@@ -7,7 +7,7 @@ import {
 	Menu,
 } from '@linusborg/lib'
 import App from './App.vue'
-import './index.css'
+import './index.sass'
 import ButtonView from './components/views/ButtonView.vue'
 import MenuView from './components/views/MenuView.vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
