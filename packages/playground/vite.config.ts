@@ -5,6 +5,7 @@ export default defineConfig({
 	plugins: [vue()],
 	resolve: {
 		alias: {
+			'@': '/src',
 			// we alias to the lib's source files in dev
 			// so we don't need to rebuild the lib over and over again
 			'@linusborg/lib':

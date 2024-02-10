@@ -11,6 +11,7 @@ import './index.sass'
 import ButtonView from './components/views/ButtonView.vue'
 import MenuView from './components/views/MenuView.vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
+import { createVCodeBlock } from '@wdns/vue-code-block'
 
 const routes = [
 	{ path: '/button', component: ButtonView },
@@ -28,11 +29,16 @@ const router = createRouter({
 
 const app = createApp(App)
 
+const VCodeBlock = createVCodeBlock({
+	// options
+})
+
 app.use(ComponentsPlugin, {
 	theme: baseTheme,
 })
 app.use(router)
 
+app.component('VCodeBlock', VCodeBlock)
 app.component('Sidebar', Sidebar)
 app.component('Menu', Menu)
 app.component('Button', Button)
