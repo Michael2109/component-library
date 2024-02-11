@@ -124,6 +124,9 @@ importers:
       vue-router:
         specifier: '4'
         version: 4.2.5(vue@3.4.15)
+      vue-sidebar-menu:
+        specifier: ^5.3.1
+        version: 5.3.1
     devDependencies:
       '@vue/compiler-sfc':
         specifier: ^3.3.8
@@ -3568,6 +3571,10 @@ packages:
     dependencies:
       '@vue/devtools-api': 6.5.1
       vue: 3.4.15(typescript@5.2.2)
+    dev: false
+
+  /vue-sidebar-menu@5.3.1:
+    resolution: {integrity: sha512-i4674eLSTeSQeXGrIssqGm3k5r4iegguOTRe30nvkliZl6c+M71CGOqkakTox6XOB//2ZrLwyECDlOXBqmaUMg==}
     dev: false
 
   /vue-template-compiler@2.7.15:

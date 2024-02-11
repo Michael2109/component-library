@@ -1,13 +1,7 @@
 <template>
-  <span class="component-title">{{ title }}</span>
-  <a
-    aria-current="page"
-    href="/button/#import"
-    class="router-link-active router-link-exact-active"
-    id="import"
-  >
-    #
-  </a>
+  <div class="component-title">
+    {{ title }}
+  </div>
 
   <p class="component-description">{{ description }}</p>
 </template>
@@ -26,9 +20,9 @@ defineProps({
 <style lang="sass">
 
 .component-title
+  padding-top: 20px
   font-weight: 600
   line-height: 1.2
-  margin: 1.5rem 0 1rem
   font-size: 1.75rem
 
 .component-description

@@ -1,10 +1,6 @@
 <script setup lang="ts">
-import Preview from '@/components/docs/Preview.vue';
-import Documentation from '@/App.vue';
-import Document from '@/components/docs/DocSection.vue';
-import DocumentHeader from '@/components/docs/DocSectionHeader.vue';
-import type { DocSectionCode } from '@/components/docs/doc-section-code';
 import DocSection from '@/components/docs/DocSection.vue';
+import type { DocSectionCode } from '@/components/docs/doc-section-code';
 
 const code: DocSectionCode = {
   basic: `<Button size='xs'>Extra Small</Button>
@@ -25,9 +21,10 @@ const code: DocSectionCode = {
 
     <template #description>
       Use the size prop to change the size of the button. You can set the value
-      to xs, sm, md, lg, or xlg.
-    </template></DocSection
-  >
+      to <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>, or
+      <code>xlg</code>.
+    </template>
+  </DocSection>
 </template>
 
 <style scoped lang="sass"></style>

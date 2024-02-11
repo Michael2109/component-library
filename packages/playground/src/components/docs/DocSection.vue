@@ -16,31 +16,59 @@ defineProps({
 </script>
 
 <template>
-  <span class="document-title">{{ title }}</span>
-  <p class="document-description">
-    <slot name="description"> </slot>
-  </p>
+  <div class="document-section">
+    <div class="document-section-title">
+      <span>
+        {{ title }}
+      </span>
+      <a
+        aria-current="page"
+        href="/button/#import"
+        class="document-section-title-link"
+      >
+        #
+      </a>
+    </div>
 
-  <div class="doc-section-component">
-    <slot></slot>
+    <p class="document-section-description">
+      <slot name="description"> </slot>
+    </p>
+
+    <div class="doc-section-component">
+      <slot></slot>
+    </div>
+    <preview :code="code.basic"></preview>
   </div>
-  <preview :code="code.basic"></preview>
 </template>
 
 <style scoped lang="sass">
+.document-section
+  margin-top: 30px
 
-.document-title
+.document-section-title
   font-weight: 600
   line-height: 1.2
   margin: 1.5rem 0 1rem
-  font-size: 1.75rem
+  font-size: 1.25rem
 
-.document-description
+
+.document-section-title-link
+  text-decoration: none
+  display: none
+
+.document-section-title:hover > .document-section-title-link
+  display: inline
+
+.document-section-description
   display: block
   margin-block-start: 1em
   margin-block-end: 1em
   margin-inline-start: 0
   margin-inline-end: 0
+
+  :deep(code)
+    background-color: #e5e5e5
+    font-size: 1rem
 
 .doc-section-component
   display: flex
