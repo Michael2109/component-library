@@ -12,7 +12,7 @@ const props = defineProps({
   }
 });
 
-const selected: Ref<string | undefined> = ref(undefined);
+const selected: Ref<string | undefined> = ref(props.selectedKey);
 
 watch(
   () => props.selectedKey,
@@ -23,7 +23,7 @@ watch(
 
 const tabHeaders = computed(() => {
   return slots.default().reduce((tabHeaders: Array<any>, child: any) => {
-    tabHeaders.push(child.props.key);
+    tabHeaders.push(child.props);
 
     return tabHeaders;
   }, []);
@@ -32,7 +32,9 @@ const tabHeaders = computed(() => {
 const tabs = computed(() => {
   return slots.default().reduce((tabs: Array<any>, child: any) => {
     if (child.props.key === selected.value) {
-      tabs.push(child.children.default()[0]);
+      if (child.children) {
+        tabs.push(child.children.default()[0]);
+      }
     }
 
     return tabs;
@@ -44,15 +46,15 @@ const tabs = computed(() => {
   <div>
     <div class="tab-headers">
       <Button
-        v-for="tabHeader in tabHeaders"
-        @click="selected = tabHeader"
+        v-for="{ label, key } in tabHeaders"
+        @click="selected = key"
         variant="text"
       >
-        {{ tabHeader }}</Button
+        {{ label }}</Button
       >
     </div>
     <template v-for="(tab, index) of tabs" :key="tab">
-      <component :is="tab"></component>
+      <component v-if="tab" :is="tab"></component>
     </template>
   </div>
 </template>

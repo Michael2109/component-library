@@ -1,5 +1,5 @@
-import ButtonView from '@/components/views/ButtonView.vue';
-import MenuView from '@/components/views/MenuView.vue';
+import ButtonView from '@/views/ButtonView.vue';
+import MenuView from '@/views/MenuView.vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
 
 const routes = [

@@ -4,7 +4,9 @@ import {
   Button,
   ComponentsPlugin,
   Menu,
-  Sidebar
+  Sidebar,
+  Tab,
+  Tabs
 } from '@linusborg/lib';
 import App from './App.vue';
 import './index.sass';
@@ -29,4 +31,6 @@ app.component('VCodeBlock', VCodeBlock);
 app.component('Sidebar', Sidebar);
 app.component('Menu', Menu);
 app.component('Button', Button);
+app.component('Tabs', Tabs);
+app.component('Tab', Tab);
 app.mount('#app');

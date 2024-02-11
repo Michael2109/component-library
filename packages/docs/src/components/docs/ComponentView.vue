@@ -4,6 +4,12 @@
   </div>
 
   <p class="component-description">{{ description }}</p>
+
+  <Tabs selected-key="usage">
+    <Tab label="Usage" key="usage"> <slot name="usage"></slot></Tab>
+    <Tab label="API" key="props"><slot name="api"></slot></Tab>
+    <Tab label="Styling" key="styling"><slot name="styling"></slot></Tab>
+  </Tabs>
 </template>
 <script lang="ts" setup>
 defineProps({

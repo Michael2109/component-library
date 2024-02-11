@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { DocSectionCode } from '@/components/docs/doc-section-code';
-import DocSection from '@/components/docs/DocSection.vue';
+import type { DocSectionCode } from '@/components/docs/section/doc-section-code';
+import DocSection from '@/components/docs/section/DocSection.vue';
 
 const code: DocSectionCode = {
   basic: `<Button>

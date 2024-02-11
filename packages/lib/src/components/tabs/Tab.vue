@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 defineProps({
   label: {
     type: String,
@@ -10,16 +9,12 @@ defineProps({
     type: String,
     required: true
   }
-})
-
+});
 </script>
 
 <template>
-  <template >Other</template>
-  <div class="tab-header">{{label}}</div>
-<slot></slot>
+  <div class="tab-header">{{ label }}</div>
+  <slot></slot>
 </template>
 
-<style scoped lang="sass">
-
-</style>
+<style scoped lang="sass"></style>

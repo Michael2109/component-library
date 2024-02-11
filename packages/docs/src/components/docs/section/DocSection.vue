@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { PropType } from 'vue';
-import type { DocSectionCode } from '@/components/docs/doc-section-code';
-import Preview from '@/components/docs/Preview.vue';
+import type { DocSectionCode } from '@/components/docs/section/doc-section-code';
+import Preview from '@/components/docs/section/Preview.vue';
 
 defineProps({
   title: {
