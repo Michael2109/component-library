@@ -1,17 +1,18 @@
 <script setup lang="ts">
-import {computed, defineModel, PropType} from "vue";
+import { computed, defineModel } from 'vue';
+import type { PropType } from 'vue';
 
-const model = defineModel<string>()
+const model = defineModel<string>();
 
-const emits = defineEmits(["click"])
+const emits = defineEmits(['click']);
 
-const text = computed(() => model.value)
+const text = computed(() => model.value);
 
 const props = defineProps({
   size: {
-    type: String as PropType<"xs" | "sm" | "md" | "lg" | "xlg">,
+    type: String as PropType<'xs' | 'sm' | 'md' | 'lg' | 'xlg'>,
     require: false,
-    default: "md"
+    default: 'md'
   },
   label: {
     type: String,
@@ -23,37 +24,40 @@ const props = defineProps({
     required: false,
     default: undefined
   }
-})
+});
 
 const className = computed(() => {
   return {
-    'input': true,
-    'input-xlg': props.size === "xlg",
-    'input-lg': props.size === "lg",
-    'input-sm': props.size === "sm",
-    'input-xsm': props.size === "xs",
-  }
-})
+    input: true,
+    'input-xlg': props.size === 'xlg',
+    'input-lg': props.size === 'lg',
+    'input-sm': props.size === 'sm',
+    'input-xsm': props.size === 'xs'
+  };
+});
 
 const padding = computed(() => {
-  switch (props.size){
-    case "xs": return "4px"
-    case "sm": return "7px"
-    case "md": return "10px"
-    case "lg": return "13px"
-    case "xlg": return "16px"
+  switch (props.size) {
+    case 'xs':
+      return '4px';
+    case 'sm':
+      return '7px';
+    case 'md':
+      return '10px';
+    case 'lg':
+      return '13px';
+    case 'xlg':
+      return '16px';
   }
-})
-
+});
 </script>
 
 <template>
   <div class="text-field">
-    <input type="text" required :class="className">
+    <input type="text" required :class="className" />
 
     <label>Username</label>
   </div>
-
 </template>
 
 <style scoped lang="sass">

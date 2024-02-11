@@ -15,9 +15,9 @@
     {
       "path": "./packages/lib/tsconfig.vitest.json"
     },
-    // Playground
+    // Docs
     {
-      "path": "./packages/playground/tsconfig.app.json"
+      "path": "./packages/docs/tsconfig.app.json"
     }
   ]
 }

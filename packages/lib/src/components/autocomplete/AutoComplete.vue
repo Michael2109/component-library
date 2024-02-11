@@ -1,10 +1,10 @@
 <script setup lang="ts">
+import { watch } from 'vue';
+import type { PropType } from 'vue';
 
-import {defineModel, PropType, watch} from "vue";
+const model = defineModel<Boolean>();
 
-const model = defineModel<Boolean>()
-
-const emits = defineEmits(["change"])
+const emits = defineEmits(['change']);
 
 const props = defineProps({
   id: {
@@ -22,17 +22,23 @@ const props = defineProps({
     required: false,
     default: []
   }
-})
+});
 
 watch(model, (enabled: any) => {
-  emits("change",enabled )
-})
+  emits('change', enabled);
+});
 </script>
 
 <template>
   <div class="select-container">
     <select :id="id" :name="name" v-model="model">
-      <option v-for="option in options" :key="option.value" :value="option.value">{{ option.title }}</option>
+      <option
+        v-for="option in options"
+        :key="option.value"
+        :value="option.value"
+      >
+        {{ option.title }}
+      </option>
     </select>
   </div>
 </template>

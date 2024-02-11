@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import { computed, ref, watch } from 'vue';
 
-import {computed, defineModel, PropType, ref, watch} from "vue";
+import type { PropType } from 'vue';
 
-const model = defineModel<Array<string>>()
+const model = defineModel<Array<string>>();
 
-const emits = defineEmits(["change"])
+const emits = defineEmits(['change']);
 
 const props = defineProps({
   label: {
@@ -27,29 +28,30 @@ const props = defineProps({
     required: false,
     default: []
   }
-})
+});
 
-const visible = ref(false)
+const visible = ref(false);
 
 const className = computed(() => {
   return {
-    "dropdown-check-list": true,
+    'dropdown-check-list': true,
     visible: visible.value
-  }
-})
+  };
+});
 
-function onOptionChange(event: any){
-  console.log(event.target)
+function onOptionChange(event: any) {
+  console.log(event.target);
   //model.push()
 }
-
 </script>
 
 <template>
   <div id="list1" :class="className" tabindex="100">
     <span class="anchor" @click="visible = !visible">Select Fruits</span>
     <ul class="items">
-      <li v-for="option in options" :key="option.value"><input type="checkbox" @change="onOptionChange" />{{ option.title }} </li>
+      <li v-for="option in options" :key="option.value">
+        <input type="checkbox" @change="onOptionChange" />{{ option.title }}
+      </li>
     </ul>
   </div>
 </template>

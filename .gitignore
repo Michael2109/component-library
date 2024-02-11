@@ -3,7 +3,7 @@
 node_modules
 dist
 
-packages/docs/.vitepress/cache
+packages/docsother/.vitepress/cache
 packages/*/dist
 packages/*/types
 
