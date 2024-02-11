@@ -1,10 +1,12 @@
 import ButtonView from '@/views/ButtonView.vue';
 import MenuView from '@/views/MenuView.vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
+import TableView from '@/views/TableView.vue';
 
 const routes = [
   { path: '/components/button', component: ButtonView },
-  { path: '/components/menu', component: MenuView }
+  { path: '/components/menu', component: MenuView },
+  { path: '/components/table', component: TableView }
 ];
 
 // 3. Create the router instance and pass the `routes` option

@@ -6,7 +6,9 @@ import {
   Menu,
   Sidebar,
   Tab,
-  Tabs
+  Table,
+  Tabs,
+  Column
 } from '@linusborg/lib';
 import App from './App.vue';
 import './index.sass';
@@ -33,4 +35,6 @@ app.component('Menu', Menu);
 app.component('Button', Button);
 app.component('Tabs', Tabs);
 app.component('Tab', Tab);
+app.component('Table', Table);
+app.component('Column', Column);
 app.mount('#app');

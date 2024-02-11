@@ -29,17 +29,17 @@
 		"dev-types": "vue-tsc  --noEmit -p tsconfig.app.json --watch",
 		"build": "pnpm build-lib && pnpm build-types",
 		"build-lib": "vite build",
-		"build-watch":  "pnpm run build --watch",
+		"build-watch": "pnpm run build --watch",
 		"build-types": "vue-tsc --emitDeclarationOnly --declaration -p tsconfig.app.json",
 		"lint": "eslint 'src/**/*.{ts,vue}'",
 		"test": "vitest",
 		"test-ci": "vitest --run"
 	},
 	"dependencies": {
-		"@linusborg/lib": "workspace:*",
-		"object-to-css-variables": "^0.2.1",
 		"@fontsource/mulish": "^5.0.16",
+		"@linusborg/lib": "workspace:*",
 		"@mdi/font": "^7.4.47",
+		"object-to-css-variables": "^0.2.1",
 		"sass": "^1.70.0"
 	},
 	"peerDependencies": {

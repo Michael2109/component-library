@@ -28,6 +28,10 @@ const menu = [
       {
         href: '/components/button',
         title: 'Button'
+      },
+      {
+        href: '/components/table',
+        title: 'Table'
       }
     ]
   }
