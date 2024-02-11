@@ -1,0 +1,76 @@
+<script setup lang="ts">
+import Preview from '@/components/docs/Preview.vue';
+import Documentation from '@/App.vue';
+import Document from '@/components/docs/DocSection.vue';
+import DocumentHeader from '@/components/docs/DocSectionHeader.vue';
+
+</script>
+
+<template>
+  <Document>
+    <template #header>
+      <DocumentHeader
+        title="Button"
+        description="Button is an extension to standard input element with icons and theming."
+      >
+      </DocumentHeader>
+    </template>
+
+    <template #features>
+      <Preview
+        title="Sizes"
+        description="Use the size prop to change the size of the button. You can set the value to xs, sm, md, lg, or xlg."
+        :code="examples[0]"
+      >
+        <Button size="xs">Extra Small</Button>
+        <Button size="sm">Small </Button>
+        <Button size="md">Default</Button>
+        <Button size="lg">Large </Button>
+        <Button size="xlg">Extra Large</Button>
+      </Preview>
+      <Preview
+        title="Variants"
+        description="Use the variant prop to change the visual style of the Button. You can set the value to solid, outline, text, or link."
+        code=""
+      >
+        <Button variant="solid">Solid </Button>
+        <Button variant="outlined">Outlined </Button>
+        <Button variant="text">Text</Button>
+        <Button variant="link">Link</Button>
+      </Preview>
+      <Preview title="Colors" code="">
+        <Button color="gray">Gray</Button>
+        <Button color="red">Red</Button>
+        <Button color="orange">Orange</Button>
+        <Button color="yellow">Yellow</Button>
+        <Button color="green">Green</Button>
+        <Button color="teal">Teal</Button>
+        <Button color="blue">Blue</Button>
+        <Button color="cyan">Cyan</Button>
+        <Button color="purple">Purple</Button>
+        <Button color="pink">Pink</Button>
+      </Preview>
+      <Preview title="Icons" code="">
+        <Button>
+          <template #leftIcon>
+            <div class="mdi mdi-account"></div>
+          </template>
+          Left Icon
+        </Button>
+        <Button>
+          <template #rightIcon>
+            <div class="mdi mdi-account"></div>
+          </template>
+          Right Icon
+        </Button>
+      </Preview>
+
+      <Preview title="Loading" code="">
+        <Button loading>Button</Button>
+        <Button loading icon-position="right">Button</Button>
+      </Preview>
+    </template></Document
+  >
+</template>
+
+<style scoped lang="sass"></style>

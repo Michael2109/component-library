@@ -2,6 +2,5 @@
   "singleQuote": true,
   "trailingComma": "none",
   "semi": true,
-  "htmlWhitespaceSensitivity": "css",
-  "editorconfig": true
+  "useTabs": false
 }

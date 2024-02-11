@@ -1,32 +1,33 @@
 <template>
-	<Sidebar>
-		<template #top>
-			<div>Test</div>
-			<Menu v-model="items"></Menu>
-		</template>
-	</Sidebar>
-	<div class="app-layout">
-		<router-view></router-view>
-	</div>
+  <Sidebar>
+    <template #top>
+      <div>Test</div>
+      <Menu v-model="items"></Menu>
+    </template>
+  </Sidebar>
+  <div class="app-layout">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { Ref, ref } from 'vue'
-import type { MenuItem } from '@linusborg/lib/types/components/menu/menu-item'
-import { useRouter } from 'vue-router'
+import { Ref, ref } from 'vue';
+import type { MenuItem } from '@linusborg/lib/types/components/menu/menu-item';
+import { useRouter } from 'vue-router';
 
-const router = useRouter()
+const router = useRouter();
 
 const items: Ref<Array<MenuItem>> = ref([
-	{ label: 'Button', command: () => router.push('/button') },
-	{ label: 'Menu', command: () => router.push('/menu') },
-])
+  { label: 'Button', command: () => router.push('/button') },
+  { label: 'Menu', command: () => router.push('/menu') }
+]);
 </script>
 
 <style lang="sass">
 .app-layout
-	width: calc(100% - 250px)
+	width: calc(100% - 300px)
 	height: 100%
 	margin-top: 0
-	margin-left: 250px
+	margin-left: 270px
+	margin-right: 20px
 </style>

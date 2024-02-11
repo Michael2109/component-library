@@ -9,6 +9,7 @@
 		"lint": "eslint 'src/**/*.{ts,vue}'"
 	},
 	"dependencies": {
+		"@fontsource/public-sans": "^5.0.16",
 		"@linusborg/lib": "workspace:*",
 		"@wdns/vue-code-block": "^2.3.1",
 		"js-beautify": "^1.14.11",

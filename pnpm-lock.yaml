@@ -100,6 +100,9 @@ importers:
 
   packages/playground:
     dependencies:
+      '@fontsource/public-sans':
+        specifier: ^5.0.16
+        version: 5.0.16
       '@linusborg/lib':
         specifier: workspace:*
         version: link:../lib
@@ -585,6 +588,10 @@ packages:
 
   /@fontsource/mulish@5.0.16:
     resolution: {integrity: sha512-NM1LDZRDBWzK+9iVzgINGHVkGrSHVCJsGAK8PKrnyQ+rt99vYPGz7JOtBkEQZQbP6+Zn0uV+ie3SdETNzBAJtA==}
+    dev: false
+
+  /@fontsource/public-sans@5.0.16:
+    resolution: {integrity: sha512-bThZip6sLRsnfzi/oBr1/9+aWmvHkb59QlLh/OtoAIA0Mi2+Z1cKOxtR1B2ITauljlLJHPRvjpTZDUZitUN8pA==}
     dev: false
 
   /@humanwhocodes/config-array@0.11.13:
