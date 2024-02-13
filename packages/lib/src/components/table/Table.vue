@@ -25,19 +25,21 @@ const headerKeys = computed(() => {
 });
 
 const rows = computed(() => {
-  const row: Array<string> = [];
   const result = props.items.map((item: any) => {
+    const row: Array<string> = [];
     headerKeys.value.forEach((headerKey) => {
       row.push(item[headerKey]);
     });
     return row;
   });
+
+  console.log(result);
   return result;
 });
 </script>
 
 <template>
-  <table>
+  <table class="table">
     <tr>
       <template v-for="(header, index) of tableHeaders" :key="header">
         <td><component v-if="header" :is="header"></component></td>
@@ -49,4 +51,16 @@ const rows = computed(() => {
   </table>
 </template>
 
-<style scoped lang="sass"></style>
+<style scoped lang="sass">
+.table
+  width: 100%
+  border-collapse: collapse
+
+td, th
+  border: 1px solid #dddddd
+  text-align: left
+  padding: 8px
+
+tr:nth-child(even)
+  background-color: #dddddd
+</style>

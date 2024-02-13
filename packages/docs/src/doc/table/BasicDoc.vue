@@ -4,25 +4,35 @@ import type { DocSectionCode } from '@/components/docs/section/doc-section-code'
 import { Table } from '@linusborg/lib';
 
 const code: DocSectionCode = {
-  basic: `<Table :items="">Solid</Table>
-<Button variant="outlined">Outlined</Button>
-<Button variant="text">Text</Button>
-<Button variant="link">Link</Button>`
+  basic: `<Table
+  :items="[
+    { firstName: 'John', lastName: 'Doe', age: 30 },
+    { firstName: 'Jane', lastName: 'Doe', age: 25 },
+    { firstName: 'James', lastName: 'Smith', age: 40 }
+  ]"
+>
+  <Column key="firstName" header="First Name"></Column>
+  <Column key="lastName" header="Last Name"></Column>
+  <Column key="age" header="Age"></Column>
+</Table>`
 };
+
+const items = [
+  { firstName: 'John', lastName: 'Doe', age: 30 },
+  { firstName: 'Jane', lastName: 'Doe', age: 25 },
+  { firstName: 'James', lastName: 'Smith', age: 40 }
+];
 </script>
 
 <template>
-  <DocSection title="Variants" :code="code">
-    <Table :items="[{ example1: 'Something', example2: 'Something2' }]">
-      <Column key="example1" header="Test 1"></Column>
-      <Column key="example2" header="Test 2"></Column>
-      <Column key="example3" header="Test 3"></Column>
+  <DocSection title="Basic" :code="code">
+    <Table :items="items">
+      <Column key="firstName" header="First Name"></Column>
+      <Column key="lastName" header="Last Name"></Column>
+      <Column key="age" header="Age"></Column>
     </Table>
 
-    <template #description>
-      Use the variant prop to change the visual style of the Button. You can set
-      the value to solid, outline, text, or link.
-    </template>
+    <template #description> A table. </template>
   </DocSection>
 </template>
 
