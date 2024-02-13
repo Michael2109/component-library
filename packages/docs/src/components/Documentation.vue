@@ -26,6 +26,10 @@ const menu = [
     title: 'Components',
     child: [
       {
+        href: '/components/chip',
+        title: 'Chip'
+      },
+      {
         href: '/components/button',
         title: 'Button'
       },

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { computed, PropType, ref, watch } from 'vue';
+import { computed, ref, watch } from 'vue';
+import type { PropType } from 'vue';
 import type { Ref } from 'vue';
 import Button from '../button/Button.vue';
 
@@ -27,7 +28,7 @@ const headerKeys = computed(() => {
 const rows = computed(() => {
   const result = props.items.map((item: any) => {
     const row: Array<string> = [];
-    headerKeys.value.forEach((headerKey) => {
+    headerKeys.value.forEach((headerKey: string) => {
       row.push(item[headerKey]);
     });
     return row;

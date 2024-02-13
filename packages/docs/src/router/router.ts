@@ -2,9 +2,11 @@ import ButtonView from '@/views/ButtonView.vue';
 import MenuView from '@/views/MenuView.vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
 import TableView from '@/views/TableView.vue';
+import ChipView from '@/views/ChipView.vue';
 
 const routes = [
   { path: '/components/button', component: ButtonView },
+  { path: '/components/chip', component: ChipView },
   { path: '/components/menu', component: MenuView },
   { path: '/components/table', component: TableView }
 ];

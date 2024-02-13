@@ -8,7 +8,8 @@ import {
   Tab,
   Table,
   Tabs,
-  Column
+  Column,
+  Chip
 } from '@linusborg/lib';
 import App from './App.vue';
 import './index.sass';
@@ -30,6 +31,7 @@ app
   .use(router);
 
 app.component('VCodeBlock', VCodeBlock);
+app.component('Chip', Chip);
 app.component('Sidebar', Sidebar);
 app.component('Menu', Menu);
 app.component('Button', Button);
