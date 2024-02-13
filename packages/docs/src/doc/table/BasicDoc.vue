@@ -13,8 +13,10 @@ const code: DocSectionCode = {
 
 <template>
   <DocSection title="Variants" :code="code">
-    <Table :items="[]">
-      <Column key="example"></Column>
+    <Table :items="[{ example1: 'Something', example2: 'Something2' }]">
+      <Column key="example1" header="Test 1"></Column>
+      <Column key="example2" header="Test 2"></Column>
+      <Column key="example3" header="Test 3"></Column>
     </Table>
 
     <template #description>

@@ -14,7 +14,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <slot></slot>
+  <div>{{ header }}</div>
 </template>
 
 <style scoped lang="sass"></style>
