@@ -1,10 +1,9 @@
 <script setup lang="ts">
+import { defineModel, watch } from 'vue';
 
-import {defineModel, watch} from "vue";
+const model = defineModel<Boolean>();
 
-const model = defineModel<Boolean>()
-
-const emits = defineEmits(["change"])
+const emits = defineEmits(['change']);
 
 const props = defineProps({
   label: {
@@ -12,19 +11,22 @@ const props = defineProps({
     required: false,
     default: undefined
   }
-})
+});
 
 watch(model, (enabled: any) => {
-  emits("change",enabled )
-})
+  emits('change', enabled);
+});
 </script>
 
 <template>
   <div class="checkbox-container">
-  <input type="checkbox" v-model="model"><div class="components-checkbox-label">{{ label }}</div>
+    <input type="checkbox" v-model="model" />
+    <div class="checkbox-label"><slot></slot></div>
   </div>
 </template>
 
 <style scoped lang="sass">
-@import "checkbox"
+.checkbox-container
+  display: flex
+  align-items: center
 </style>

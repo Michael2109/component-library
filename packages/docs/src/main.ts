@@ -2,6 +2,8 @@ import { createApp } from 'vue';
 import {
   baseTheme,
   Button,
+  Checkbox,
+  Code,
   ComponentsPlugin,
   Menu,
   Sidebar,
@@ -31,7 +33,9 @@ app
   .use(router);
 
 app.component('VCodeBlock', VCodeBlock);
+app.component('Checkbox', Checkbox);
 app.component('Chip', Chip);
+app.component('Code', Code);
 app.component('Sidebar', Sidebar);
 app.component('Menu', Menu);
 app.component('Button', Button);

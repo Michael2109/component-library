@@ -1,14 +1,5 @@
 <template>
   <SidebarMenu hide-toggle show-child width="250px" :menu="menu" />
-
-  <!--  <Sidebar>
-      <template #top>
-        <SidebarMenu width="100%" :menu="menu" />
-
-        <div>Test</div>
-        <Menu v-model="items"></Menu>
-      </template>
-    </Sidebar>-->
   <div class="app-layout">
     <router-view></router-view>
   </div>
@@ -26,8 +17,16 @@ const menu = [
     title: 'Components',
     child: [
       {
+        href: '/components/checkbox',
+        title: 'Checkbox'
+      },
+      {
         href: '/components/chip',
         title: 'Chip'
+      },
+      {
+        href: '/components/code',
+        title: 'Code'
       },
       {
         href: '/components/button',
