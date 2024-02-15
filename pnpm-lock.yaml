@@ -99,7 +99,7 @@ importers:
 
   packages/lib:
     dependencies:
-      '@fontsource/mulish':
+      '@fontsource/public-sans':
         specifier: ^5.0.16
         version: 5.0.16
       '@linusborg/lib':
@@ -397,10 +397,6 @@ packages:
     resolution: {integrity: sha512-Kn7K8dx/5U6+cT1yEhpX1w4PCSg0M+XyRILPgvwcEBjerFWCwQj5sbr3/VmxqV0JGHCBCzyd6LxypEuehypY1w==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
-
-  /@fontsource/mulish@5.0.16:
-    resolution: {integrity: sha512-NM1LDZRDBWzK+9iVzgINGHVkGrSHVCJsGAK8PKrnyQ+rt99vYPGz7JOtBkEQZQbP6+Zn0uV+ie3SdETNzBAJtA==}
-    dev: false
 
   /@fontsource/public-sans@5.0.16:
     resolution: {integrity: sha512-bThZip6sLRsnfzi/oBr1/9+aWmvHkb59QlLh/OtoAIA0Mi2+Z1cKOxtR1B2ITauljlLJHPRvjpTZDUZitUN8pA==}

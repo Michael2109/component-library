@@ -6,7 +6,7 @@ import BasicDoc from '@/doc/chip/BasicDoc.vue';
 
 <template>
   <ComponentView
-    title="Button"
+    title="Chip"
     description="Button is an extension to standard input element with icons and theming."
   >
     <template #usage>

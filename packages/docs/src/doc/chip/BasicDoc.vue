@@ -4,25 +4,15 @@ import type { DocSectionCode } from '@/components/docs/section/doc-section-code'
 import { Chip, Table } from '@linusborg/lib';
 
 const code: DocSectionCode = {
-  basic: `<Table
-  :items="[
-    { firstName: 'John', lastName: 'Doe', age: 30 },
-    { firstName: 'Jane', lastName: 'Doe', age: 25 },
-    { firstName: 'James', lastName: 'Smith', age: 40 }
-  ]"
->
-  <Column key="firstName" header="First Name"></Column>
-  <Column key="lastName" header="Last Name"></Column>
-  <Column key="age" header="Age"></Column>
-</Table>`
+  basic: ` <Chip label="Chip"></Chip>`
 };
 </script>
 
 <template>
   <DocSection title="Basic" :code="code">
-    <Chip label="Example"></Chip>
+    <Chip label="Chip"></Chip>
 
-    <template #description> A table. </template>
+    <template #description> A table.</template>
   </DocSection>
 </template>
 

@@ -36,7 +36,7 @@
 		"test-ci": "vitest --run"
 	},
 	"dependencies": {
-		"@fontsource/mulish": "^5.0.16",
+		"@fontsource/public-sans": "^5.0.16",
 		"@linusborg/lib": "workspace:*",
 		"@mdi/font": "^7.4.47",
 		"object-to-css-variables": "^0.2.1",

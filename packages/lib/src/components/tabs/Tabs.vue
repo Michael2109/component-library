@@ -23,7 +23,10 @@ watch(
 
 const tabHeaders = computed(() => {
   return slots.default().reduce((tabHeaders: Array<any>, child: any) => {
-    tabHeaders.push(child.props);
+    tabHeaders.push({
+      ...child.props,
+      ...{ active: child.props.key === selected.value }
+    });
 
     return tabHeaders;
   }, []);
@@ -45,13 +48,18 @@ const tabs = computed(() => {
 <template>
   <div>
     <div class="tab-headers">
-      <Button
-        v-for="{ label, key } in tabHeaders"
-        @click="selected = key"
-        variant="text"
+      <div
+        v-for="{ label, key, active } in tabHeaders"
+        :class="active ? ' tab-header-active' : ''"
       >
-        {{ label }}</Button
-      >
+        <Button
+          @click="selected = key"
+          variant="text"
+          class="tab-header-button"
+        >
+          {{ label }}</Button
+        >
+      </div>
     </div>
     <template v-for="(tab, index) of tabs" :key="tab">
       <component v-if="tab" :is="tab"></component>
@@ -62,4 +70,11 @@ const tabs = computed(() => {
 <style scoped lang="sass">
 .tab-headers
   display: flex
+  top: 1px
+  border-bottom: solid rgba(38, 38, 38, 0.2) 1px
+  margin-bottom: 10px
+.tab-header-button
+  font-weight: 550
+.tab-header-active
+  border-bottom: solid #1a1a1a 2px
 </style>

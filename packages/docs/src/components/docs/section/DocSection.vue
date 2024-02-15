@@ -71,14 +71,15 @@ defineProps({
     font-size: 1rem
 
 .doc-section-component
+  padding: 20px
+  flex-wrap: wrap
   display: flex
   justify-content: center
   align-items: center
-  gap: 8px
+  gap: 10px
   background-color: #ffffff
   border: #d8d8d8 solid 1px
   margin-top: 8px
-  padding: 10px
   margin-bottom: 8px
   border-radius: 5px
 </style>
