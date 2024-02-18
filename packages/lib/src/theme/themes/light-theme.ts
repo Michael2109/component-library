@@ -19,7 +19,18 @@ export const LIGHT_THEME: Theme = {
     blue: '#00f',
     cyan: '#00FFFF',
     purple: '#800080',
-    pink: '#FFC0CB'
+    pink: '#FFC0CB',
+    surface: {
+      100: '#05f5f5',
+      200: '#e8e8e8',
+      300: '#d5d5d5',
+      400: '#a3a3a3',
+      500: '#747474',
+      600: '#555555',
+      700: '#414141',
+      800: '#292929',
+      900: '#171717'
+    }
   },
   button: {},
   input: {

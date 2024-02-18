@@ -19,7 +19,18 @@ export const DARK_THEME: Theme = {
     blue: '#00f',
     cyan: '#00FFFF',
     purple: '#800080',
-    pink: '#FFC0CB'
+    pink: '#FFC0CB',
+    surface: {
+      900: '#05f5f5',
+      800: '#e8e8e8',
+      700: '#d5d5d5',
+      600: '#a3a3a3',
+      500: '#747474',
+      400: '#555555',
+      300: '#414141',
+      200: '#292929',
+      100: '#171717'
+    }
   },
   button: {},
   input: {

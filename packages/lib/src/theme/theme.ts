@@ -1,4 +1,4 @@
-import type { ColorTheme } from './color-theme';
+import type { ColorTheme } from './color/color-theme';
 import type { ButtonTheme } from './button-theme';
 import type { InputTheme } from './input-theme';
 import type { TypographiesTheme } from '@/theme/typographies-theme';
