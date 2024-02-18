@@ -50,7 +50,7 @@ defineProps({
 .document-section-title
   font-weight: 600
   line-height: 1.2
-  margin: 1.5rem 0 1rem
+  margin: 2.5rem 0 1rem
   font-size: 1.25rem
 
 .document-section-title-link
@@ -71,12 +71,12 @@ defineProps({
   padding: 20px
   flex-wrap: wrap
   display: flex
-  justify-content: center
+  justify-content: left
   align-items: center
   gap: 10px
-  background-color: var(--color-surface-200)
+  background-color: var(--colors-surface-200)
   //border: var(--color-surface-300) solid 1px
   margin-top: 8px
-  margin-bottom: 8px
+  margin-bottom: 16px
   border-radius: 5px
 </style>
