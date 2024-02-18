@@ -76,7 +76,7 @@ const tabs = computed(() => {
 
 .tab-header-button
   font-weight: 550
-  color: var(--color-black-text)
+  color: var(--colors-black-text)
 .tab-header-active
-  border-bottom: solid  var(--color-black-text) 2px
+  border-bottom: solid  var(--colors-black-text) 2px
 </style>

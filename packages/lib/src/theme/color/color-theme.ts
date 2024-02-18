@@ -4,4 +4,5 @@ export interface ColorTheme {
   background: string;
   border: string;
   hover: string;
+  text: string;
 }

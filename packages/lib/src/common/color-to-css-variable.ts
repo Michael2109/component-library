@@ -1,5 +1,12 @@
-export function backgroundColorToCssVariable(color: string) {
-  return `--colors-${color}-background`;
+export function getBackgroundColor(color: string) {
+  return `var(--colors-${color}-background, var(--colors-primary-background))`;
+}
+
+export function getFontColor(color: string) {
+  if (color === undefined) {
+    return 'var(--colors-black-text)';
+  }
+  return `var(--colors-${color}-text, var(--colors-black-text)`;
 }
 
 export function calculateFontColor(darkMode: boolean, color?: string) {

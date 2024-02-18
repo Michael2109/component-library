@@ -12,57 +12,68 @@ export const LIGHT_THEME: Theme = {
     primary: {
       background: '#87edc3',
       border: '#87edc3',
-      hover: '#87edc3'
+      hover: '#87edc3',
+      text: '#000'
     },
     gray: {
       background: '#DCDCDC',
       border: '#DCDCDC',
-      hover: '#DCDCDC'
+      hover: '#DCDCDC',
+      text: '#000'
     },
     red: {
       background: '#f00',
       border: '#f00',
-      hover: '#f00'
+      hover: '#f00',
+      text: '#000'
     },
     orange: {
       background: '#FFA500',
       border: '#FFA500',
-      hover: '#FFA500'
+      hover: '#FFA500',
+      text: '#000'
     },
     yellow: {
       background: '#FFA500',
       border: '#FFA500',
-      hover: '#FFA500'
+      hover: '#FFA500',
+      text: '#000'
     },
     green: {
       background: '#0f0',
       border: '#0f0',
-      hover: '#0f0'
+      hover: '#0f0',
+      text: '#000'
     },
     teal: {
       background: '#008080',
       border: '#008080',
-      hover: '#008080'
+      hover: '#008080',
+      text: '#fff'
     },
     blue: {
       background: '#00f',
       border: '#00f',
-      hover: '#00f'
+      hover: '#00f',
+      text: '#fff'
     },
     cyan: {
       background: '#00FFFF',
       border: '#00FFFF',
-      hover: '#00FFFF'
+      hover: '#00FFFF',
+      text: '#000'
     },
     purple: {
       background: '#800080',
       border: '#800080',
-      hover: '#800080'
+      hover: '#800080',
+      text: '#fff'
     },
     pink: {
       background: '#FFC0CB',
       border: '#FFC0CB',
-      hover: '#FFC0CB'
+      hover: '#FFC0CB',
+      text: '#000'
     },
     surface: {
       100: '#f5f5f5',

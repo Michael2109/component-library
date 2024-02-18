@@ -5,8 +5,9 @@ import type { PropType } from 'vue';
 import { useTheme } from '../../plugins/components-plugin';
 import type { Theme } from '@/theme/theme';
 import {
-  backgroundColorToCssVariable,
-  calculateFontColor
+  getBackgroundColor,
+  calculateFontColor,
+  getFontColor
 } from '../../common/color-to-css-variable';
 
 type ButtonType = 'default' | 'text';
@@ -30,7 +31,7 @@ const props = defineProps({
   color: {
     type: String,
     require: false,
-    default: 'default'
+    default: 'primary'
   },
   disabled: {
     type: Boolean,
@@ -71,17 +72,14 @@ const className = computed(() => {
 });
 
 const backgroundColorCssVariable = computed(() => {
-  if (props.color === undefined) {
-    return undefined;
+  return getBackgroundColor(props.color);
+});
+
+const fontColor = computed(() => {
+  if (props.variant === 'text') {
+    return getFontColor(undefined);
   }
-  console.log(
-    `var(${backgroundColorToCssVariable(
-      props.color
-    )}, var(--colors-primary-background))`
-  );
-  return `var(${backgroundColorToCssVariable(
-    props.color
-  )}, var(--colors-primary-background))`;
+  return getFontColor(props.color);
 });
 
 const theme: Theme = useTheme().global();
@@ -109,7 +107,7 @@ const theme: Theme = useTheme().global();
   display: flex
   justify-content: center
   background-color: v-bind('backgroundColorCssVariable')
-  color: var(--colors-white-text)
+  color: v-bind('fontColor')
   font-family: var(--button-font-family, var(--font-family))
   font-size: var(--input-font-size, --font-size)
   font-weight: 600
