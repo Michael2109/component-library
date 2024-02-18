@@ -14,7 +14,7 @@ export default {
     // Merge the provided theme with a default theme
     theme = { ...getDefaultTheme(), ...options.theme };
 
-    updateCSSVariables(theme);
+    setTheme(theme);
   }
 };
 
@@ -24,8 +24,14 @@ function getDefaultTheme(): Theme {
 
 export function useTheme() {
   return {
-    global: () => theme
+    global: () => theme,
+    setTheme: (newTheme: Theme) => setTheme(newTheme)
   };
+}
+
+function setTheme(newTheme: Theme) {
+  theme = newTheme;
+  updateCSSVariables(theme);
 }
 
 function updateCSSVariables(theme: Theme) {

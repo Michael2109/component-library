@@ -14,7 +14,8 @@ import {
   Column,
   Chip,
   DARK_THEME,
-  LIGHT_THEME
+  LIGHT_THEME,
+  Switch
 } from '@linusborg/lib';
 import App from './App.vue';
 import './index.sass';
@@ -45,6 +46,7 @@ app.component('Header', Header);
 app.component('Sidebar', Sidebar);
 app.component('Menu', Menu);
 app.component('Button', Button);
+app.component('Switch', Switch);
 app.component('Tabs', Tabs);
 app.component('Tab', Tab);
 app.component('Table', Table);

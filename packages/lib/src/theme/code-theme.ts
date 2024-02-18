@@ -1,3 +1,3 @@
-export interface ButtonTheme {
+export interface CodeTheme {
   backgroundColor?: string;
 }

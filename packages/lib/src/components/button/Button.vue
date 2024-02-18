@@ -74,18 +74,17 @@ const backgroundColorCssVariable = computed(() => {
   if (props.color === undefined) {
     return undefined;
   }
+  console.log(
+    `var(${backgroundColorToCssVariable(
+      props.color
+    )}, var(--colors-primary-background))`
+  );
   return `var(${backgroundColorToCssVariable(
     props.color
-  )}, var(--color-primary))`;
+  )}, var(--colors-primary-background))`;
 });
 
-const fontColorCssVariable = computed(() => {
-  const theme: Theme = useTheme().global();
-
-  const rgb = (theme.color as any)[props.color];
-
-  return `var(${calculateFontColor(rgb, theme.dark)}`;
-});
+const theme: Theme = useTheme().global();
 </script>
 
 <template>
@@ -110,7 +109,7 @@ const fontColorCssVariable = computed(() => {
   display: flex
   justify-content: center
   background-color: v-bind('backgroundColorCssVariable')
-  color: v-bind("fontColorCssVariable")
+  color: var(--colors-white-text)
   font-family: var(--button-font-family, var(--font-family))
   font-size: var(--input-font-size, --font-size)
   font-weight: 600

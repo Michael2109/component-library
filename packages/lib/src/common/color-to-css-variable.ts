@@ -1,8 +1,8 @@
 export function backgroundColorToCssVariable(color: string) {
-  return `--color-${color}`;
+  return `--colors-${color}-background`;
 }
 
-export function calculateFontColor(color?: string, darkMode: boolean) {
+export function calculateFontColor(darkMode: boolean, color?: string) {
   let isDark: boolean;
   if (color) {
     let hexColor = color;

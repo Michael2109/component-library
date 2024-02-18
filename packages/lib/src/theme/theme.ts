@@ -1,14 +1,14 @@
-import type { ColorTheme } from './color/color-theme';
+import type { ColorsTheme } from './color/colors-theme';
 import type { ButtonTheme } from './button-theme';
 import type { InputTheme } from './input-theme';
 import type { TypographiesTheme } from '@/theme/typographies-theme';
+import type { CodeTheme } from '@/theme/code-theme';
 
 export interface Theme {
-  dark: boolean;
   fontFamily?: string;
   fontSize: string;
   button: ButtonTheme;
-  color: ColorTheme;
+  colors: ColorsTheme;
   code: CodeTheme;
   input: InputTheme;
   typographies: TypographiesTheme;
