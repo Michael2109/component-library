@@ -21,8 +21,8 @@ const code: DocSectionCode = {
 
     <template #description>
       Use the size prop to change the size of the button. You can set the value
-      to <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>, or
-      <code>xlg</code>.
+      to <Code>xs</Code>, <Code>sm</Code>, <Code>md</Code>, <Code>lg</Code>, or
+      <Code>xlg</Code>.
     </template>
   </DocSection>
 </template>

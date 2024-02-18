@@ -22,6 +22,7 @@ import { createVCodeBlock } from '@wdns/vue-code-block';
 import '@fontsource/public-sans';
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css';
 import router from '@/router/router';
+import '@mdi/font/css/materialdesignicons.min.css';
 
 const app = createApp(App);
 

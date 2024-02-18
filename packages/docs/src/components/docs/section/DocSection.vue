@@ -18,16 +18,18 @@ defineProps({
 <template>
   <div class="document-section">
     <div class="document-section-title">
-      <h2>
-        {{ title }}
-      </h2>
-      <a
-        aria-current="page"
-        href="/button/#import"
-        class="document-section-title-link"
-      >
-        #
-      </a>
+      <div class="document-section-content">
+        <h2>
+          {{ title }}
+          <a
+            aria-current="page"
+            href="/button/#import"
+            class="document-section-title-link"
+          >
+            #
+          </a>
+        </h2>
+      </div>
     </div>
 
     <p class="document-section-description">
@@ -51,7 +53,6 @@ defineProps({
   margin: 1.5rem 0 1rem
   font-size: 1.25rem
 
-
 .document-section-title-link
   text-decoration: none
   display: none
@@ -65,10 +66,6 @@ defineProps({
   margin-block-end: 1em
   margin-inline-start: 0
   margin-inline-end: 0
-
-  :deep(code)
-    background-color: #e5e5e5
-    font-size: 1rem
 
 .doc-section-component
   padding: 20px

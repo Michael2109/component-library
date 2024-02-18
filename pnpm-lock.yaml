@@ -68,6 +68,9 @@ importers:
       '@linusborg/lib':
         specifier: workspace:*
         version: link:../lib
+      '@mdi/font':
+        specifier: ^7.4.47
+        version: 7.4.47
       '@wdns/vue-code-block':
         specifier: ^2.3.1
         version: 2.3.1(typescript@5.2.2)
