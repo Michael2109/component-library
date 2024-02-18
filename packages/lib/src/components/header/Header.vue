@@ -1,28 +1,37 @@
 <script setup lang="ts">
+import { defineModel, watch } from 'vue';
 
-import {defineModel, watch} from "vue";
-
-const model = defineModel<Boolean>()
-
+const model = defineModel<Boolean>();
 
 const props = defineProps({
   id: {
     type: String,
     required: false,
     default: undefined
-  },
-})
-
+  }
+});
 </script>
 
 <template>
   <div class="header">
-    <slot name="left"/>
+    <slot name="left" />
     <div class="header-right">
-    <slot name="right"/></div>
+      <slot name="right" />
+    </div>
   </div>
 </template>
 
 <style scoped lang="sass">
-@import "header"
+.header
+  display: flex
+  flex-direction: row
+  width: 100%
+  height: 64px
+  background-color: var(--colors-surface-200)
+  border-bottom: #1a1a1a
+  border-bottom-style: solid
+  border-bottom-width: 1px
+
+.header-right
+  margin-left: auto
 </style>
