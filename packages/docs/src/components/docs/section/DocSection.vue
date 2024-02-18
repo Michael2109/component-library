@@ -18,9 +18,9 @@ defineProps({
 <template>
   <div class="document-section">
     <div class="document-section-title">
-      <span>
+      <h2>
         {{ title }}
-      </span>
+      </h2>
       <a
         aria-current="page"
         href="/button/#import"

@@ -1,7 +1,7 @@
 <template>
-  <div class="component-title">
+  <h1 class="component-title">
     {{ title }}
-  </div>
+  </h1>
 
   <p class="component-description">{{ description }}</p>
 

@@ -1,4 +1,5 @@
-import { baseTheme } from './theme/base-theme';
+import { LIGHT_THEME } from './theme/themes/light-theme';
+import { DARK_THEME } from './theme/themes/dark-theme';
 import Sidebar from './components/sidebar/Sidebar.vue';
 import Checkbox from './components/checkbox/Checkbox.vue';
 import Chip from './components/chip/Chip.vue';
@@ -14,7 +15,8 @@ import Column from './components/table/Column.vue';
 import ComponentsPlugin from './plugins/components-plugin';
 
 export {
-  baseTheme,
+  LIGHT_THEME,
+  DARK_THEME,
   Checkbox,
   Chip,
   Code,

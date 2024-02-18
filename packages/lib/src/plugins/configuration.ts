@@ -1,7 +1,7 @@
-import type { Theme } from '../theme/theme'
+import type { Theme } from '@/theme/theme';
 
 interface Configuration {
-	theme: Theme
+  theme: Theme;
 }
 
-export type { Configuration }
+export type { Configuration };

@@ -12,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-  <span class="document-title">{{ title }}</span>
+  <h1 class="document-title">{{ title }}</h1>
 
   <p class="document-description">{{ description }}</p>
 </template>

@@ -1,6 +1,5 @@
 import { createApp } from 'vue';
 import {
-  baseTheme,
   Button,
   Checkbox,
   Code,
@@ -13,7 +12,8 @@ import {
   Table,
   Tabs,
   Column,
-  Chip
+  Chip,
+  DARK_THEME
 } from '@linusborg/lib';
 import App from './App.vue';
 import './index.sass';
@@ -30,7 +30,7 @@ const VCodeBlock = createVCodeBlock({
 
 app
   .use(ComponentsPlugin, {
-    theme: baseTheme
+    theme: DARK_THEME
   })
   .use(router);
 
