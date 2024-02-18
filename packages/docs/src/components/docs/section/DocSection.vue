@@ -77,8 +77,8 @@ defineProps({
   justify-content: center
   align-items: center
   gap: 10px
-  background-color: var(--color-surface-100)
-  border: var(--color-surface-200) solid 1px
+  background-color: var(--color-surface-200)
+  //border: var(--color-surface-300) solid 1px
   margin-top: 8px
   margin-bottom: 8px
   border-radius: 5px

@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import DocSection from '@/components/docs/section/DocSection.vue';
 import type { DocSectionCode } from '@/components/docs/section/doc-section-code';
-import { Checkbox, Table } from '@linusborg/lib';
+import { Code } from '@linusborg/lib';
 
 const code: DocSectionCode = {
-  basic: ` <Checkbox></Checkbox>`
+  basic: ` <Code></Code>`
 };
 </script>
 
 <template>
   <DocSection title="Basic" :code="code">
-    <Checkbox>This is some text </Checkbox>
+    <Code>This is some text </Code>
 
     <template #description> A table.</template>
   </DocSection>

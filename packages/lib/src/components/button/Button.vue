@@ -84,7 +84,7 @@ const fontColorCssVariable = computed(() => {
 
   const rgb = (theme.color as any)[props.color];
 
-  return `var(${calculateFontColor(rgb)}`;
+  return `var(${calculateFontColor(rgb, theme.dark)}`;
 });
 </script>
 

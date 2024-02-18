@@ -9,14 +9,15 @@ const props = defineProps({
 </script>
 
 <template>
-  <code>
+  <code class="code">
     <slot></slot>
   </code>
 </template>
 
 <style scoped lang="sass">
-code
-  background-color: #EDF2F7
+.code
+  color: var(--color-black-text)
+  background-color: var(--code-background-color)
   font-size: 16px
   display: inline-block
   padding-inline: 0.2em

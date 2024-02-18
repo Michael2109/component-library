@@ -13,7 +13,8 @@ import {
   Tabs,
   Column,
   Chip,
-  DARK_THEME
+  DARK_THEME,
+  LIGHT_THEME
 } from '@linusborg/lib';
 import App from './App.vue';
 import './index.sass';

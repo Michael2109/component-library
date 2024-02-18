@@ -4,11 +4,12 @@ export const DEFAULT_FONT_FAMILY =
   '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji';
 
 export const DARK_THEME: Theme = {
+  dark: true,
   fontFamily: DEFAULT_FONT_FAMILY,
   fontSize: '24px',
   color: {
-    whiteText: '#fff',
-    blackText: '#000',
+    whiteText: '#000',
+    blackText: '#fff',
     primary: '#87edc3',
     gray: '#DCDCDC',
     red: '#f00',
@@ -33,6 +34,9 @@ export const DARK_THEME: Theme = {
     }
   },
   button: {},
+  code: {
+    backgroundColor: '#353535'
+  },
   input: {
     backgroundColor: '#ffffff',
     borderColor: '#fff',

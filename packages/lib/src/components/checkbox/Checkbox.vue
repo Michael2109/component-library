@@ -29,4 +29,7 @@ watch(model, (enabled: any) => {
 .checkbox-container
   display: flex
   align-items: center
+
+.checkbox-label
+  color: var(--color-black-text)
 </style>

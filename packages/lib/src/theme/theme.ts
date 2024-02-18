@@ -4,10 +4,12 @@ import type { InputTheme } from './input-theme';
 import type { TypographiesTheme } from '@/theme/typographies-theme';
 
 export interface Theme {
+  dark: boolean;
   fontFamily?: string;
   fontSize: string;
-  color: ColorTheme;
   button: ButtonTheme;
+  color: ColorTheme;
+  code: CodeTheme;
   input: InputTheme;
   typographies: TypographiesTheme;
 }
