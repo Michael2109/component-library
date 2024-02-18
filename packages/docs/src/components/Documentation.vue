@@ -8,32 +8,37 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
 import { SidebarMenu } from 'vue-sidebar-menu';
+import Documentation from '@/components/Documentation.vue';
 
 const router = useRouter();
 
 const menu = [
   {
-    href: '/components',
-    title: 'Components',
+    href: '/getting-started',
+    title: 'Getting Started'
+  },
+  {
+    href: '/elements',
+    title: 'Elements',
     child: [
       {
-        href: '/components/checkbox',
+        href: '/elements/checkbox',
         title: 'Checkbox'
       },
       {
-        href: '/components/chip',
+        href: '/elements/chip',
         title: 'Chip'
       },
       {
-        href: '/components/code',
+        href: '/elements/code',
         title: 'Code'
       },
       {
-        href: '/components/button',
+        href: '/elements/button',
         title: 'Button'
       },
       {
-        href: '/components/table',
+        href: '/elements/table',
         title: 'Table'
       }
     ]

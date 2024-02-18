@@ -1,16 +1,16 @@
 <template>
-	<Documentation msg="Hello Vue 3.0 + Vite" />
+  <router-view></router-view>
 </template>
 
 <script>
-import Documentation from './components/Documentation.vue'
+import Documentation from './components/Documentation.vue';
 
 export default {
-	name: 'App',
-	components: {
-		Documentation,
-	},
-}
+  name: 'App',
+  components: {
+    Documentation
+  }
+};
 </script>
 
 <style lang="sass"></style>

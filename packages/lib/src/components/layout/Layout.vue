@@ -17,6 +17,8 @@ const props = defineProps({
     <slot name="header" />
 
     <slot name="sidebar" />
+
+    <slot></slot>
   </div>
 </template>
 

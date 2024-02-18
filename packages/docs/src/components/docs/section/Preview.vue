@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import VCodeBlock from '@wdns/vue-code-block';
+import CodeBlock from '@/components/docs/code/CodeBlock.vue';
 
 const props = defineProps({
   code: {
@@ -10,7 +11,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <VCodeBlock :code="code" prismjs lang="html" theme="tomorrow" />
+  <CodeBlock :code="code" prismjs lang="html" />
 </template>
 
 <style scoped lang="sass">

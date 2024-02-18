@@ -5,6 +5,8 @@ import {
   Checkbox,
   Code,
   ComponentsPlugin,
+  Layout,
+  Header,
   Menu,
   Sidebar,
   Tab,
@@ -36,6 +38,8 @@ app.component('VCodeBlock', VCodeBlock);
 app.component('Checkbox', Checkbox);
 app.component('Chip', Chip);
 app.component('Code', Code);
+app.component('Layout', Layout);
+app.component('Header', Header);
 app.component('Sidebar', Sidebar);
 app.component('Menu', Menu);
 app.component('Button', Button);

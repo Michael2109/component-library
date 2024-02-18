@@ -1,18 +1,40 @@
-import ButtonView from '@/views/ButtonView.vue';
-import MenuView from '@/views/MenuView.vue';
-import { createRouter, createWebHashHistory } from 'vue-router';
-import TableView from '@/views/TableView.vue';
-import ChipView from '@/views/ChipView.vue';
-import CodeView from '@/views/CodeView.vue';
-import CheckboxView from '@/views/CheckboxView.vue';
+import ButtonView from '@/components/views/ButtonView.vue';
+import MenuView from '@/components/views/MenuView.vue';
+import { createRouter, createWebHistory } from 'vue-router';
+import TableView from '@/components/views/TableView.vue';
+import ChipView from '@/components/views/ChipView.vue';
+import CodeView from '@/components/views/CodeView.vue';
+import CheckboxView from '@/components/views/CheckboxView.vue';
+import HomePage from '@/pages/homepage/HomePage.vue';
+import Documentation from '@/components/Documentation.vue';
+import GettingStartedView from '@/components/views/GettingStartedView.vue';
 
 const routes = [
-  { path: '/components/button', component: ButtonView },
-  { path: '/components/checkbox', component: CheckboxView },
-  { path: '/components/chip', component: ChipView },
-  { path: '/components/code', component: CodeView },
-  { path: '/components/menu', component: MenuView },
-  { path: '/components/table', component: TableView }
+  {
+    path: '/',
+    name: 'DocumentationParent',
+    component: Documentation,
+    children: [
+      {
+        path: 'getting-started',
+        name: 'GettingStarted',
+        component: GettingStartedView
+      },
+      {
+        path: 'elements',
+        name: 'Elements',
+        children: [
+          { path: 'button', name: 'Button', component: ButtonView },
+          { path: 'checkbox', name: 'Checkbox', component: CheckboxView },
+          { path: 'chip', name: 'Chip', component: ChipView },
+          { path: 'code', name: 'Code', component: CodeView },
+          { path: 'menu', name: 'Menu', component: MenuView },
+          { path: 'table', name: 'Table', component: TableView }
+        ]
+      }
+    ]
+  },
+  { path: '/', component: HomePage }
 ];
 
 // 3. Create the router instance and pass the `routes` option
@@ -20,7 +42,7 @@ const routes = [
 // keep it simple for now.
 const router = createRouter({
   // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes // short for `routes: routes`
 });
 
