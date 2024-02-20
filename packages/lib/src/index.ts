@@ -13,6 +13,7 @@ import Switch from './components/switch/Switch.vue';
 import Tabs from './components/tabs/Tabs.vue';
 import Tab from './components/tabs/Tab.vue';
 import Table from './components/table/Table.vue';
+import TextField from './components/textfield/TextField.vue';
 import Column from './components/table/Column.vue';
 import ComponentsPlugin from './plugins/components-plugin';
 
@@ -32,6 +33,7 @@ export {
   Tabs,
   Tab,
   Table,
+  TextField,
   Column,
   ComponentsPlugin
 };

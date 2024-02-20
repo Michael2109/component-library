@@ -11,6 +11,7 @@ import {
   Tab,
   Table,
   Tabs,
+  TextField,
   Column,
   Chip,
   DARK_THEME,
@@ -50,5 +51,6 @@ app.component('Switch', Switch);
 app.component('Tabs', Tabs);
 app.component('Tab', Tab);
 app.component('Table', Table);
+app.component('TextField', TextField);
 app.component('Column', Column);
 app.mount('#app');

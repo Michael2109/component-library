@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import DocSection from '@/components/docs/section/DocSection.vue';
 import type { DocSectionCode } from '@/components/docs/section/doc-section-code';
-import { Code } from '@linusborg/lib';
+import { TextField } from '@linusborg/lib';
 
 const code: DocSectionCode = {
   basic: `<p>This is some text and <Code>some code</Code> in a sentence</p>
@@ -11,7 +11,7 @@ const code: DocSectionCode = {
 
 <template>
   <DocSection title="Basic" :code="code">
-    <p>This is some text and <Code>some code</Code> in a sentence</p>
+    <TextField />
 
     <template #description> A table.</template>
   </DocSection>

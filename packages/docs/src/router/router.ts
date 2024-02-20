@@ -8,6 +8,7 @@ import CheckboxView from '@/components/views/CheckboxView.vue';
 import HomePage from '@/pages/homepage/HomePage.vue';
 import Documentation from '@/components/Documentation.vue';
 import GettingStartedView from '@/components/views/GettingStartedView.vue';
+import TextFieldView from '@/components/views/TextFieldView.vue';
 
 const routes = [
   {
@@ -29,7 +30,8 @@ const routes = [
           { path: 'chip', name: 'Chip', component: ChipView },
           { path: 'code', name: 'Code', component: CodeView },
           { path: 'menu', name: 'Menu', component: MenuView },
-          { path: 'table', name: 'Table', component: TableView }
+          { path: 'table', name: 'Table', component: TableView },
+          { path: 'text-field', name: 'TextField', component: TextFieldView }
         ]
       }
     ]

@@ -52,6 +52,10 @@ const menu = [
       {
         href: '/elements/table',
         title: 'Table'
+      },
+      {
+        href: '/elements/text-field',
+        title: 'TextField'
       }
     ]
   }
