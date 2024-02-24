@@ -5,6 +5,7 @@ import ColorsDoc from '@/components/docs/components/button/ColorsDoc.vue';
 import IconsDoc from '@/components/docs/components/button/IconsDoc.vue';
 import ComponentDoc from '@/components/docs/ComponentDoc.vue';
 import Props from '@/components/docs/components/button/api/Props.vue';
+import BasicDoc from '@/components/docs/components/button/BasicDoc.vue';
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import Props from '@/components/docs/components/button/api/Props.vue';
     description="Button is an extension to standard input element with icons and theming."
   >
     <template #usage>
+      <BasicDoc></BasicDoc>
       <SizesDoc></SizesDoc>
       <VariantsDoc></VariantsDoc>
       <ColorsDoc></ColorsDoc>

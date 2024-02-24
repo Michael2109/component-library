@@ -15,6 +15,18 @@ export const DARK_THEME: Theme = {
       hover: '#87edc3',
       text: '#000'
     },
+    black: {
+      background: '#000',
+      border: '#000',
+      hover: '#000',
+      text: '#fff'
+    },
+    white: {
+      background: '#fff',
+      border: '#fff',
+      hover: '#fff',
+      text: '#000'
+    },
     gray: {
       background: '#DCDCDC',
       border: '#DCDCDC',

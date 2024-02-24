@@ -87,6 +87,7 @@ const theme: Theme = useTheme().global();
 
 <template>
   <button @click="emits('click')" :class="className">
+    <div v-if="icon" :class="icon"></div>
     <slot name="leftIcon"></slot>
     <div v-if="loading && iconPosition === 'left'" class="button-icon">
       <div class="mdi mdi-loading button-loading" />

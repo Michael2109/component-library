@@ -2,14 +2,18 @@
   <Layout style="margin-left: 250px; width: calc(100% - 250px)">
     <template #sidebar>
       <Sidebar
-        ><template #top><Menu :items="items" /></template
+        ><template #top><Menu class="menu" :items="items" /></template
       ></Sidebar>
     </template>
     <template #header>
       <Header>
-        <template #left>Test</template>
+        <template #left></template>
         <template #right>
-          <Switch @change="setTheme"></Switch>
+          <Button
+            :icon="lightModeIcon"
+            @click="changeTheme"
+            :color="lightModeButtonColor"
+          ></Button>
         </template>
       </Header>
     </template>
@@ -24,6 +28,7 @@ import { useRouter } from 'vue-router';
 import { SidebarMenu } from 'vue-sidebar-menu';
 import { DARK_THEME, LIGHT_THEME, useTheme, Menu } from '@linusborg/lib';
 import type { MenuItem } from '@linusborg/lib';
+import { computed, ref } from 'vue';
 
 const router = useRouter();
 
@@ -83,8 +88,21 @@ const items: Array<MenuItem> = [
 
 const theme = useTheme();
 
-function setTheme(lightMode: boolean) {
-  theme.setTheme(lightMode ? LIGHT_THEME : DARK_THEME);
+const lightMode = ref(false);
+
+const lightModeIcon = computed(() => {
+  return lightMode.value
+    ? 'mdi mdi-24px mdi-lightbulb'
+    : 'mdi mdi-24px  mdi-lightbulb-off';
+});
+
+const lightModeButtonColor = computed(() => {
+  return lightMode.value ? 'black' : 'white';
+});
+
+function changeTheme() {
+  lightMode.value = !lightMode.value;
+  theme.setTheme(lightMode.value ? LIGHT_THEME : DARK_THEME);
 }
 
 function goTo(name: string) {
@@ -93,6 +111,8 @@ function goTo(name: string) {
 </script>
 
 <style lang="sass">
+.menu
+  margin: 15px
 .app-layout
   width: calc(100% - 300px)
   height: 100%

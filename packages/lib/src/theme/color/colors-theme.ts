@@ -5,6 +5,8 @@ export interface ColorsTheme {
   whiteText: string;
   blackText: string;
   primary: ColorTheme;
+  black: ColorTheme;
+  white: ColorTheme;
   gray: ColorTheme;
   red: ColorTheme;
   orange: ColorTheme;

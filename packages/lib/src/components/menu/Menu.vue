@@ -16,13 +16,13 @@ const props = defineProps({
 </script>
 
 <template>
-  <ul class="menu">
+  <ul class="aurora-menu">
     <li
       v-for="item in items"
       @click="item.command !== undefined ? item.command() : {}"
       :key="item.key"
     >
-      <div :class="item.items ? 'group' : 'item'">
+      <div :class="item.items ? 'aurora-group' : 'aurora-item'">
         {{ item.label }}
       </div>
       <Menu v-if="items" :items="item.items"></Menu>
@@ -31,10 +31,11 @@ const props = defineProps({
 </template>
 
 <style scoped lang="sass">
-.menu
+.aurora-menu
   list-style-type: none
   padding: 0
-.group
+.aurora-group
+  text-transform: capitalize
   color: var(--colors-black-text)
   padding-top: 15px
   padding-bottom: 15px
@@ -42,21 +43,17 @@ const props = defineProps({
   font-size: 16px
   font-weight: bold
   transition: background-color 0.3s
-.item
+.aurora-item
+  border-radius: 5px
   color: var(--colors-black-text)
-  padding: 5px
-  padding-left: 10px
+  padding: 5px 5px 5px 10px
   font-size: 16px
-  transition: background-color 0.3s
+  transition: background-color 0.0s
+  cursor: pointer
 
-.item:hover
+.aurora-item:hover
   background-color: rgba(255, 255, 255, 0.1)
 
-.item:active
+.aurora-item:active
   background-color: rgba(255, 255, 255, 0.2)
-
-
-
-li:hover > ul
-  display: block /* Show nested menus on parent hover */
 </style>

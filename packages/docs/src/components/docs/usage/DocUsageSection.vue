@@ -51,7 +51,7 @@ defineProps({
   font-weight: 600
   line-height: 1.2
   margin: 2.5rem 0 1rem
-  font-size: 1.25rem
+  font-size: 1rem
 
 .document-section-title-link
   text-decoration: none
