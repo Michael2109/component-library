@@ -34,6 +34,10 @@ const menu = [
     title: 'Elements',
     child: [
       {
+        href: '/elements/button',
+        title: 'Button'
+      },
+      {
         href: '/elements/checkbox',
         title: 'Checkbox'
       },
@@ -46,8 +50,8 @@ const menu = [
         title: 'Code'
       },
       {
-        href: '/elements/button',
-        title: 'Button'
+        href: '/elements/menu',
+        title: 'Menu'
       },
       {
         href: '/elements/table',
@@ -58,6 +62,10 @@ const menu = [
         title: 'TextField'
       }
     ]
+  },
+  {
+    href: '/theme',
+    title: 'Theming'
   }
 ];
 

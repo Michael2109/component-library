@@ -37,6 +37,7 @@ const className = computed(() => {
 <template>
   <div class="text-field">
     <input type="text" required :class="className" />
+    ghdsiufhusdfio
   </div>
 </template>
 

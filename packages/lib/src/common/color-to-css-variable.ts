@@ -2,7 +2,7 @@ export function getBackgroundColor(color: string) {
   return `var(--colors-${color}-background, var(--colors-primary-background))`;
 }
 
-export function getFontColor(color: string) {
+export function getFontColor(color: string | undefined) {
   if (color === undefined) {
     return 'var(--colors-black-text)';
   }
