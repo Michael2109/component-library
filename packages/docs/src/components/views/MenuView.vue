@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import ComponentView from '@/components/docs/ComponentView.vue';
-import BasicDoc from '@/doc/menu/BasicDoc.vue';
+import ComponentDoc from '@/components/docs/ComponentDoc.vue';
+import BasicDoc from '@/components/docs/components/menu/BasicDoc.vue';
 </script>
 
 <template>
-  <ComponentView title="Menu" description="Menu description.">
+  <ComponentDoc title="Menu" description="Menu description.">
     <template #usage>
       <BasicDoc></BasicDoc>
     </template>
 
     <template #api></template>
-  </ComponentView>
+  </ComponentDoc>
 </template>
 
 <style scoped lang="sass"></style>

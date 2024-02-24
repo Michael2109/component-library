@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CodeBlock from '@/components/docs/code/CodeBlock.vue';
+import CodeBlock from '@/components/docs/usage/CodeBlock.vue';
 </script>
 
 <template>

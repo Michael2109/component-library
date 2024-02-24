@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import ComponentView from '@/components/docs/ComponentView.vue';
-import BasicDoc from '@/doc/textfield/BasicDoc.vue';
-import Props from '@/doc/textfield/api/Props.vue';
+import ComponentDoc from '@/components/docs/ComponentDoc.vue';
+import BasicDoc from '@/components/docs/components/textfield/BasicDoc.vue';
+import Props from '@/components/docs/components/textfield/api/Props.vue';
 </script>
 
 <template>
-  <ComponentView title="Table" description="Table description.">
+  <ComponentDoc title="Table" description="Table description.">
     <template #usage>
       <BasicDoc></BasicDoc>
     </template>
@@ -13,7 +13,7 @@ import Props from '@/doc/textfield/api/Props.vue';
     <template #api>
       <Props></Props>
     </template>
-  </ComponentView>
+  </ComponentDoc>
 </template>
 
 <style scoped lang="sass"></style>

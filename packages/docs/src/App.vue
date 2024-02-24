@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Documentation from './components/Documentation.vue';
+import Documentation from './pages/DocumentationPage.vue';
 
 export default {
   name: 'App',

@@ -5,8 +5,8 @@ import TableView from '@/components/views/TableView.vue';
 import ChipView from '@/components/views/ChipView.vue';
 import CodeView from '@/components/views/CodeView.vue';
 import CheckboxView from '@/components/views/CheckboxView.vue';
-import HomePage from '@/pages/homepage/HomePage.vue';
-import Documentation from '@/components/Documentation.vue';
+import HomePage from '@/pages/HomePage.vue';
+import Documentation from '@/pages/DocumentationPage.vue';
 import GettingStartedView from '@/components/views/GettingStartedView.vue';
 import TextFieldView from '@/components/views/TextFieldView.vue';
 

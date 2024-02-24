@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import ComponentView from '@/components/docs/ComponentView.vue';
-import Props from '@/doc/button/api/Props.vue';
-import BasicDoc from '@/doc/code/BasicDoc.vue';
+import ComponentDoc from '@/components/docs/ComponentDoc.vue';
+import Props from '@/components/docs/components/button/api/Props.vue';
+import BasicDoc from '@/components/docs/components/code/BasicDoc.vue';
 </script>
 
 <template>
-  <ComponentView
+  <ComponentDoc
     title="Code"
     description="Button is an extension to standard input element with icons and theming."
   >
@@ -16,7 +16,7 @@ import BasicDoc from '@/doc/code/BasicDoc.vue';
     <template #api>
       <Props></Props>
     </template>
-  </ComponentView>
+  </ComponentDoc>
 </template>
 
 <style scoped lang="sass"></style>
