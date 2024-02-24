@@ -1,6 +1,7 @@
 import { LIGHT_THEME } from './theme/themes/light-theme';
 import { DARK_THEME } from './theme/themes/dark-theme';
 import { useTheme } from './plugins/components-plugin';
+import type { MenuItem } from '@/components/menu/menu-item';
 import Sidebar from './components/sidebar/Sidebar.vue';
 import Checkbox from './components/checkbox/Checkbox.vue';
 import Chip from './components/chip/Chip.vue';
@@ -16,6 +17,8 @@ import Table from './components/table/Table.vue';
 import TextField from './components/textfield/TextField.vue';
 import Column from './components/table/Column.vue';
 import ComponentsPlugin from './plugins/components-plugin';
+
+export type { MenuItem };
 
 export {
   useTheme,
