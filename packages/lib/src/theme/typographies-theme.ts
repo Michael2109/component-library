@@ -1,6 +1,8 @@
 import type { TypographyTheme } from '@/theme/typography-theme';
 
 export interface TypographiesTheme {
+  white: string;
+  black: string;
   fontFamily: string;
   fontWeight: string;
   textWrap: string;

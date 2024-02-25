@@ -7,8 +7,6 @@ export const DARK_THEME: Theme = {
   fontFamily: DEFAULT_FONT_FAMILY,
   fontSize: '24px',
   colors: {
-    whiteText: '#000',
-    blackText: '#fff',
     primary: {
       background: '#87edc3',
       border: '#87edc3',
@@ -109,6 +107,8 @@ export const DARK_THEME: Theme = {
     borderStyle: 'none'
   },
   typographies: {
+    white: '#000',
+    black: '#fff',
     fontFamily: DEFAULT_FONT_FAMILY,
     fontWeight: '700',
     textWrap: 'wrap',

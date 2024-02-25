@@ -7,9 +7,9 @@ export function getBackgroundColor(color: string | undefined) {
 
 export function getFontColor(color: string | undefined) {
   if (color === undefined) {
-    return 'var(--colors-black-text)';
+    return 'var(--typographies-black)';
   }
-  return `var(--colors-${color}-text, var(--colors-black-text)`;
+  return `var(--colors-${color}-text, var(--typographies-black)`;
 }
 
 export function calculateFontColor(darkMode: boolean, color?: string) {

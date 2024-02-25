@@ -36,7 +36,7 @@ const props = defineProps({
   padding: 0
 .aurora-group
   text-transform: capitalize
-  color: var(--colors-black-text)
+  color: var(--typographies-black)
   padding-top: 15px
   padding-bottom: 15px
   padding-left: 10px
@@ -45,7 +45,7 @@ const props = defineProps({
   transition: background-color 0.3s
 .aurora-item
   border-radius: 5px
-  color: var(--colors-black-text)
+  color: var(--typographies-black)
   padding: 5px 5px 5px 10px
   font-size: 16px
   transition: background-color 0.0s

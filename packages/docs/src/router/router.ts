@@ -28,7 +28,7 @@ const routes = [
         children: [
           { path: 'button', name: 'Button', component: ButtonView },
           { path: 'checkbox', name: 'Checkbox', component: CheckboxView },
-          { path: 'chip', name: 'Chip', component: ChipView },
+          { path: 'tag', name: 'Chip', component: ChipView },
           { path: 'code', name: 'Code', component: CodeView },
           { path: 'menu', name: 'Menu', component: MenuView },
           { path: 'table', name: 'Table', component: TableView },

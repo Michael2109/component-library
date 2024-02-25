@@ -7,12 +7,22 @@ export const LIGHT_THEME: Theme = {
   fontFamily: DEFAULT_FONT_FAMILY,
   fontSize: '24px',
   colors: {
-    whiteText: '#fff',
-    blackText: '#000',
     primary: {
       background: '#87edc3',
       border: '#87edc3',
       hover: '#87edc3',
+      text: '#000'
+    },
+    black: {
+      background: '#000',
+      border: '#000',
+      hover: '#000',
+      text: '#fff'
+    },
+    white: {
+      background: '#fff',
+      border: '#fff',
+      hover: '#fff',
       text: '#000'
     },
     gray: {
@@ -97,6 +107,8 @@ export const LIGHT_THEME: Theme = {
     borderStyle: 'none'
   },
   typographies: {
+    white: '#fff',
+    black: '#000',
     fontFamily: DEFAULT_FONT_FAMILY,
     fontWeight: '700',
     textWrap: 'wrap',

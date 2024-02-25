@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ComponentDoc from '@/components/docs/ComponentDoc.vue';
 import Props from '@/components/docs/components/button/api/Props.vue';
-import BasicDoc from '@/components/docs/components/chip/BasicDoc.vue';
+import BasicDoc from '@/components/docs/components/tag/BasicDoc.vue';
 </script>
 
 <template>

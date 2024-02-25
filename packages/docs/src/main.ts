@@ -13,7 +13,7 @@ import {
   Tabs,
   TextField,
   Column,
-  Chip,
+  Tag,
   DARK_THEME,
   LIGHT_THEME,
   Switch
@@ -34,13 +34,13 @@ const VCodeBlock = createVCodeBlock({
 
 app
   .use(ComponentsPlugin, {
-    theme: DARK_THEME
+    theme: LIGHT_THEME
   })
   .use(router);
 
 app.component('VCodeBlock', VCodeBlock);
 app.component('Checkbox', Checkbox);
-app.component('Chip', Chip);
+app.component('Tag', Tag);
 app.component('Code', Code);
 app.component('Layout', Layout);
 app.component('Header', Header);

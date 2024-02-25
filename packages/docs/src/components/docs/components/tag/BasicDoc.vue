@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import DocSection from '@/components/docs/usage/DocUsageSection.vue';
 import type { DocUsageSectionCode } from '@/components/docs/usage/doc-usage-section-code';
-import { Chip, Table } from '@linusborg/lib';
+import { Tag } from '@linusborg/lib';
 
 const code: DocUsageSectionCode = {
-  basic: ` <Chip label="Chip"></Chip>`
+  basic: ` <Tag>Tag</Tag>`
 };
 </script>
 
 <template>
   <DocSection title="Basic" :code="code">
-    <Chip label="Chip"></Chip>
+    <Tag>Tag</Tag>
 
     <template #description> A table.</template>
   </DocSection>

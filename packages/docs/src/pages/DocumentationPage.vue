@@ -57,7 +57,7 @@ const items: Array<MenuItem> = [
         command: () => goTo('Checkbox')
       },
       {
-        key: 'elements-chip',
+        key: 'elements-tag',
         label: 'Chip',
         command: () => goTo('Chip')
       },
