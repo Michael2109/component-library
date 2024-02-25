@@ -92,7 +92,7 @@ const items: Array<MenuItem> = [
 
 const theme = useTheme();
 
-const lightMode = ref(false);
+const lightMode = ref(true);
 
 const lightModeIcon = computed(() => {
   return lightMode.value
@@ -115,6 +115,9 @@ function goTo(name: string) {
 </script>
 
 <style lang="sass" scoped>
+:deep(.aurora-layout-content)
+  background-color: var(--colors-surface-100)
+
 #header
   margin-left: 10px
   margin-top: 0

@@ -86,6 +86,7 @@ export const LIGHT_THEME: Theme = {
       text: '#000'
     },
     surface: {
+      50: `#fcfcfc`,
       100: '#f5f5f5',
       200: '#e8e8e8',
       300: '#d5d5d5',

@@ -14,7 +14,9 @@ defineProps({
 
 <template>
   <div class="tab-header">{{ label }}</div>
-  <slot></slot>
+  <div>
+    <slot></slot>
+  </div>
 </template>
 
 <style scoped lang="sass"></style>

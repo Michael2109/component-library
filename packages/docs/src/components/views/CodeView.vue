@@ -2,6 +2,7 @@
 import ComponentDoc from '@/components/docs/ComponentDoc.vue';
 import Props from '@/components/docs/components/button/api/Props.vue';
 import BasicDoc from '@/components/docs/components/code/BasicDoc.vue';
+import ColorsDoc from '@/components/docs/components/code/ColorsDoc.vue';
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import BasicDoc from '@/components/docs/components/code/BasicDoc.vue';
   >
     <template #usage>
       <BasicDoc></BasicDoc>
+      <ColorsDoc></ColorsDoc>
     </template>
 
     <template #api>
