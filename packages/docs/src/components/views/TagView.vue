@@ -2,15 +2,19 @@
 import ComponentDoc from '@/components/docs/ComponentDoc.vue';
 import Props from '@/components/docs/components/button/api/Props.vue';
 import BasicDoc from '@/components/docs/components/tag/BasicDoc.vue';
+import ColorsDoc from '@/components/docs/components/tag/ColorsDoc.vue';
+import CloseableDoc from '@/components/docs/components/tag/CloseableDoc.vue';
 </script>
 
 <template>
   <ComponentDoc
-    title="Chip"
+    title="Tag"
     description="Button is an extension to standard input element with icons and theming."
   >
     <template #usage>
       <BasicDoc></BasicDoc>
+      <ColorsDoc></ColorsDoc>
+      <CloseableDoc></CloseableDoc>
     </template>
 
     <template #api>

@@ -58,8 +58,8 @@ const items: Array<MenuItem> = [
       },
       {
         key: 'elements-tag',
-        label: 'Chip',
-        command: () => goTo('Chip')
+        label: 'Tag',
+        command: () => goTo('Tag')
       },
       {
         key: 'elements-code',

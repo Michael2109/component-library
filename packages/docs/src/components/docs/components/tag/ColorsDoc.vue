@@ -4,7 +4,16 @@ import type { DocUsageSectionCode } from '@/components/docs/usage/doc-usage-sect
 import { Tag, Chip, Table } from '@linusborg/lib';
 
 const code: DocUsageSectionCode = {
-  basic: ` <Chip label="Chip"></Chip>`
+  basic: `<Tag color="gray">Gray</Tag>
+<Tag color="red">Red</Tag>
+<Tag color="orange">Orange</Tag>
+<Tag color="yellow">Yellow</Tag>
+<Tag color="green">Green</Tag>
+<Tag color="teal">Teal</Tag>
+<Tag color="blue">Blue</Tag>
+<Tag color="cyan">Cyan</Tag>
+<Tag color="purple">Purple</Tag>
+<Tag color="pink">Pink</Tag>`
 };
 </script>
 

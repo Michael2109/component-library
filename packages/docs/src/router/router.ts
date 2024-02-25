@@ -2,7 +2,7 @@ import ButtonView from '@/components/views/ButtonView.vue';
 import MenuView from '@/components/views/MenuView.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import TableView from '@/components/views/TableView.vue';
-import ChipView from '@/components/views/ChipView.vue';
+import TagView from '@/components/views/TagView.vue';
 import CodeView from '@/components/views/CodeView.vue';
 import CheckboxView from '@/components/views/CheckboxView.vue';
 import HomePage from '@/pages/HomePage.vue';
@@ -28,7 +28,7 @@ const routes = [
         children: [
           { path: 'button', name: 'Button', component: ButtonView },
           { path: 'checkbox', name: 'Checkbox', component: CheckboxView },
-          { path: 'tag', name: 'Chip', component: ChipView },
+          { path: 'tag', name: 'Tag', component: TagView },
           { path: 'code', name: 'Code', component: CodeView },
           { path: 'menu', name: 'Menu', component: MenuView },
           { path: 'table', name: 'Table', component: TableView },
