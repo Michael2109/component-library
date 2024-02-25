@@ -11,6 +11,7 @@ import GettingStartedView from '@/components/views/GettingStartedView.vue';
 import TextFieldView from '@/components/views/TextFieldView.vue';
 
 const routes = [
+  { path: '/', name: 'Home', component: HomePage },
   {
     path: '/',
     name: 'DocumentationParent',
@@ -35,8 +36,7 @@ const routes = [
         ]
       }
     ]
-  },
-  { path: '/', component: HomePage }
+  }
 ];
 
 // 3. Create the router instance and pass the `routes` option

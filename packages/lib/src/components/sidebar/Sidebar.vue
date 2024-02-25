@@ -23,20 +23,20 @@ const props = defineProps({
 
 <style scoped lang="sass">
 .sidebar
-	display: flex
-	flex-direction: column
-	border-right: var(--colors-surface-300)
-	border-right-style: solid
-	border-right-width: 1px
-	width: 250px
-	background-color: var(--colors-surface-200)
-	position: fixed
-	top: 0
-	left: 0
-	height: 100%
-	overflow-y: auto
-	padding-top: 20px
+  display: flex
+  flex-direction: column
+  border-right: var(--colors-surface-300)
+  border-right-style: solid
+  border-right-width: 1px
+  width: 250px
+  background-color: var(--colors-surface-200)
+  position: fixed
+  top: 0
+  left: 0
+  height: 100%
+  overflow-y: auto
+  padding-top: 20px
 
 .sidebar-bottom
-	margin-top: auto
+  margin-top: auto
 </style>

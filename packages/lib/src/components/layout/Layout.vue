@@ -18,11 +18,16 @@ const props = defineProps({
 
     <slot name="sidebar" />
 
-    <slot></slot>
+    <div class="aurora-layout-content">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
 <style scoped lang="sass">
+.aurora-layout-content
+  max-height: calc(100% - 65px)
+  overflow-y: scroll
 .layout
   width: 100%
   height: 100%

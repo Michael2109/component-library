@@ -2,13 +2,17 @@
   <Layout style="margin-left: 250px; width: calc(100% - 250px)">
     <template #sidebar>
       <Sidebar
-        ><template #top><Menu class="menu" :items="items" /></template
+        ><template #top>
+          <div class="content">
+            <h1 id="header" @click="goTo('Home')">Aurora UI</h1>
+            <Menu :items="items" /></div></template
       ></Sidebar>
     </template>
     <template #header>
       <Header>
         <template #left></template>
         <template #right>
+          <Button icon="mdi mdi-github mdi-24px"></Button>
           <Button
             :icon="lightModeIcon"
             @click="changeTheme"
@@ -110,9 +114,13 @@ function goTo(name: string) {
 }
 </script>
 
-<style lang="sass">
-.menu
-  margin: 15px
+<style lang="sass" scoped>
+#header
+  margin-left: 10px
+  margin-top: 0
+  cursor: pointer
+.content
+  padding: 15px
 .app-layout
   width: calc(100% - 300px)
   height: 100%

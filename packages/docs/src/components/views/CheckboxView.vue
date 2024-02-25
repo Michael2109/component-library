@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import ComponentDoc from '@/components/docs/ComponentDoc.vue';
-import Props from '@/components/docs/components/button/api/Props.vue';
-import BasicDoc from '@/components/docs/components/code/BasicDoc.vue';
+import Props from '@/components/docs/components/checkbox/api/Props.vue';
+import BasicDoc from '@/components/docs/components/checkbox/BasicDoc.vue';
+import SizesDoc from '@/components/docs/components/checkbox/SizesDoc.vue';
+import ColorsDoc from '@/components/docs/components/checkbox/ColorsDoc.vue';
+import DisabledDoc from '@/components/docs/components/checkbox/DisabledDoc.vue';
 </script>
 
 <template>
@@ -11,6 +14,9 @@ import BasicDoc from '@/components/docs/components/code/BasicDoc.vue';
   >
     <template #usage>
       <BasicDoc></BasicDoc>
+      <SizesDoc></SizesDoc>
+      <ColorsDoc></ColorsDoc>
+      <DisabledDoc></DisabledDoc>
     </template>
 
     <template #api>

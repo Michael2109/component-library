@@ -4,13 +4,13 @@ import type { DocUsageSectionCode } from '@/components/docs/usage/doc-usage-sect
 import { Checkbox, Chip, Table } from '@linusborg/lib';
 
 const code: DocUsageSectionCode = {
-  basic: `<Checkbox label="Chip"></Che>`
+  basic: ` <Checkbox label="Checkbox" disabled></Checkbox>`
 };
 </script>
 
 <template>
-  <DocSection title="Basic" :code="code">
-    <Checkbox label="Chip"></Checkbox>
+  <DocSection title="Disabled" :code="code">
+    <Checkbox label="Checkbox" disabled></Checkbox>
 
     <template #description> A table.</template>
   </DocSection>
