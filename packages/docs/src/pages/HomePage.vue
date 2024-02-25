@@ -17,11 +17,13 @@ const router = useRouter();
 </script>
 <style lang="sass">
 .hero
-  background: linear-gradient(45deg, #6a11cb, #2575fc, #19d228)
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)
+  background-size: 400% 400%
+  animation: gradient 15s ease infinite
+  height: 60vh
   background-size: 600% 600%
   animation: GradientAnimation 10s ease infinite
 
-  height: 100vh
   display: flex
   align-items: center
   justify-content: center
@@ -51,11 +53,15 @@ const router = useRouter();
       &:hover
         background-color: #ff6347
 
-@keyframes GradientAnimation
+
+
+@keyframes gradient
   0%
     background-position: 0% 50%
+
   50%
     background-position: 100% 50%
+
   100%
     background-position: 0% 50%
 </style>
