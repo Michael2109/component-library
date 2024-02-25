@@ -4,7 +4,9 @@
     <div class="hero-content">
       <h1>Welcome to Our Website</h1>
       <p>Discover amazing experiences.</p>
-      <Button @click="router.push({ name: 'GettingStarted' })">Explore</Button>
+      <Button @click="router.push({ name: 'GettingStarted' })"
+        >Get Started</Button
+      >
     </div>
   </div>
 </template>
@@ -21,8 +23,6 @@ const router = useRouter();
   background-size: 400% 400%
   animation: gradient 15s ease infinite
   height: 60vh
-  background-size: 600% 600%
-  animation: GradientAnimation 10s ease infinite
 
   display: flex
   align-items: center

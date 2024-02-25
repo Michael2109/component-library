@@ -10,7 +10,7 @@ const code: DocUsageSectionCode = {
 
 <template>
   <DocSection title="Basic" :code="code">
-    <Checkbox label="Chip"></Checkbox>
+    <Checkbox>Checkbox</Checkbox>
 
     <template #description> A table.</template>
   </DocSection>

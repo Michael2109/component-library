@@ -1,5 +1,8 @@
-export function getBackgroundColor(color: string) {
-  return `var(--colors-${color}-background, var(--colors-primary-background))`;
+export function getBackgroundColor(color: string | undefined) {
+  if (color) {
+    return `var(--colors-${color}-background, var(--colors-primary-background))`;
+  }
+  return `var(--colors-primary-background)`;
 }
 
 export function getFontColor(color: string | undefined) {

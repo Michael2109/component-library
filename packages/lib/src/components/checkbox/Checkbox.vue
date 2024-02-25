@@ -1,17 +1,16 @@
 <script setup lang="ts">
-import { defineModel, watch } from 'vue';
-import { PropType } from 'vue/dist/vue';
+import { computed, watch } from 'vue';
+import type { PropType } from 'vue';
+import {
+  getBackgroundColor,
+  getFontColor
+} from '../../common/color-to-css-variable';
 
 const model = defineModel<Boolean>();
 
 const emits = defineEmits(['change']);
 
 const props = defineProps({
-  label: {
-    type: String,
-    required: false,
-    default: undefined
-  },
   color: {
     type: String,
     required: false,
@@ -32,16 +31,32 @@ const props = defineProps({
 watch(model, (enabled: any) => {
   emits('change', enabled);
 });
+
+const backgroundColorCssVariable = computed(() => {
+  return getBackgroundColor(props.color);
+});
+
+const fontColor = computed(() => {
+  return getFontColor(props.color);
+});
 </script>
 
 <template>
   <div class="checkbox-container">
-    <input type="checkbox" v-model="model" :disabled="disabled" />
+    <input
+      class="aurora-checkbox"
+      type="checkbox"
+      v-model="model"
+      :disabled="disabled"
+    />
     <div class="checkbox-label"><slot></slot></div>
   </div>
 </template>
 
 <style scoped lang="sass">
+.aurora-checkbox
+  background-color: v-bind('backgroundColorCssVariable')
+  color: v-bind('fontColor')
 .checkbox-container
   display: flex
   align-items: center
