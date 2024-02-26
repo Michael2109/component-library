@@ -7,7 +7,9 @@ import Props from '@/components/docs/components/textfield/api/Props.vue';
 <template>
   <ComponentDoc title="Table" description="Table description.">
     <template #usage>
+
       <BasicDoc></BasicDoc>
+hihgbuiy
     </template>
 
     <template #api>

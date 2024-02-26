@@ -1,5 +1,9 @@
 <template>
-  <Header></Header>
+  <Header>
+    <template #left>
+      <div class="homepage-header">Aurora UI</div>
+  </template>
+  </Header>
   <div class="hero">
     <div class="hero-content">
       <h1>Welcome to Our Website</h1>
@@ -18,6 +22,16 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 </script>
 <style lang="sass">
+
+.homepage-header
+  font-size: 2rem
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 0px 0px 0px 5px
+  font-weight: bolder
+
+
 .hero
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)
   background-size: 400% 400%
