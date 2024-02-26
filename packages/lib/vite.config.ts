@@ -2,12 +2,13 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { fileURLToPath } from 'url';
+import path from 'path';
 
 export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': '/src'
+      '@': path.resolve(__dirname, './src')
       /*
        * We recommend to not use aliases in the lib's source,
        * because they will leak into the generated d.ts files and then
