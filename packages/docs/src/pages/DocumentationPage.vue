@@ -80,6 +80,11 @@ const items: Array<MenuItem> = [
         key: 'elements-text-field',
         label: 'TextField',
         command: () => goTo('TextField')
+      },
+      {
+        key: 'elements-icon-button',
+        label: 'IconButton',
+        command: () => goTo('IconButton')
       }
     ]
   },

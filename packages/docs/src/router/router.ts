@@ -9,6 +9,7 @@ import HomePage from '@/pages/HomePage.vue';
 import Documentation from '@/pages/DocumentationPage.vue';
 import GettingStartedView from '@/components/views/GettingStartedView.vue';
 import TextFieldView from '@/components/views/TextFieldView.vue';
+import IconButtonView from "@/components/views/IconButtonView.vue";
 
 const routes = [
   { path: '/', name: 'Home', component: HomePage },
@@ -32,7 +33,9 @@ const routes = [
           { path: 'code', name: 'Code', component: CodeView },
           { path: 'menu', name: 'Menu', component: MenuView },
           { path: 'table', name: 'Table', component: TableView },
-          { path: 'text-field', name: 'TextField', component: TextFieldView }
+          { path: 'text-field', name: 'TextField', component: TextFieldView },
+          { path: 'icon-button', name: 'IconButton', component: IconButtonView }
+
         ]
       }
     ]

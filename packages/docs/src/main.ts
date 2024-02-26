@@ -16,7 +16,8 @@ import {
   Tag,
   DARK_THEME,
   LIGHT_THEME,
-  Switch
+  Switch,
+  IconButton,
 } from '@linusborg/lib';
 import App from './App.vue';
 import './index.sass';
@@ -53,4 +54,5 @@ app.component('Tab', Tab);
 app.component('Table', Table);
 app.component('TextField', TextField);
 app.component('Column', Column);
+app.component('IconButton', IconButton)
 app.mount('#app');

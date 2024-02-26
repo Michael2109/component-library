@@ -11,7 +11,19 @@ const code: DocUsageSectionCode = {
 
 <template>
   <DocSection title="Basic" :code="code">
-    <TextField />
+
+    <TextField>
+
+    <template #left-icon>
+      Left Icon
+    </template>
+
+      <template #right-icon>
+        Right Icon
+      </template>
+
+
+    </TextField>
 
     <template #description> A table.</template>
   </DocSection>
