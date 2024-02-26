@@ -13,9 +13,9 @@ jobs:
         with:
           node-version: '18'
       - run: cd ./packages/lib
-      - run: npm ci
-      - run: npm run build
+      - run: pnpm ci
+      - run: pnpm run build
       - run: cp ./package.json ./dist/package.json
       - run: cp ./package-lock.json ./dist/package-lock.json
       - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-      - run: cd dist && npm publish
+      - run: cd dist && pnpm publish
