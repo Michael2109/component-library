@@ -1,5 +1,5 @@
 {
-	"name": "@linusborg/lib",
+	"name": "@aurora/vue",
 	"description": "CHANGE_ME This is a placeholder description, please change me as well as the name above me.",
 	"version": "0.0.1",
 	"private": false,
@@ -38,7 +38,7 @@
 	},
 	"dependencies": {
 		"@fontsource/public-sans": "^5.0.16",
-		"@linusborg/lib": "workspace:*",
+		"@aurora/vue": "workspace:*",
 		"@mdi/font": "^7.4.47",
 		"object-to-css-variables": "^0.2.1",
 		"sass": "^1.70.0"

@@ -18,6 +18,6 @@ export default defineConfig({
     }
   },
   optimizeDeps: {
-    exclude: ['@linusborg/lib']
+    exclude: ['@aurora/vue']
   }
 });

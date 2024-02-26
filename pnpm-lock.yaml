@@ -65,7 +65,7 @@ importers:
       '@fontsource/public-sans':
         specifier: ^5.0.16
         version: 5.0.16
-      '@linusborg/lib':
+      '@aurora/vue':
         specifier: workspace:*
         version: link:../lib
       '@mdi/font':
@@ -108,7 +108,7 @@ importers:
       '@fontsource/public-sans':
         specifier: ^5.0.16
         version: 5.0.16
-      '@linusborg/lib':
+      '@aurora/vue':
         specifier: workspace:*
         version: 'link:'
       '@mdi/font':

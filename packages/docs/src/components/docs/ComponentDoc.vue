@@ -12,7 +12,7 @@
 
         <CodeBlock
           lang="js"
-          :code="`import { ${title} } from '@linusborg/lib'`"
+          :code="`import { ${title} } from '@aurora/vue'`"
         ></CodeBlock>
         <slot name="usage"></slot></div
     ></Tab>

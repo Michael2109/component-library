@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import DocSection from '@/components/docs/usage/DocUsageSection.vue';
 import type { DocUsageSectionCode } from '@/components/docs/usage/doc-usage-section-code';
-import { TextField } from '@linusborg/lib';
+import { TextField } from '@aurora/vue';
 
 const code: DocUsageSectionCode = {
   basic: `<p>This is some text and <Code>some code</Code> in a sentence</p>
@@ -11,18 +11,10 @@ const code: DocUsageSectionCode = {
 
 <template>
   <DocSection title="Basic" :code="code">
-
     <TextField>
+      <template #left-icon> Left Icon </template>
 
-    <template #left-icon>
-      Left Icon
-    </template>
-
-      <template #right-icon>
-        Right Icon
-      </template>
-
-
+      <template #right-icon> Right Icon </template>
     </TextField>
 
     <template #description> A table.</template>
