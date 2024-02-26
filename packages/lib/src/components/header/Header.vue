@@ -27,7 +27,7 @@ const props = defineProps({
   flex-direction: row
   width: 100%
   height: 64px
-  background-color: var(--colors-surface-100)
+  background-color: var(--colors-surface-50)
   border-bottom: var(--colors-surface-300)
   border-bottom-style: solid
   border-bottom-width: 1px

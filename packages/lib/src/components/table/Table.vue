@@ -43,7 +43,7 @@ const rows = computed(() => {
   <table class="table">
     <tr>
       <template v-for="(header, index) of tableHeaders" :key="header">
-        <td><component v-if="header" :is="header"></component></td>
+        <th><component v-if="header" :is="header"></component></th>
       </template>
     </tr>
     <tr v-for="row in rows" :key="row">
@@ -57,11 +57,24 @@ const rows = computed(() => {
   width: 100%
   border-collapse: collapse
 
-td, th
-  border: 1px solid #dddddd
+th
+  font-weight: 500
+  border-bottom: 1px solid var(--colors-surface-200)
   text-align: left
   padding: 8px
 
+td
+  border-top: 1px solid var(--colors-surface-200)
+  border-bottom: 1px solid var(--colors-surface-200)
+  text-align: left
+  padding: 8px
+
+tr:nth-child(odd)
+  background-color: var(--colors-surface-50)
+
 tr:nth-child(even)
-  background-color: #dddddd
+  background-color: var(--colors-surface-50)
+
+tr:hover:not(:first-child)
+  background-color: var(--colors-surface-200)
 </style>
