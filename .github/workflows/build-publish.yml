@@ -19,6 +19,7 @@ jobs:
           cache: 'pnpm'
       - name: Build and publish
         run: |
+             pnpm install
              cd ./packages/lib 
              pnpm install
              pnpm run build
