@@ -15,12 +15,13 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20.11.1
+          node-version: 20
           cache: 'pnpm'
-      - run: cd ./packages/lib
-      - run: pnpm install
-      - run: pnpm run build
-      - run: cp ./package.json ./dist/package.json
-      - run: cp ./package-lock.json ./dist/package-lock.json
-      - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-      - run: cd dist && pnpm publish
+      - name: Build and publish
+        working-directory: ./packages/lib
+        run: pnpm install
+             pnpm run build
+             cp ./package.json ./dist/package.json
+             cp ./package-lock.json ./dist/package-lock.json
+             echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+             cd dist && pnpm publish

@@ -30,7 +30,7 @@
 		"build": "pnpm build-lib && pnpm build-types",
 		"build-lib": "vite build",
 		"build-watch": "nodemon --exec 'pnpm run build' --watch ./",
-		"watch": "chokidar ./src -c \"pnpm run build\"",
+		"watch": "pnpm run build && chokidar ./src -c \"pnpm run build\"",
 		"build-types": "vue-tsc --emitDeclarationOnly --declaration -p tsconfig.app.json",
 		"lint": "eslint 'src/**/*.{ts,vue}'",
 		"test": "vitest",
