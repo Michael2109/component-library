@@ -25,4 +25,4 @@ jobs:
              pnpm run build
              cp ./package.json ./dist/package.json
              echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-             cd dist && pnpm publish
+             cd dist && pnpm publish --access=public
