@@ -19,11 +19,12 @@ jobs:
           cache: 'pnpm'
       - name: Build and publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
         run: |
              cd ./packages/lib 
              pnpm install
              pnpm run build
              cp ./package.json ./dist/package.json || exit 1 
+             echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
              cd ./dist || exit 1 
              pnpm publish --access=public
