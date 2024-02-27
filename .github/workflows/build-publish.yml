@@ -30,5 +30,6 @@ jobs:
              cat ~/.npmrc  # Print the contents of .npmrc for debugging
              
              cd ./dist || exit 1 
-             ls -al 
+             find . -type f  # Print all file names recursively
+          
              pnpm publish --access=public
