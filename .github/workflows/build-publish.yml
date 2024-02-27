@@ -27,5 +27,8 @@ jobs:
              cp ./package.json ./dist/package.json || exit 1 
              echo ${NPM_TOKEN}
              echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+             cat ~/.npmrc  # Print the contents of .npmrc for debugging
+             
              cd ./dist || exit 1 
+             ls -al 
              pnpm publish --access=public
