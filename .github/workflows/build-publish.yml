@@ -29,5 +29,5 @@ jobs:
              
              cd ./dist
              find . -type f  # Print all file names recursively
-          
+             pnpm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
              pnpm publish
