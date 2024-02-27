@@ -24,8 +24,7 @@ jobs:
              pnpm run build
              cp ./package.json ./dist/package.json || exit 1 
              echo ${NPM_TOKEN}
-            
-             cat ~/.npmrc  # Print the contents of .npmrc for debugging
+          
              
              cd ./dist
              find . -type f  # Print all file names recursively
