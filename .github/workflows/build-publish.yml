@@ -18,13 +18,11 @@ jobs:
           node-version: 20
           cache: 'pnpm'
       - name: Build and publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         run: |
              cd ./packages/lib 
              pnpm install
-             echo "Installed"
              pnpm run build
-             echo "HERE"
              cp ./package.json ./dist/package.json
-             echo "Copied files"
-             echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
              cd ./dist && pnpm publish --access=public
