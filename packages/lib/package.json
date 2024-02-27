@@ -9,6 +9,9 @@
 	"type": "module",
 	"main": "dist/index.cjs",
 	"module": "dist/index.mjs",
+	"publishConfig": {
+		"access": "public"
+	},
 	"repository": "git://github.com/Michael2109/component-library",
 	"exports": {
 		".": {
