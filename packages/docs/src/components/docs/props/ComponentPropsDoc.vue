@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { PropType } from 'vue';
 import type { DocumentProperty } from '@/components/docs/props/document-property';
-import { Column, Table } from '@linusborg/lib';
+import { Column, Table } from '@aurora/vue';
 
 defineProps({
   properties: {

@@ -4,7 +4,7 @@ import type { PropType } from 'vue';
 import {
   getBackgroundColor,
   getFontColor
-} from '../../common/color-to-css-variable';
+} from '@/common/color-to-css-variable';
 
 const model = defineModel<Boolean>();
 

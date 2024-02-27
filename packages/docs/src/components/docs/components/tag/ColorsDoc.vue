@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import DocSection from '@/components/docs/usage/DocUsageSection.vue';
 import type { DocUsageSectionCode } from '@/components/docs/usage/doc-usage-section-code';
-import { Tag, Chip, Table } from '@linusborg/lib';
+import { Tag, Chip, Table } from '@aurora/vue';
 
 const code: DocUsageSectionCode = {
   basic: `<Tag color="gray">Gray</Tag>

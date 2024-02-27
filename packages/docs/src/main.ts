@@ -17,14 +17,15 @@ import {
   DARK_THEME,
   LIGHT_THEME,
   Switch,
-  IconButton,
-} from '@linusborg/lib';
-import App from './App.vue';
-import './index.sass';
+  IconButton
+} from '@aurora/vue';
+import App from '@/App.vue';
+import '@/index.sass';
 import { createVCodeBlock } from '@wdns/vue-code-block';
 import '@fontsource/public-sans';
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css';
 import router from '@/router/router';
+import '@aurora/vue/dist/style.css';
 import '@mdi/font/css/materialdesignicons.min.css';
 
 const app = createApp(App);
@@ -54,5 +55,5 @@ app.component('Tab', Tab);
 app.component('Table', Table);
 app.component('TextField', TextField);
 app.component('Column', Column);
-app.component('IconButton', IconButton)
+app.component('IconButton', IconButton);
 app.mount('#app');

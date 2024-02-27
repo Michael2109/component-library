@@ -2,7 +2,7 @@
   <Header>
     <template #left>
       <div class="homepage-header">Aurora UI</div>
-  </template>
+    </template>
   </Header>
   <div class="hero">
     <div class="hero-content">
@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { Button, Header } from '@linusborg/lib';
+import { Button, Header } from '@aurora/vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();

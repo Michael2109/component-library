@@ -10,9 +10,10 @@
 	},
 	"dependencies": {
 		"@fontsource/public-sans": "^5.0.16",
-		"@linusborg/lib": "workspace:*",
+		"@aurora/vue": "workspace:*",
 		"@mdi/font": "^7.4.47",
 		"@wdns/vue-code-block": "^2.3.1",
+		"dist": "link:..\\lib\\dist",
 		"js-beautify": "^1.14.11",
 		"primeflex": "^3.3.1",
 		"sass": "^1.70.0",
