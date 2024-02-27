@@ -30,4 +30,4 @@ jobs:
              cd ./dist
              find . -type f  # Print all file names recursively
           
-             pnpm publish --access=public
+             pnpm publish
