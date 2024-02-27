@@ -38,7 +38,7 @@
 	},
 	"dependencies": {
 		"@fontsource/public-sans": "^5.0.16",
-		"@aurora/vue": "workspace:*",
+		"@aurora/vue": "workspace:x",
 		"@mdi/font": "^7.4.47",
 		"object-to-css-variables": "^0.2.1",
 		"sass": "^1.70.0"
