@@ -1,5 +1,5 @@
 {
-	"name": "@aurora/vue",
+	"name": "@aurora-ui-library/vue",
 	"description": "CHANGE_ME This is a placeholder description, please change me as well as the name above me.",
 	"version": "0.0.3",
 	"private": false,
@@ -10,7 +10,8 @@
 	"main": "dist/index.cjs",
 	"module": "dist/index.mjs",
 	"publishConfig": {
-		"access": "public"
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
 	},
 	"repository": "git://github.com/Michael2109/component-library",
 	"exports": {
@@ -42,7 +43,6 @@
 	},
 	"dependencies": {
 		"@fontsource/public-sans": "^5.0.16",
-		"@aurora/vue": "workspace:x",
 		"@mdi/font": "^7.4.47",
 		"object-to-css-variables": "^0.2.1",
 		"sass": "^1.70.0"

@@ -62,12 +62,12 @@ importers:
 
   packages/docs:
     dependencies:
-      '@fontsource/public-sans':
-        specifier: ^5.0.16
-        version: 5.0.16
       '@aurora/vue':
         specifier: workspace:x
         version: link:../lib
+      '@fontsource/public-sans':
+        specifier: ^5.0.16
+        version: 5.0.16
       '@mdi/font':
         specifier: ^7.4.47
         version: 7.4.47
@@ -108,9 +108,6 @@ importers:
       '@fontsource/public-sans':
         specifier: ^5.0.16
         version: 5.0.16
-      '@aurora/vue':
-        specifier: workspace:x
-        version: 'link:'
       '@mdi/font':
         specifier: ^7.4.47
         version: 7.4.47

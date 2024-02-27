@@ -25,8 +25,7 @@ jobs:
              cp ./package.json ./dist/package.json || exit 1 
              echo ${NPM_TOKEN}
           
-             
+             echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
              cd ./dist
              find . -type f  # Print all file names recursively
-             pnpm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
              pnpm publish
