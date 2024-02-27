@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import DocSection from '@/components/docs/usage/DocUsageSection.vue';
 import type { DocUsageSectionCode } from '@/components/docs/usage/doc-usage-section-code';
-import { Table } from '@aurora/vue';
+import { Table } from '@aurora-lib/vue';
 
 const code: DocUsageSectionCode = {
   basic: `<Table

@@ -62,7 +62,7 @@ importers:
 
   packages/docs:
     dependencies:
-      '@aurora/vue':
+      '@aurora-lib/vue':
         specifier: workspace:x
         version: link:../lib
       '@fontsource/public-sans':

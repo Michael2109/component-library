@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import DocSection from '@/components/docs/usage/DocUsageSection.vue';
 import type { DocUsageSectionCode } from '@/components/docs/usage/doc-usage-section-code';
-import { Menu } from '@aurora/vue';
-import type { MenuItem } from '@aurora/vue';
+import { Menu } from '@aurora-lib/vue';
+import type { MenuItem } from '@aurora-lib/vue';
 
 const code: DocUsageSectionCode = {
   basic: `<Menu>This is some text and <Code>some code</Code> in a sentence</Menu>

@@ -30,8 +30,8 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
 import { SidebarMenu } from 'vue-sidebar-menu';
-import { DARK_THEME, LIGHT_THEME, useTheme, Menu } from '@aurora/vue';
-import type { MenuItem } from '@aurora/vue';
+import { DARK_THEME, LIGHT_THEME, useTheme, Menu } from '@aurora-lib/vue';
+import type { MenuItem } from '@aurora-lib/vue';
 import { computed, ref } from 'vue';
 
 const router = useRouter();

@@ -7,7 +7,7 @@ import CodeBlock from '@/components/docs/usage/CodeBlock.vue';
 
   <h2>Installation</h2>
 
-  <CodeBlock lang="html" code="npm i @aurora/vue"></CodeBlock>
+  <CodeBlock lang="html" code="npm i @aurora-lib/vue"></CodeBlock>
 
   <h2>Import</h2>
   <CodeBlock lang="html" code="import blah from ''"></CodeBlock>

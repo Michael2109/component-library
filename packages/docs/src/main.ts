@@ -18,14 +18,14 @@ import {
   LIGHT_THEME,
   Switch,
   IconButton
-} from '@aurora/vue';
+} from '@aurora-lib/vue';
 import App from '@/App.vue';
 import '@/index.sass';
 import { createVCodeBlock } from '@wdns/vue-code-block';
 import '@fontsource/public-sans';
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css';
 import router from '@/router/router';
-import '@aurora/vue/dist/style.css';
+import '@aurora-lib/vue/dist/style.css';
 import '@mdi/font/css/materialdesignicons.min.css';
 
 const app = createApp(App);
