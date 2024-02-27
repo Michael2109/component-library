@@ -25,6 +25,7 @@ jobs:
              pnpm install
              pnpm run build
              cp ./package.json ./dist/package.json || exit 1 
+             echo ${NPM_TOKEN}
              echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
              cd ./dist || exit 1 
              pnpm publish --access=public
