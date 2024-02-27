@@ -19,8 +19,11 @@ jobs:
           cache: 'pnpm'
       - name: Build and publish
         run: |
-             cd ./packages/lib && pnpm install
-             cd ./packages/lib && pnpm run build
-             cd ./packages/lib && cp ./package.json ./dist/package.json
-             cd ./packages/lib && echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-             cd ./packages/lib/dist && pnpm publish --access=public
+             cd ./packages/lib 
+             pnpm install
+             echo "Installed"
+             pnpm run build
+             echo "HERE"
+             cp ./package.json ./dist/package.json
+             echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+             cd ./dist && pnpm publish --access=public
