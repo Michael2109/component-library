@@ -18,8 +18,9 @@ jobs:
           node-version: 20
           cache: 'pnpm'
       - name: Build and publish
-        working-directory: ./packages/lib
-        run: pnpm install
+        run:
+             cd ./packages/lib
+             pnpm install
              pnpm run build
              cp ./package.json ./dist/package.json
              cp ./package-lock.json ./dist/package-lock.json
