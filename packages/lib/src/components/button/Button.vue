@@ -8,15 +8,15 @@ import {
   getBackgroundColor,
   calculateFontColor,
   getFontColor
-} from '../../common/color-to-css-variable';
+} from '@/common/color-to-css-variable';
 
 type ButtonType = 'default' | 'text';
 
 const props = defineProps({
-  type: {
-    type: String as PropType<ButtonType>,
+  href: {
+    type: String,
     require: false,
-    default: 'default'
+    default: undefined
   },
   size: {
     type: String as PropType<'xs' | 'sm' | 'md' | 'lg' | 'xlg'>,
@@ -83,10 +83,18 @@ const fontColor = computed(() => {
 });
 
 const theme: Theme = useTheme().global();
+
+function onClick() {
+  if (props.href) {
+    console.log('HGERE');
+    window.location.href = props.href;
+  }
+  emits('click');
+}
 </script>
 
 <template>
-  <button @click="emits('click')" :class="className">
+  <button :href="href" @click="onClick" :class="className">
     <div v-if="icon" :class="icon"></div>
     <slot name="leftIcon"></slot>
     <div v-if="loading && iconPosition === 'left'" class="button-icon">
