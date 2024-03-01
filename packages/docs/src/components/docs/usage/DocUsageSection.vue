@@ -3,7 +3,7 @@ import type { PropType } from 'vue';
 import type { DocUsageSectionCode } from '@/components/docs/usage/doc-usage-section-code';
 import CodeBlock from '@/components/docs/usage/CodeBlock.vue';
 
-defineProps({
+const props = defineProps({
   title: {
     type: String,
     required: true
@@ -17,19 +17,17 @@ defineProps({
 
 <template>
   <div class="document-section">
-    <div class="document-section-title">
-      <div class="document-section-content">
-        <h2>
-          {{ title }}
-          <a
-            aria-current="page"
-            href="/button/#import"
-            class="document-section-title-link"
-          >
-            #
-          </a>
-        </h2>
-      </div>
+    <div class="document-section-content">
+      <h2 :id="title" class="document-section-title">
+        {{ title }}
+      </h2>
+      <a
+        aria-current="page"
+        href="/button/#import"
+        class="document-section-title-link"
+      >
+        #
+      </a>
     </div>
 
     <p class="document-section-description">
@@ -51,7 +49,7 @@ defineProps({
   font-weight: 600
   line-height: 1.2
   margin: 2.5rem 0 1rem
-  font-size: 1rem
+  font-size: 1.5rem
 
 .document-section-title-link
   text-decoration: none

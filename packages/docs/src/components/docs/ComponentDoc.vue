@@ -14,14 +14,22 @@
           lang="js"
           :code="`import { ${title} } from '@aurora-lib/vue'`"
         ></CodeBlock>
-        <slot name="usage"></slot></div
+        <div ref="usageContainer">
+          <slot name="usage"></slot>
+        </div></div
     ></Tab>
     <Tab label="API" key="props"><slot name="api"></slot></Tab>
     <Tab label="Styling" key="styling"><slot name="styling"></slot></Tab>
   </Tabs>
+
+  <ComponentDocSidebar :names="names"></ComponentDocSidebar>
 </template>
 <script lang="ts" setup>
 import CodeBlock from '@/components/docs/usage/CodeBlock.vue';
+import ComponentDocSidebar from '@/components/docs/ComponentDocSidebar.vue';
+import { computed, Ref, ref } from 'vue';
+
+const usageContainer = ref<HTMLDivElement | null>(null);
 
 defineProps({
   title: {
@@ -31,6 +39,23 @@ defineProps({
   description: {
     type: String,
     required: true
+  }
+});
+
+const slots = defineSlots();
+
+const names = computed(() => {
+  const queryResults = usageContainer.value?.querySelectorAll(
+    '.document-section-title'
+  );
+  console.log(queryResults);
+  if (queryResults) {
+    const documentSectionTitles = [
+      ...usageContainer.value?.querySelectorAll('.document-section-title')
+    ];
+    return documentSectionTitles.map((element) => element.innerHTML);
+  } else {
+    return [];
   }
 });
 </script>
