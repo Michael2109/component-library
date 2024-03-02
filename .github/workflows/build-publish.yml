@@ -2,7 +2,7 @@ name: components-library
 run-name: Deploy
 on: [ push ]
 jobs:
-  build-deploy:
+  build-lib:
     runs-on: ubuntu-latest
     env:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -29,3 +29,27 @@ jobs:
              cd ./dist
              find . -type f  # Print all file names recursively
              pnpm publish
+  build-docs:
+    runs-on: ubuntu-latest
+    needs: build-lib
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: 'eu-west-2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'pnpm'
+      - name: Build and deploy documentation
+        run: | 
+             cd ./packages/docs
+             pnpm install
+             pnpm run build
+      - name: Sync to S3
+        run: aws s3 sync ./dist/ s3://aurora-ui --delete

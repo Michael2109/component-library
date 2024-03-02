@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import CodeBlock from '@/components/docs/usage/CodeBlock.vue';
+import CodeBlockTabs, {
+  CodeInfo
+} from '@/components/docs/usage/CodeBlockTabs.vue';
 
 const installCode = `# Using npm
 npm install @aurora-lib/vue
@@ -10,6 +13,15 @@ yarn add @aurora-lib/vue
 # Using pnpm
 pnpm add @aurora-lib/vue
 `;
+
+const codes: Array<CodeInfo> = [
+  {
+    label: 'npm',
+    code: `# Using npm
+npm install @aurora-lib/vue`,
+    lang: 'html'
+  }
+];
 </script>
 
 <template>
@@ -17,7 +29,7 @@ pnpm add @aurora-lib/vue
 
   <h2>Installation</h2>
 
-  <CodeBlock lang="html" :code="installCode"></CodeBlock>
+  <CodeBlockTabs :codes="codes"></CodeBlockTabs>
 
   <h2>Import</h2>
   <CodeBlock

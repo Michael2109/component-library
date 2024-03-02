@@ -86,7 +86,6 @@ const theme: Theme = useTheme().global();
 
 function onClick() {
   if (props.href) {
-    console.log('HGERE');
     window.location.href = props.href;
   }
   emits('click');

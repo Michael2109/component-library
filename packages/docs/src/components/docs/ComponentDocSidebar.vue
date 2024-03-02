@@ -22,5 +22,5 @@ defineProps({
 <style lang="sass">
 .component-doc-sidebar
   position: fixed
-  right: 16px
+  right: 100px
 </style>

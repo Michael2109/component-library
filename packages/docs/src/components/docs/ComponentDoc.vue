@@ -28,14 +28,18 @@
         </div>
       </div>
     </Tab>
-    <Tab label="API" key="props"><slot name="api"></slot></Tab>
-    <Tab label="Styling" key="styling"><slot name="styling"></slot></Tab>
+    <Tab label="API" value="props">
+      <slot name="api"></slot>
+    </Tab>
+    <Tab label="Styling" value="styling">
+      <slot name="styling"></slot>
+    </Tab>
   </Tabs>
 </template>
 <script lang="ts" setup>
 import CodeBlock from '@/components/docs/usage/CodeBlock.vue';
 import ComponentDocSidebar from '@/components/docs/ComponentDocSidebar.vue';
-import { computed, onMounted, onUpdated, Ref, ref, watch } from 'vue';
+import { onMounted, ref } from 'vue';
 
 const usageContainer = ref<HTMLDivElement | null>(null);
 
@@ -80,7 +84,7 @@ onMounted(() => {
   margin-inline-end: 0
 
 .component-doc-sidebar-container
-  width: 200px
+  width: 300px
   height: 100%
   background-color: white
 </style>
