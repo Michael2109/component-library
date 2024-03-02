@@ -46,9 +46,10 @@ jobs:
         with:
           node-version: 18
           cache: 'pnpm'
+      - name: Install lib
+        run: cd ./packages/lib && pnpm install
       - name: Build and deploy documentation
         run: | 
-             cd ./packages/lib && pnpm install
              cd ./packages/docs
              pnpm install
              pnpm run build
