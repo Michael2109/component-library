@@ -58,4 +58,4 @@ jobs:
              pnpm install
              pnpm run build
       - name: Sync to S3
-        run: cd ./packages/docs && aws s3 sync ./dist/ s3://aurora-ui --delete
+        run: cd ./packages/docs && aws s3 sync ./dist/ s3://www.aurora-ui.com --delete
