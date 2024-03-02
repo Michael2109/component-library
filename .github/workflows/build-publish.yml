@@ -49,7 +49,8 @@ jobs:
       - name: Install lib
         run: cd ./packages/lib && pnpm install
       - name: Build and deploy documentation
-        run: | 
+        run: |
+             pnpm install
              cd ./packages/docs
              pnpm install
              pnpm run build
