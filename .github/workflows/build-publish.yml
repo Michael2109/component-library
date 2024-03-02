@@ -48,6 +48,7 @@ jobs:
           cache: 'pnpm'
       - name: Build and deploy documentation
         run: | 
+             cd ./packages/lib & pnpm install
              cd ./packages/docs
              pnpm install
              pnpm run build
