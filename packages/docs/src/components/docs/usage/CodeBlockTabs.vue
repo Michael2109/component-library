@@ -19,13 +19,11 @@ defineProps({
 
 <template>
   <Tabs>
-    <Tab label="Usage" value="usage"> </Tab>
     <Tab
-      v-if="codes"
       v-for="codeInfo in codes"
-      key="codeInfo.label"
-      label="codeInfo.label"
-      value="codeInfo.label"
+      :key="codeInfo.label"
+      :label="codeInfo.label"
+      :value="codeInfo.label"
     ></Tab>
   </Tabs>
 </template>

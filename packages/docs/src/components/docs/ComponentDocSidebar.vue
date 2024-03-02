@@ -1,5 +1,6 @@
 <template>
   <div class="component-doc-sidebar">
+    <h2>Sections</h2>
     <div v-for="name in names" :key="name">
       <Button variant="text" :href="`#` + name">{{ name }}</Button>
     </div>

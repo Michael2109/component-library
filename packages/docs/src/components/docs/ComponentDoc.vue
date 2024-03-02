@@ -6,7 +6,7 @@
   <p class="component-description">{{ description }}</p>
 
   <Tabs selected-key="usage">
-    <Tab label="Usage" key="usage">
+    <Tab label="Usage" value="usage">
       <div style="display: flex; height: 100%">
         <div class="usage" style="flex: 1">
           <h2>Import</h2>
