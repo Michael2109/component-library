@@ -9,6 +9,7 @@ import {
   calculateFontColor,
   getFontColor
 } from '@/common/color-to-css-variable';
+import type { Sizes } from '@/common/sizes';
 
 type ButtonType = 'default' | 'text';
 
@@ -19,7 +20,7 @@ const props = defineProps({
     default: undefined
   },
   size: {
-    type: String as PropType<'xs' | 'sm' | 'md' | 'lg' | 'xlg'>,
+    type: String as PropType<Sizes>,
     require: false,
     default: 'md'
   },

@@ -5,6 +5,13 @@ export function getBackgroundColor(color: string | undefined) {
   return `var(--colors-primary-background)`;
 }
 
+export function getBorderColor(color: string | undefined) {
+  if (color) {
+    return `var(--colors-${color}-border, var(--colors-primary-border))`;
+  }
+  return `var(--colors-primary-border)`;
+}
+
 export function getFontColor(color: string | undefined) {
   if (color === undefined) {
     return 'var(--typographies-black)';

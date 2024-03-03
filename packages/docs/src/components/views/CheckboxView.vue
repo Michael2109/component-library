@@ -15,7 +15,6 @@ import DisabledDoc from '@/components/docs/components/checkbox/DisabledDoc.vue';
     <template #usage>
       <BasicDoc></BasicDoc>
       <SizesDoc></SizesDoc>
-      <ColorsDoc></ColorsDoc>
       <DisabledDoc></DisabledDoc>
     </template>
 

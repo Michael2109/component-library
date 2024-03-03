@@ -4,13 +4,21 @@ import type { DocUsageSectionCode } from '@/components/docs/usage/doc-usage-sect
 import { Checkbox, Chip, Table } from '@aurora-lib/vue';
 
 const code: DocUsageSectionCode = {
-  basic: ` <Chip label="Chip"></Chip>`
+  basic: `<Checkbox size="xs">Extra Small</Checkbox>
+<Checkbox size="sm">Small</Checkbox>
+<Checkbox size="md">Default</Checkbox>
+<Checkbox size="lg">Large</Checkbox>
+<Checkbox size="xlg">Extra Large</Checkbox>`
 };
 </script>
 
 <template>
-  <DocSection title="Basic" :code="code">
-    <Checkbox>Checkbox</Checkbox>
+  <DocSection title="Sizes" :code="code">
+    <Checkbox size="xs">Extra Small</Checkbox>
+    <Checkbox size="sm">Small</Checkbox>
+    <Checkbox size="md">Default</Checkbox>
+    <Checkbox size="lg">Large</Checkbox>
+    <Checkbox size="xlg">Extra Large</Checkbox>
 
     <template #description> A table.</template>
   </DocSection>

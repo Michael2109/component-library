@@ -29,8 +29,9 @@ npm install @aurora-lib/vue`,
 
   <h2>Installation</h2>
 
-  <CodeBlockTabs :codes="codes"></CodeBlockTabs>
+  <!--  <CodeBlockTabs :codes="codes"></CodeBlockTabs>-->
 
+  <CodeBlock lang="html" :code="installCode"></CodeBlock>
   <h2>Import</h2>
   <CodeBlock
     lang="html"
