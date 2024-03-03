@@ -1,11 +1,6 @@
 <script setup lang="ts">
-import { computed, watch } from 'vue';
 import type { PropType } from 'vue';
-import {
-  getBackgroundColor,
-  getBorderColor,
-  getFontColor
-} from '@/common/color-to-css-variable';
+import { computed, watch } from 'vue';
 import type { Sizes } from '@/common/sizes';
 
 const model = defineModel<Boolean>();
@@ -29,29 +24,38 @@ watch(model, (enabled: any) => {
   emits('change', enabled);
 });
 
-const className = computed(() => {
+const checkboxClassName = computed(() => {
   return {
     button: true,
+    'aurora-checkbox': true,
     'aurora-checkbox-xlg': props.size === 'xlg',
     'aurora-checkbox-lg': props.size === 'lg',
     'aurora-checkbox-sm': props.size === 'sm',
-    'aurora-checkbox-xsm': props.size === 'xs'
+    'aurora-checkbox-xsm': props.size === 'xs',
+    'aurora-checkbox-disabled': props.disabled
   };
 });
+function onClick() {
+  if (!props.disabled) {
+    model.value = !model.value;
+  }
+}
 </script>
 
 <template>
-  <div class="checkbox-container">
+  <div class="aurora-checkbox-container">
     <input
       class="aurora-checkbox-hidden"
       type="checkbox"
       v-model="model"
       :disabled="disabled"
     />
-    <div class="aurora-checkbox" @click="model = !model">
+    <div :class="checkboxClassName" @click="onClick">
       <div v-if="model" class="aurora-checkbox-icon mdi mdi-check"></div>
     </div>
-    <div class="checkbox-label"><slot></slot></div>
+    <div class="aurora-checkbox-label">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -78,10 +82,17 @@ const className = computed(() => {
   margin: auto
   transform: translateY(-50%)
 
-.checkbox-container
+.aurora-checkbox-disabled
+  border-color: gray
+  background-color: #9f9f9f
+  color: #c6c6c6
+
+.aurora-checkbox-container
   display: flex
   align-items: center
+  justify-content: center
 
-.checkbox-label
+.aurora-checkbox-label
+  padding-left: 5px
   color: var(--typographies-black)
 </style>

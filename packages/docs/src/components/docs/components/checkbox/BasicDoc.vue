@@ -4,7 +4,7 @@ import type { DocUsageSectionCode } from '@/components/docs/usage/doc-usage-sect
 import { Checkbox, Chip, Table } from '@aurora-lib/vue';
 
 const code: DocUsageSectionCode = {
-  basic: `<Checkbox label="Chip"></Che>`
+  basic: `<Checkbox>Checkbox</Checkbox>`
 };
 </script>
 
