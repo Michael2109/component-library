@@ -35,6 +35,18 @@ const checkboxClassName = computed(() => {
     'aurora-checkbox-disabled': props.disabled
   };
 });
+
+const checkboxIconClassName = computed(() => {
+  return {
+    'aurora-checkbox-icon': true,
+    mdi: true,
+    'mdi-check': true,
+    'aurora-checkbox-icon-xlg': props.size === 'xlg',
+    'aurora-checkbox-icon-lg': props.size === 'lg',
+    'aurora-checkbox-icon-sm': props.size === 'sm',
+    'aurora-checkbox-icon-xsm': props.size === 'xs'
+  };
+});
 function onClick() {
   if (!props.disabled) {
     model.value = !model.value;
@@ -51,7 +63,7 @@ function onClick() {
       :disabled="disabled"
     />
     <div :class="checkboxClassName" @click="onClick">
-      <div v-if="model" class="aurora-checkbox-icon mdi mdi-check"></div>
+      <div v-if="model" :class="checkboxIconClassName"></div>
     </div>
     <div class="aurora-checkbox-label">
       <slot></slot>
@@ -83,14 +95,49 @@ function onClick() {
   transform: translateY(-50%)
 
 .aurora-checkbox-disabled
-  border-color: gray
-  background-color: #9f9f9f
+  border-color: #bdbdc7
+  background-color: #e2e8f0
   color: #c6c6c6
 
 .aurora-checkbox-container
   display: flex
   align-items: center
   justify-content: center
+
+.aurora-checkbox-xsm
+  padding: 6px
+
+.aurora-checkbox-sm
+  padding: 8px
+
+.aurora-checkbox-lg
+  padding: 12px
+
+.aurora-checkbox-xlg
+  padding: 14px
+
+
+.aurora-checkbox-icon-xsm
+  width: 4px
+  height: 4px
+  left: -10px
+  top: -3px
+
+.aurora-checkbox-icon-sm
+  width: 6px
+  height: 6px
+  left: -11px
+  top: 0
+
+.aurora-checkbox-icon-lg
+  width: 10px !important
+  height: 10px
+  left: -11px
+  top: 0
+
+
+.aurora-checkbox-icon-xlg
+  padding: 14px
 
 .aurora-checkbox-label
   padding-left: 5px

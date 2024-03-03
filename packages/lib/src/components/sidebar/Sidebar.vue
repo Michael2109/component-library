@@ -13,7 +13,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="sidebar">
+  <div class="aurora-sidebar">
     <slot name="top" />
     <div class="sidebar-bottom">
       <slot name="bottom" />
@@ -22,7 +22,7 @@ const props = defineProps({
 </template>
 
 <style scoped lang="sass">
-.sidebar
+.aurora-sidebar
   display: flex
   flex-direction: column
   border-right: var(--colors-surface-300)
@@ -35,7 +35,7 @@ const props = defineProps({
   left: 0
   height: 100%
   overflow-y: auto
-  padding-top: 20px
+  padding-top: 0
 
 .sidebar-bottom
   margin-top: auto

@@ -14,7 +14,9 @@ const props = defineProps({
 
 <template>
   <div class="header">
-    <slot name="left" />
+    <div class="header-left">
+      <slot name="left" />
+    </div>
     <div class="header-right">
       <slot name="right" />
     </div>
@@ -25,6 +27,8 @@ const props = defineProps({
 .header
   display: flex
   flex-direction: row
+  align-items: center
+  padding-left: 8px
   width: 100%
   height: 64px
   background-color: var(--colors-surface-50)
