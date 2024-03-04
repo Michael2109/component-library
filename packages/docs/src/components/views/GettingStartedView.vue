@@ -14,6 +14,10 @@ yarn add @aurora-lib/vue
 pnpm add @aurora-lib/vue
 `;
 
+const usePluginCode = `app.use(ComponentsPlugin, {
+  theme: LIGHT_THEME
+})`;
+
 const codes: Array<CodeInfo> = [
   {
     label: 'npm',
@@ -22,6 +26,10 @@ npm install @aurora-lib/vue`,
     lang: 'html'
   }
 ];
+
+const useComponentCode = `import { Button } from '@aurora-lib/vue'
+
+app.component("Button", Button)`;
 </script>
 
 <template>
@@ -32,11 +40,18 @@ npm install @aurora-lib/vue`,
   <!--  <CodeBlockTabs :codes="codes"></CodeBlockTabs>-->
 
   <CodeBlock lang="html" :code="installCode"></CodeBlock>
-  <h2>Import</h2>
+
+  <h2>Use plugin</h2>
+  <CodeBlock lang="html" :code="usePluginCode"></CodeBlock>
+
+  <h2>Import CSS</h2>
   <CodeBlock
     lang="html"
-    code="import { Button } from '@aurora-lib/vue'"
+    code="import '@aurora-lib/vue/dist/style.css';"
   ></CodeBlock>
+
+  <h2>Use a component</h2>
+  <CodeBlock lang="html" :code="useComponentCode"></CodeBlock>
 </template>
 
 <style scoped lang="sass"></style>
