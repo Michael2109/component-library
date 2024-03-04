@@ -39,10 +39,10 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
 import { SidebarMenu } from 'vue-sidebar-menu';
-import { DARK_THEME, LIGHT_THEME, useTheme, Menu } from '@aurora-lib/vue';
-import type { MenuItem } from '@aurora-lib/vue';
+import { DARK_THEME, LIGHT_THEME, useTheme, Menu } from '@aurora_ui/vue';
+import type { MenuItem } from '@aurora_ui/vue';
 import { computed, ref } from 'vue';
-import { TextField } from '@aurora-lib/vue';
+import { TextField } from '@aurora_ui/vue';
 
 const router = useRouter();
 

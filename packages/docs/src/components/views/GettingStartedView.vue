@@ -5,13 +5,13 @@ import CodeBlockTabs, {
 } from '@/components/docs/usage/CodeBlockTabs.vue';
 
 const installCode = `# Using npm
-npm install @aurora-lib/vue
+npm install @aurora_ui/vue
 
 # Using yarn
-yarn add @aurora-lib/vue
+yarn add @aurora_ui/vue
 
 # Using pnpm
-pnpm add @aurora-lib/vue
+pnpm add @aurora_ui/vue
 `;
 
 const usePluginCode = `app.use(ComponentsPlugin, {
@@ -22,12 +22,12 @@ const codes: Array<CodeInfo> = [
   {
     label: 'npm',
     code: `# Using npm
-npm install @aurora-lib/vue`,
+npm install @aurora_ui/vue`,
     lang: 'html'
   }
 ];
 
-const useComponentCode = `import { Button } from '@aurora-lib/vue'
+const useComponentCode = `import { Button } from '@aurora_ui/vue'
 
 app.component("Button", Button)`;
 </script>
@@ -47,7 +47,7 @@ app.component("Button", Button)`;
   <h2>Import CSS</h2>
   <CodeBlock
     lang="html"
-    code="import '@aurora-lib/vue/dist/style.css';"
+    code="import '@aurora_ui/vue/dist/style.css';"
   ></CodeBlock>
 
   <h2>Use a component</h2>

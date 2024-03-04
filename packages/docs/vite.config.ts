@@ -18,6 +18,6 @@ export default defineConfig({
     }
   },
   optimizeDeps: {
-    exclude: ['@aurora-lib/vue']
+    exclude: ['@aurora_ui/vue']
   }
 });

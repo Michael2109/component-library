@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import DocSection from '@/components/docs/usage/DocUsageSection.vue';
 import type { DocUsageSectionCode } from '@/components/docs/usage/doc-usage-section-code';
-import { Code, Table } from '@aurora-lib/vue';
+import { Code, Table } from '@aurora_ui/vue';
 
 const code: DocUsageSectionCode = {
   basic: `<Code color="gray">Gray</Code>

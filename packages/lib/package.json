@@ -1,9 +1,9 @@
 {
-	"name": "@aurora-lib/vue",
-	"description": "CHANGE_ME This is a placeholder description, please change me as well as the name above me.",
-	"version": "0.0.18",
+	"name": "@aurora_ui/vue",
+	"description": "Aurora UI",
+	"version": "0.0.19",
 	"private": false,
-	"author": "CHANGE_ME Thorsten Lünborg <t.luneborg@googlemail.com>",
+	"author": "Michael Haywood",
 	"homepage": "",
 	"license": "MIT",
 	"type": "module",

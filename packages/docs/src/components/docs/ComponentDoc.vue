@@ -13,7 +13,7 @@
 
           <CodeBlock
             lang="js"
-            :code="`import { ${title} } from '@aurora-lib/vue'`"
+            :code="`import { ${title} } from '@aurora_ui/vue'`"
           ></CodeBlock>
 
           <div class="usage" ref="usageContainer">

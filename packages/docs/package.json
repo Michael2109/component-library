@@ -9,7 +9,7 @@
 		"lint": "eslint 'src/**/*.{ts,vue}'"
 	},
 	"dependencies": {
-		"@aurora-lib/vue": "workspace:*",
+		"@aurora_ui/vue": "workspace:*",
 		"@fontsource/public-sans": "^5.0.16",
 		"@mdi/font": "^7.4.47",
 		"@wdns/vue-code-block": "^2.3.1",
