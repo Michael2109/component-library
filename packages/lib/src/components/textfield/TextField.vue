@@ -59,7 +59,7 @@ const sizeClass = computed(() => {
 </script>
 
 <template>
-  <slot name="left-icon"></slot>
+  <slot name="prefix"></slot>
 
   <input
     :placeholder="placeholder"
@@ -67,7 +67,9 @@ const sizeClass = computed(() => {
     :class="variantClass + ' ' + sizeClass"
   />
 
-  <slot class="icon" name="right-icon"></slot>
+  <div class="aurora-text-field-postfix">
+    <slot name="postfix"></slot>
+  </div>
 </template>
 
 <style scoped lang="sass">
@@ -115,4 +117,7 @@ input
   width: 150px
   border-radius: 6px
   padding: 10px
+
+.aurora-text-field-postfix
+  position: absolute
 </style>

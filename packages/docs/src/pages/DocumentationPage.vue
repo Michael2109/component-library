@@ -12,8 +12,7 @@
       <Header>
         <template #left>
           <TextField placeholder="Search" size="xlg"
-            ><template #right-icon
-              ><div class="mdi mdi-search-web"></div></template
+            ><template #postfix><div class="mdi mdi-search-web"></div></template
           ></TextField>
         </template>
         <template #right>
