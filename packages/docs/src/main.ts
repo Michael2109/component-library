@@ -18,8 +18,8 @@ import {
   LIGHT_THEME,
   Switch,
   IconButton,
-  Panel,
-} from '@aurora-lib/vue';
+  Panel
+} from '@aurora_ui/vue';
 import App from '@/App.vue';
 import '@/index.sass';
 import { createVCodeBlock } from '@wdns/vue-code-block';
