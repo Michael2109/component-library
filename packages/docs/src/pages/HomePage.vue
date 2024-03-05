@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { Button, Header } from '@aurora-lib/vue';
+import { Button, Header } from '@aurora_ui/vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();

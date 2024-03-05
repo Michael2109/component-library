@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import {computed} from 'vue';
-import type {PropType} from 'vue';
-
+import { computed } from 'vue';
+import type { PropType } from 'vue';
 
 const model = defineModel<string>();
 
@@ -34,54 +33,43 @@ const props = defineProps({
   }
 });
 
-const variantClass = computed(()=> {
-  if (props.variant==="filled") {
-    return "input-filled"
+const variantClass = computed(() => {
+  if (props.variant === 'filled') {
+    return 'input-filled';
+  } else if (props.variant === 'outlined') {
+    return 'input-outlined';
+  } else {
+    return '';
   }
-  else if (props.variant==="outlined") {
-    return "input-outlined"
+});
+
+const sizeClass = computed(() => {
+  if (props.size === 'xs') {
+    return 'input-xs';
+  } else if (props.size === 'md') {
+    return 'input-md';
+  } else if (props.size === 'lg') {
+    return 'input-lg';
+  } else if (props.size === 'xlg') {
+    return 'input-xlg';
+  } else {
+    return '';
   }
-
-  else {
-    return ""
-  }
-})
-
-const sizeClass = computed(()=> {
-  if (props.size==="xs") {
-    return "input-xs"
-  }
-  else if (props.size==="md") {
-    return "input-md"
-  }
-
-  else if (props.size==="lg") {
-    return "input-lg"
-  }
-
-  else if (props.size==="xlg") {
-    return "input-xlg"
-  }
-
-  else {
-    return ""
-  }
-
-
-
-})
-
-
+});
 </script>
 
 <template>
+  <slot name="prefix"></slot>
 
-    <slot name="left-icon"></slot>
+  <input
+    :placeholder="placeholder"
+    type="text"
+    :class="variantClass + ' ' + sizeClass"
+  />
 
-  <input type="text" :class="variantClass +' '+ sizeClass"/>
-
-  <slot class="icon" name="right-icon"></slot>
-
+  <div class="aurora-text-field-postfix">
+    <slot name="postfix"></slot>
+  </div>
 </template>
 
 <style scoped lang="sass">
@@ -90,10 +78,10 @@ const sizeClass = computed(()=> {
   font-size: 100px
 
 .input-xlg
-  width: 475px
-  border-radius: 25px
-  padding: 25px
-  font-size: 60px
+  width: 300px
+  border-radius: 10px
+  padding: 6px
+  font-size: 20px
 
 .input-lg
   width: 400px
@@ -102,10 +90,8 @@ const sizeClass = computed(()=> {
   font-size: 50px
 
 .input-md
-  width: 325px
-  border-radius: 15px
-  padding: 15px
-  font-size: 30px
+  padding: 5px
+  font-size: 14px
 
 .input-sm
   width: 250px
@@ -128,8 +114,10 @@ const sizeClass = computed(()=> {
   border: 1px solid #1a1a1a
 
 input
-  width: 173px
-  border-radius: 10px
+  width: 150px
+  border-radius: 6px
   padding: 10px
 
+.aurora-text-field-postfix
+  position: absolute
 </style>

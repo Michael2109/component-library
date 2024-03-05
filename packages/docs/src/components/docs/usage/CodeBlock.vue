@@ -19,7 +19,4 @@ defineProps({
   </div>
 </template>
 
-<style scoped lang="sass">
-.code-block
-  max-width: 900px
-</style>
+<style scoped lang="sass"></style>

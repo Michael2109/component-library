@@ -9,7 +9,8 @@ import HomePage from '@/pages/HomePage.vue';
 import Documentation from '@/pages/DocumentationPage.vue';
 import GettingStartedView from '@/components/views/GettingStartedView.vue';
 import TextFieldView from '@/components/views/TextFieldView.vue';
-import IconButtonView from "@/components/views/IconButtonView.vue";
+import IconButtonView from '@/components/views/IconButtonView.vue';
+import ThemeView from '@/components/views/ThemeView.vue';
 
 const routes = [
   { path: '/', name: 'Home', component: HomePage },
@@ -35,8 +36,12 @@ const routes = [
           { path: 'table', name: 'Table', component: TableView },
           { path: 'text-field', name: 'TextField', component: TextFieldView },
           { path: 'icon-button', name: 'IconButton', component: IconButtonView }
-
         ]
+      },
+      {
+        path: 'theme',
+        name: 'Theme',
+        component: ThemeView
       }
     ]
   }

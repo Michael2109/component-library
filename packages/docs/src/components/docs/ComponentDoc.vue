@@ -6,28 +6,40 @@
   <p class="component-description">{{ description }}</p>
 
   <Tabs selected-key="usage">
-    <Tab label="Usage" key="usage">
-      <div>
-        <h2>Import</h2>
+    <Tab label="Usage" value="usage">
+      <div style="display: flex; height: 100%">
+        <div class="usage" style="flex: 1">
+          <h2>Import</h2>
 
-        <CodeBlock
-          lang="js"
-          :code="`import { ${title} } from '@aurora-lib/vue'`"
-        ></CodeBlock>
-        <div ref="usageContainer">
-          <slot name="usage"></slot>
-        </div></div
-    ></Tab>
-    <Tab label="API" key="props"><slot name="api"></slot></Tab>
-    <Tab label="Styling" key="styling"><slot name="styling"></slot></Tab>
+          <CodeBlock
+            lang="js"
+            :code="`import { ${title} } from '@aurora_ui/vue'`"
+          ></CodeBlock>
+
+          <div class="usage" ref="usageContainer">
+            <slot name="usage"></slot>
+          </div>
+        </div>
+        <div class="component-doc-sidebar-container">
+          <ComponentDocSidebar
+            :names="names"
+            style="width: 200px; flex-shrink: 0"
+          ></ComponentDocSidebar>
+        </div>
+      </div>
+    </Tab>
+    <Tab label="API" value="props">
+      <slot name="api"></slot>
+    </Tab>
+    <Tab label="Styling" value="styling">
+      <slot name="styling"></slot>
+    </Tab>
   </Tabs>
-
-  <ComponentDocSidebar :names="names"></ComponentDocSidebar>
 </template>
 <script lang="ts" setup>
 import CodeBlock from '@/components/docs/usage/CodeBlock.vue';
 import ComponentDocSidebar from '@/components/docs/ComponentDocSidebar.vue';
-import { computed, Ref, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 const usageContainer = ref<HTMLDivElement | null>(null);
 
@@ -42,20 +54,17 @@ defineProps({
   }
 });
 
-const slots = defineSlots();
+const names = ref<Array<string> | undefined>(undefined);
 
-const names = computed(() => {
+onMounted(() => {
   const queryResults = usageContainer.value?.querySelectorAll(
     '.document-section-title'
   );
-  console.log(queryResults);
   if (queryResults) {
-    const documentSectionTitles = [
-      ...usageContainer.value?.querySelectorAll('.document-section-title')
-    ];
-    return documentSectionTitles.map((element) => element.innerHTML);
+    const documentSectionTitles = [...queryResults];
+    names.value = documentSectionTitles.map((element) => element.innerHTML);
   } else {
-    return [];
+    names.value = [];
   }
 });
 </script>
@@ -73,4 +82,9 @@ const names = computed(() => {
   margin-block-end: 1em
   margin-inline-start: 0
   margin-inline-end: 0
+
+.component-doc-sidebar-container
+  width: 300px
+  height: 100%
+  background-color: white
 </style>

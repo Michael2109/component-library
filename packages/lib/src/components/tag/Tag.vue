@@ -69,7 +69,7 @@ const fontColor = computed(() => {
   outline: none
   padding: 0
   font-size: 14px
-  font-family: "Open Sans", sans-serif
+  font-weight: bold
   white-space: nowrap
   align-items: center
   border-radius: 16px

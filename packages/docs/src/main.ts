@@ -26,7 +26,7 @@ import { createVCodeBlock } from '@wdns/vue-code-block';
 import '@fontsource/public-sans';
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css';
 import router from '@/router/router';
-import '@aurora-lib/vue/dist/style.css';
+import '@aurora_ui/vue/dist/style.css';
 import '@mdi/font/css/materialdesignicons.min.css';
 
 const app = createApp(App);

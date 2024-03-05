@@ -10,13 +10,22 @@
     </template>
     <template #header>
       <Header>
-        <template #left></template>
+        <template #left>
+          <TextField placeholder="Search" size="xlg"
+            ><template #postfix><div class="mdi mdi-search-web"></div></template
+          ></TextField>
+        </template>
         <template #right>
-          <Button icon="mdi mdi-github mdi-24px"></Button>
+          <Button
+            icon="mdi mdi-github mdi-24px"
+            variant="text"
+            href="https://github.com/Michael2109/component-library"
+          ></Button>
           <Button
             :icon="lightModeIcon"
             @click="changeTheme"
             :color="lightModeButtonColor"
+            variant="text"
           ></Button>
         </template>
       </Header>
@@ -30,9 +39,10 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
 import { SidebarMenu } from 'vue-sidebar-menu';
-import { DARK_THEME, LIGHT_THEME, useTheme, Menu } from '@aurora-lib/vue';
-import type { MenuItem } from '@aurora-lib/vue';
+import { DARK_THEME, LIGHT_THEME, useTheme, Menu } from '@aurora_ui/vue';
+import type { MenuItem } from '@aurora_ui/vue';
 import { computed, ref } from 'vue';
+import { TextField } from '@aurora_ui/vue';
 
 const router = useRouter();
 
@@ -120,6 +130,10 @@ function goTo(name: string) {
 </script>
 
 <style lang="sass" scoped>
+
+:deep(.aurora-sidebar)
+  padding-top: 12px !important
+
 :deep(.aurora-layout-content)
   background-color: var(--colors-surface-100)
 
@@ -128,7 +142,8 @@ function goTo(name: string) {
   margin-top: 0
   cursor: pointer
 .content
-  padding: 15px
+  padding-left: 15px
+  padding-right: 15px
 .app-layout
   width: calc(100% - 300px)
   height: 100%

@@ -1,7 +1,10 @@
 <template>
-  <h1>Sidebar</h1>
-
-  <a :href="`#` + name" v-for="name in names" :key="name">{{ name }}</a>
+  <div class="component-doc-sidebar">
+    <h2>Sections</h2>
+    <div v-for="name in names" :key="name">
+      <Button variant="text" :href="`#` + name">{{ name }}</Button>
+    </div>
+  </div>
 </template>
 <script lang="ts" setup>
 import { computed, PropType } from 'vue';
@@ -12,8 +15,13 @@ const router = useRouter();
 defineProps({
   names: {
     type: Object as PropType<Array<string>>,
-    required: true
+    required: false,
+    default: undefined
   }
 });
 </script>
-<style lang="sass"></style>
+<style lang="sass">
+.component-doc-sidebar
+  position: fixed
+  right: 100px
+</style>
