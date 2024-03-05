@@ -8,32 +8,29 @@
               <img class="aurora-logo" src="/aurora-original.png" />
               <h1 id="header" @click="goTo('Home')">Aurora</h1>
             </div>
-            <Menu :items="items" />
-          </div> </template
-      ></Sidebar>
-    </template>
-    <template #header>
-      <Header>
-        <template #left>
-          <TextField placeholder="Search" size="xlg"
-            ><template #postfix><div class="mdi mdi-search-web"></div></template
-          ></TextField>
+
+            <Menu :selected-key="selectedKey" :items="items" />
+          </div>
         </template>
-        <template #right>
-          <Button
-            icon="mdi mdi-github mdi-24px"
-            variant="text"
-            href="https://github.com/Michael2109/component-library"
-          ></Button>
-          <Button
-            :icon="lightModeIcon"
-            @click="changeTheme"
-            :color="lightModeButtonColor"
-            variant="text"
-          ></Button>
+
+        <template #bottom>
+          <div style="display: flex; margin-left: 10px; align-items: center">
+            <Button
+              icon="mdi mdi-github mdi-24px"
+              variant="text"
+              href="https://github.com/Michael2109/component-library"
+            ></Button>
+            <Button
+              :icon="lightModeIcon"
+              @click="changeTheme"
+              :color="lightModeButtonColor"
+              variant="text"
+            ></Button>
+          </div>
         </template>
-      </Header>
+      </Sidebar>
     </template>
+    <template #header> </template>
     <div style="margin-left: 20px; margin-right: 20px">
       <router-view></router-view>
     </div>
@@ -41,18 +38,32 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import { SidebarMenu } from 'vue-sidebar-menu';
 import { DARK_THEME, LIGHT_THEME, useTheme, Menu } from '@aurora_ui/vue';
 import type { MenuItem } from '@aurora_ui/vue';
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { TextField } from '@aurora_ui/vue';
 
 const router = useRouter();
 
+const route = useRoute();
+
+const selectedKey = ref<string | undefined>(undefined);
+
+setSelectedKey();
+
+watch(route, (to) => {
+  setSelectedKey();
+});
+
+function setSelectedKey() {
+  selectedKey.value = '' + route.name;
+}
+
 const items: Array<MenuItem> = [
   {
-    key: 'getting-started',
+    key: 'GettingStarted',
     label: 'Getting Started',
     command: () => goTo('GettingStarted')
   },
@@ -61,49 +72,49 @@ const items: Array<MenuItem> = [
     label: 'Elements',
     items: [
       {
-        key: 'elements-button',
+        key: 'Button',
         label: 'Button',
         command: () => goTo('Button')
       },
       {
-        key: 'elements-checkbox',
+        key: 'Checkbox',
         label: 'Checkbox',
         command: () => goTo('Checkbox')
       },
       {
-        key: 'elements-tag',
+        key: 'Tag',
         label: 'Tag',
         command: () => goTo('Tag')
       },
       {
-        key: 'elements-code',
+        key: 'Code',
         label: 'Code',
         command: () => goTo('Code')
       },
       {
-        key: 'elements-menu',
+        key: 'Menu',
         label: 'Menu',
         command: () => goTo('Menu')
       },
       {
-        key: 'elements-table',
+        key: 'Table',
         label: 'Table',
         command: () => goTo('Table')
       },
       {
-        key: 'elements-text-field',
+        key: 'TextField',
         label: 'TextField',
         command: () => goTo('TextField')
       },
       {
-        key: 'elements-icon-button',
+        key: 'IconButton',
         label: 'IconButton',
         command: () => goTo('IconButton')
       }
     ]
   },
   {
-    key: 'theme',
+    key: 'Theme',
     label: 'Theming',
     command: () => goTo('Theme')
   }
@@ -142,8 +153,8 @@ function goTo(name: string) {
   background-color: var(--colors-surface-100)
 
 .aurora-logo
-  width: 64px
-  height: 64px
+  width: 48px
+  height: 48px
 
 #header
   margin-left: 10px
