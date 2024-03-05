@@ -17,8 +17,9 @@ import {
   DARK_THEME,
   LIGHT_THEME,
   Switch,
-  IconButton
-} from '@aurora_ui/vue';
+  IconButton,
+  Panel,
+} from '@aurora-lib/vue';
 import App from '@/App.vue';
 import '@/index.sass';
 import { createVCodeBlock } from '@wdns/vue-code-block';
@@ -56,4 +57,5 @@ app.component('Table', Table);
 app.component('TextField', TextField);
 app.component('Column', Column);
 app.component('IconButton', IconButton);
+app.component('Panel', Panel);
 app.mount('#app');
