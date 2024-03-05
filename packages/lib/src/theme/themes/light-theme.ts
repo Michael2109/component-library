@@ -8,10 +8,10 @@ export const LIGHT_THEME: Theme = {
   fontSize: '24px',
   colors: {
     primary: {
-      background: '#87edc3',
-      border: '#87edc3',
-      hover: '#87edc3',
-      text: '#000'
+      background: '#3181CE',
+      border: '#000000',
+      hover: '#3694ea',
+      text: '#fff'
     },
     black: {
       background: '#000',

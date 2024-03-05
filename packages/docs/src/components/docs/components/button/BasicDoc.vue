@@ -4,13 +4,13 @@ import DocSection from '@/components/docs/usage/DocUsageSection.vue';
 import { Checkbox } from '@aurora_ui/vue';
 
 const code: DocUsageSectionCode = {
-  basic: `<Checkbox>Checkbox</Checkbox>`
+  basic: `<Button>Button</Button>`
 };
 </script>
 
 <template>
   <DocSection title="Basic" :code="code">
-    <Checkbox>Checkbox</Checkbox>
+    <Button>Button</Button>
   </DocSection>
 </template>
 

@@ -12,6 +12,13 @@ export function getBorderColor(color: string | undefined) {
   return `var(--colors-primary-border)`;
 }
 
+export function getHoverColor(color: string | undefined) {
+  if (color) {
+    return `var(--colors-${color}-hover, var(--colors-primary-hover))`;
+  }
+  return `transparent`;
+}
+
 export function getFontColor(color: string | undefined) {
   if (color === undefined) {
     return 'var(--typographies-black)';

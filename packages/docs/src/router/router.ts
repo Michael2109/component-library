@@ -22,26 +22,68 @@ const routes = [
       {
         path: 'getting-started',
         name: 'GettingStarted',
-        component: GettingStartedView
+        component: GettingStartedView,
+        meta: { title: 'Getting Started' }
       },
       {
         path: 'elements',
         name: 'Elements',
         children: [
-          { path: 'button', name: 'Button', component: ButtonView },
-          { path: 'checkbox', name: 'Checkbox', component: CheckboxView },
-          { path: 'tag', name: 'Tag', component: TagView },
-          { path: 'code', name: 'Code', component: CodeView },
-          { path: 'menu', name: 'Menu', component: MenuView },
-          { path: 'table', name: 'Table', component: TableView },
-          { path: 'text-field', name: 'TextField', component: TextFieldView },
-          { path: 'icon-button', name: 'IconButton', component: IconButtonView }
+          {
+            path: 'button',
+            name: 'Button',
+            component: ButtonView,
+            meta: { title: 'Button' }
+          },
+          {
+            path: 'checkbox',
+            name: 'Checkbox',
+            component: CheckboxView,
+            meta: { title: 'Checkbox' }
+          },
+          {
+            path: 'tag',
+            name: 'Tag',
+            component: TagView,
+            meta: { title: 'Tag' }
+          },
+          {
+            path: 'code',
+            name: 'Code',
+            component: CodeView,
+            meta: { title: 'Code' }
+          },
+          {
+            path: 'menu',
+            name: 'Menu',
+            component: MenuView,
+            meta: { title: 'Menu' }
+          },
+          {
+            path: 'table',
+            name: 'Table',
+            component: TableView,
+            meta: { title: 'Table' }
+          },
+          {
+            path: 'text-field',
+            name: 'TextField',
+            component: TextFieldView,
+            meta: { title: 'TextField' }
+          },
+          {
+            path: 'icon-button',
+            name: 'IconButton',
+            component: IconButtonView,
+            meta: { title: 'IconButton' }
+          }
         ]
       },
       {
         path: 'theme',
         name: 'Theme',
-        component: ThemeView
+        component: ThemeView,
+        meta: { title: 'Theme' }
       }
     ]
   }
@@ -54,6 +96,12 @@ const router = createRouter({
   // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
   history: createWebHistory(),
   routes // short for `routes: routes`
+});
+
+const DEFAULT_TITLE = 'Some Default Title';
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title + ' - Aurora UI';
+  next();
 });
 
 export default router;

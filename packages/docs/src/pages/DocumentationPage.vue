@@ -4,8 +4,12 @@
       <Sidebar
         ><template #top>
           <div class="content">
-            <h1 id="header" @click="goTo('Home')">Aurora UI</h1>
-            <Menu :items="items" /></div></template
+            <div style="display: flex; margin-left: 10px; align-items: center">
+              <img class="aurora-logo" src="/aurora-original.png" />
+              <h1 id="header" @click="goTo('Home')">Aurora</h1>
+            </div>
+            <Menu :items="items" />
+          </div> </template
       ></Sidebar>
     </template>
     <template #header>
@@ -137,9 +141,14 @@ function goTo(name: string) {
 :deep(.aurora-layout-content)
   background-color: var(--colors-surface-100)
 
+.aurora-logo
+  width: 64px
+  height: 64px
+
 #header
   margin-left: 10px
   margin-top: 0
+  margin-bottom: 0
   cursor: pointer
 .content
   padding-left: 15px

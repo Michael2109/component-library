@@ -6,6 +6,7 @@ import { useTheme } from '../../plugins/components-plugin';
 import type { Theme } from '@/theme/theme';
 import {
   getBackgroundColor,
+  getHoverColor,
   calculateFontColor,
   getFontColor
 } from '@/common/color-to-css-variable';
@@ -76,6 +77,13 @@ const backgroundColorCssVariable = computed(() => {
   return getBackgroundColor(props.color);
 });
 
+const hoverColor = computed(() => {
+  if (props.variant === 'text' || props.variant === 'outlined') {
+    return getHoverColor(undefined);
+  }
+  return getHoverColor(props.color);
+});
+
 const fontColor = computed(() => {
   if (props.variant === 'text') {
     return getFontColor(undefined);
@@ -128,13 +136,7 @@ function onClick() {
   transition: background-color 0.3s ease
 
 .button:hover
-  background-color: #8df7ca
-
-.button-primary
-  background-color: #8EEEC5
-
-.button-primary:hover
-  background-color: #92f5cb
+  background-color: v-bind("hoverColor")
 
 .button-icon
   padding-left: 2px
@@ -166,7 +168,8 @@ function onClick() {
 // Variant
 .button-outlined
   border: 1px solid black
-  background-color: white
+  color: var(--typographies-black)
+  background-color: transparent
 
 .button-text
   background-color: transparent
