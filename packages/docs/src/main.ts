@@ -17,7 +17,8 @@ import {
   DARK_THEME,
   LIGHT_THEME,
   Switch,
-  IconButton
+  IconButton,
+  Panel,
 } from '@aurora-lib/vue';
 import App from '@/App.vue';
 import '@/index.sass';
@@ -56,4 +57,5 @@ app.component('Table', Table);
 app.component('TextField', TextField);
 app.component('Column', Column);
 app.component('IconButton', IconButton);
+app.component('Panel', Panel);
 app.mount('#app');
