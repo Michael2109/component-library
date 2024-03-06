@@ -3,31 +3,25 @@ import type { DocUsageSectionCode } from '@/components/docs/usage/doc-usage-sect
 import DocSection from '@/components/docs/usage/DocUsageSection.vue';
 
 const code: DocUsageSectionCode = {
-  basic: `<Button color="gray">Gray</Button>
-<Button color="red">Red</Button>
-<Button color="orange">Orange</Button>
-<Button color="yellow">Yellow</Button>
-<Button color="green">Green</Button>
-<Button color="teal">Teal</Button>
-<Button color="blue">Blue</Button>
-<Button color="cyan">Cyan</Button>
-<Button color="purple">Purple</Button>
-<Button color="pink">Pink</Button>`
+  basic: `<Button severity="primary">Gray</Button>
+<Button severity="secondary">Red</Button>
+<Button severity="success">Orange</Button>
+<Button severity="info">Yellow</Button>
+<Button severity="warning">Green</Button>
+<Button severity="danger">Teal</Button>
+<Button severity="contrast">Blue</Button>`
 };
 </script>
 
 <template>
-  <DocSection title="Colors" :code="code">
-    <Button color="gray">Gray</Button>
-    <Button color="red">Red</Button>
-    <Button color="orange">Orange</Button>
-    <Button color="yellow">Yellow</Button>
-    <Button color="green">Green</Button>
-    <Button color="teal">Teal</Button>
-    <Button color="blue">Blue</Button>
-    <Button color="cyan">Cyan</Button>
-    <Button color="purple">Purple</Button>
-    <Button color="pink">Pink</Button>
+  <DocSection title="Severity" :code="code">
+    <Button severity="primary">Primary</Button>
+    <Button severity="secondary">Secondary</Button>
+    <Button severity="success">Success</Button>
+    <Button severity="info">Info</Button>
+    <Button severity="warning">Warning</Button>
+    <Button severity="danger">Danger</Button>
+    <Button severity="contrast">Contrast</Button>
 
     <template #description>
       Use the color prop to change the color of the button.

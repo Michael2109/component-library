@@ -100,7 +100,12 @@ const router = createRouter({
 
 const DEFAULT_TITLE = 'Some Default Title';
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title + ' - Aurora UI';
+  const title = to.meta.title;
+  if (title) {
+    document.title = to.meta.title + ' - Aurora UI';
+  } else {
+    document.title = 'Aurora UI';
+  }
   next();
 });
 

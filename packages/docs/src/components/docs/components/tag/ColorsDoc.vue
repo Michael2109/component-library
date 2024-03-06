@@ -4,32 +4,25 @@ import type { DocUsageSectionCode } from '@/components/docs/usage/doc-usage-sect
 import { Tag, Chip, Table } from '@aurora_ui/vue';
 
 const code: DocUsageSectionCode = {
-  basic: `<Tag color="gray">Gray</Tag>
-<Tag color="red">Red</Tag>
-<Tag color="orange">Orange</Tag>
-<Tag color="yellow">Yellow</Tag>
-<Tag color="green">Green</Tag>
-<Tag color="teal">Teal</Tag>
-<Tag color="blue">Blue</Tag>
-<Tag color="cyan">Cyan</Tag>
-<Tag color="purple">Purple</Tag>
-<Tag color="pink">Pink</Tag>`
+  basic: `<Tag severity="primary">Primary</Tag>
+<Tag severity="secondary">Secondary</Tag>
+<Tag severity="success">Success</Tag>
+<Tag severity="info">Info</Tag>
+<Tag severity="warning">Warning</Tag>
+<Tag severity="danger">Danger</Tag>
+<Tag severity="contrast">Contrast</Tag>`
 };
 </script>
 
 <template>
   <DocSection title="Colors" :code="code">
-    <Tag color="gray">Gray</Tag>
-    <Tag color="red">Red</Tag>
-    <Tag color="orange">Orange</Tag>
-    <Tag color="yellow">Yellow</Tag>
-    <Tag color="green">Green</Tag>
-    <Tag color="teal">Teal</Tag>
-    <Tag color="blue">Blue</Tag>
-    <Tag color="cyan">Cyan</Tag>
-    <Tag color="purple">Purple</Tag>
-    <Tag color="pink">Pink</Tag>
-
+    <Tag severity="primary">Primary</Tag>
+    <Tag severity="secondary">Secondary</Tag>
+    <Tag severity="success">Success</Tag>
+    <Tag severity="info">Info</Tag>
+    <Tag severity="warning">Warning</Tag>
+    <Tag severity="danger">Danger</Tag>
+    <Tag severity="contrast">Contrast</Tag>
     <template #description> A table.</template>
   </DocSection>
 </template>

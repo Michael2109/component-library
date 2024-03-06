@@ -30,7 +30,7 @@ const props = defineProps({
     require: false,
     default: 'solid'
   },
-  color: {
+  severity: {
     type: String,
     require: false,
     default: 'primary'
@@ -74,21 +74,21 @@ const className = computed(() => {
 });
 
 const backgroundColorCssVariable = computed(() => {
-  return getBackgroundColor(props.color);
+  return getBackgroundColor(props.severity);
 });
 
 const hoverColor = computed(() => {
   if (props.variant === 'text' || props.variant === 'outlined') {
     return getHoverColor(undefined);
   }
-  return getHoverColor(props.color);
+  return getHoverColor(props.severity);
 });
 
 const fontColor = computed(() => {
   if (props.variant === 'text') {
     return getFontColor(undefined);
   }
-  return getFontColor(props.color);
+  return getFontColor(props.severity);
 });
 
 const theme: Theme = useTheme().global();

@@ -15,7 +15,7 @@ const props = defineProps({
     required: false,
     default: undefined
   },
-  color: {
+  severity: {
     type: String,
     required: false,
     default: 'primary'
@@ -30,11 +30,11 @@ const props = defineProps({
 const slots = defineSlots();
 
 const backgroundColorCssVariable = computed(() => {
-  return getBackgroundColor(props.color);
+  return getBackgroundColor(props.severity);
 });
 
 const fontColor = computed(() => {
-  return getFontColor(props.color);
+  return getFontColor(props.severity);
 });
 </script>
 

@@ -5,15 +5,10 @@ export interface ColorsTheme {
   primary: ColorTheme;
   black: ColorTheme;
   white: ColorTheme;
-  gray: ColorTheme;
-  red: ColorTheme;
-  orange: ColorTheme;
-  yellow: ColorTheme;
-  green: ColorTheme;
-  teal: ColorTheme;
-  blue: ColorTheme;
-  cyan: ColorTheme;
-  purple: ColorTheme;
-  pink: ColorTheme;
+  secondary: ColorTheme;
+  success: ColorTheme;
+  info: ColorTheme;
+  warning: ColorTheme;
+  danger: ColorTheme;
   surface: ColorVariants;
 }

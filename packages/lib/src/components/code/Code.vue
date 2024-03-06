@@ -1,25 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import {
-  getBackgroundColor,
-  getFontColor
-} from '../../common/color-to-css-variable';
-
-const props = defineProps({
-  color: {
-    type: String,
-    required: false,
-    default: 'gray'
-  }
-});
-
-const backgroundColorCssVariable = computed(() => {
-  return getBackgroundColor(props.color);
-});
-
-const fontColor = computed(() => {
-  return getFontColor(props.color);
-});
+const props = defineProps({});
 </script>
 
 <template>
@@ -30,8 +10,8 @@ const fontColor = computed(() => {
 
 <style scoped lang="sass">
 .aurora-code
-  background: v-bind('backgroundColorCssVariable')
-  color: v-bind(fontColor)
+  background: var(--code-background-color)
+  color: var(--typographies-black)
   font-size: 16px
   display: inline-block
   padding-inline: 0.2em
