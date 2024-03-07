@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineModel } from 'vue';
+import { computed, defineModel, useSlots } from 'vue';
 
 const model = defineModel<Boolean>();
 
@@ -10,25 +10,42 @@ const props = defineProps({
     default: undefined
   }
 });
+
+const slots = useSlots();
+
+const maxHeight = computed(() => {
+  if (!!slots['header']) {
+    console.log(slots);
+    return 'calc(100% - 65px)';
+  }
+  return '100%';
+});
 </script>
 
 <template>
   <div class="layout">
     <slot name="header" />
 
-    <slot name="sidebar" />
+    <div class="layout-bottom">
+      <slot name="sidebar" />
 
-    <div class="aurora-layout-content">
-      <slot></slot>
+      <div class="aurora-layout-content">
+        <slot></slot>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped lang="sass">
-.aurora-layout-content
-  max-height: calc(100% - 65px)
-  overflow-y: scroll
 .layout
-  width: 100%
   height: 100%
+  overflow: hidden
+.aurora-layout-content
+  max-height: 100%
+  width: 100%
+  overflow-y: auto
+.layout-bottom
+  display: flex
+  width: 100%
+  height: v-bind(maxHeight)
 </style>

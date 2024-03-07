@@ -1,19 +1,14 @@
 <template>
-  <Layout style="margin-left: 250px; width: calc(100% - 250px)">
-    <template #sidebar>
-      <Sidebar
-        ><template #top>
-          <div class="content">
-            <div style="display: flex; margin-left: 10px; align-items: center">
-              <img class="aurora-logo" src="/aurora-original.png" />
-              <h1 id="header" @click="goTo('Home')">Aurora</h1>
-            </div>
-
-            <Menu :selected-key="selectedKey" :items="items" />
+  <Layout>
+    <template #header>
+      <Header>
+        <template #left>
+          <div style="display: flex; margin-left: 10px; align-items: center">
+            <img class="aurora-logo" src="/aurora-original.png" />
+            <h1 id="header" @click="goTo('Home')">Aurora</h1>
           </div>
         </template>
-
-        <template #bottom>
+        <template #right>
           <div style="display: flex; margin-left: 10px; align-items: center">
             <Button
               icon="mdi mdi-github mdi-24px"
@@ -28,13 +23,23 @@
             ></Button>
           </div>
         </template>
-      </Sidebar>
+      </Header>
     </template>
-    <template #header> </template>
-    <div style="margin-left: 20px; margin-right: 20px">
-      <router-view></router-view>
-    </div>
-  </Layout>
+    <Layout>
+      <template #sidebar>
+        <Sidebar
+          ><template #top>
+            <div class="content">
+              <Menu :selected-key="selectedKey" :items="items" />
+            </div>
+          </template>
+        </Sidebar>
+      </template>
+
+      <div style="margin-left: 20px; margin-right: 20px">
+        <router-view></router-view>
+      </div> </Layout
+  ></Layout>
 </template>
 
 <script setup lang="ts">
@@ -44,6 +49,8 @@ import { DARK_THEME, LIGHT_THEME, useTheme, Menu } from '@aurora_ui/vue';
 import type { MenuItem } from '@aurora_ui/vue';
 import { computed, ref, watch } from 'vue';
 import { TextField } from '@aurora_ui/vue';
+import { Layout } from '@aurora_ui/vue';
+import { Header } from '@aurora_ui/vue';
 
 const router = useRouter();
 
@@ -164,10 +171,4 @@ function goTo(name: string) {
 .content
   padding-left: 15px
   padding-right: 15px
-.app-layout
-  width: calc(100% - 300px)
-  height: 100%
-  margin-top: 0
-  margin-left: 280px
-  margin-right: 20px
 </style>

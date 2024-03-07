@@ -30,7 +30,6 @@ const props = defineProps({
   border-right-width: 1px
   width: 250px
   background-color: var(--colors-surface-200)
-  position: fixed
   top: 0
   left: 0
   height: 100%

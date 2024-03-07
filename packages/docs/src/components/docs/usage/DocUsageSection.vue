@@ -73,8 +73,8 @@ const props = defineProps({
   align-items: center
   gap: 10px
   background-color: var(--colors-surface-50)
-  //border: var(--color-surface-300) solid 1px
+  border: 1px solid var(--colors-surface-300)
+  border-radius: 12px
   margin-top: 8px
   margin-bottom: 16px
-  border-radius: 5px
 </style>
