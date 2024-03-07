@@ -3,9 +3,11 @@
     <template #header>
       <Header>
         <template #left>
-          <div style="display: flex; margin-left: 10px; align-items: center">
+          <div
+            style="display: flex; margin-left: 10px; justify-content: center"
+          >
             <img class="aurora-logo" src="/aurora-original.png" />
-            <h1 id="header" @click="goTo('Home')">Aurora</h1>
+            <h1 id="header" @click="goTo('Home')">Aurora UI</h1>
           </div>
         </template>
         <template #right>

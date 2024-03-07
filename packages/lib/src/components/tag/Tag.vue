@@ -39,12 +39,12 @@ const fontColor = computed(() => {
 </script>
 
 <template>
-  <div class="chip">
-    <div class="chip-content"><slot /></div>
+  <div class="aurora-tag">
+    <div class="aurora-tag-content"><slot /></div>
     <div v-if="closeable" class="chip-close">
       <svg
         @click="emits('close')"
-        class="chip-svg"
+        class="aurora-tag-svg"
         focusable="false"
         viewBox="0 0 24 24"
         aria-hidden="true"
@@ -58,7 +58,7 @@ const fontColor = computed(() => {
 </template>
 
 <style scoped lang="sass">
-.chip
+.aurora-tag
   display: inline-flex
   flex-direction: row
   background-color: v-bind('backgroundColorCssVariable')
@@ -72,16 +72,15 @@ const fontColor = computed(() => {
   font-weight: bold
   white-space: nowrap
   align-items: center
-  border-radius: 16px
+  border-radius: 8px
   vertical-align: middle
   text-decoration: none
   justify-content: center
 
-.chip-head
+.aurora-tag-head
   display: flex
   position: relative
   overflow: hidden
-  font-size: 1.25rem
   flex-shrink: 0
   align-items: center
   user-select: none
@@ -92,7 +91,7 @@ const fontColor = computed(() => {
   font-size: 20px
   margin-right: -4px
 
-.chip-content
+.aurora-tag-content
   cursor: inherit
   display: flex
   align-items: center
@@ -101,7 +100,7 @@ const fontColor = computed(() => {
   padding-left: 12px
   padding-right: 12px
 
-.chip-svg
+.aurora-tag-svg
   color: #999999
   cursor: pointer
   height: auto
@@ -115,6 +114,6 @@ const fontColor = computed(() => {
   user-select: none
   flex-shrink: 0
 
-.chip-svg:hover
+.aurora-tag-svg:hover
   color: #666666
 </style>

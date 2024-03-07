@@ -32,16 +32,16 @@ export const LIGHT_THEME: Theme = {
       text: '#000'
     },
     success: {
-      background: '#f00',
-      border: '#f00',
-      hover: '#f00',
-      text: '#000'
+      background: '#0f0',
+      border: '#0f0',
+      hover: '#0f0',
+      text: '#fff'
     },
     info: {
-      background: '#FFA500',
-      border: '#FFA500',
-      hover: '#FFA500',
-      text: '#000'
+      background: '#00f',
+      border: '#00f',
+      hover: '#00f',
+      text: '#fff'
     },
     warning: {
       background: '#FFA500',
@@ -50,10 +50,10 @@ export const LIGHT_THEME: Theme = {
       text: '#000'
     },
     danger: {
-      background: '#0f0',
-      border: '#0f0',
-      hover: '#0f0',
-      text: '#000'
+      background: '#ff0000',
+      border: '#ff0000',
+      hover: '#ff0000',
+      text: '#fff'
     },
     surface: {
       50: `#fcfcfc`,
