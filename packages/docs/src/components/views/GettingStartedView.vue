@@ -52,6 +52,9 @@ app.component("Button", Button)`;
 
   <h2>Use a component</h2>
   <CodeBlock lang="html" :code="useComponentCode"></CodeBlock>
+
+
+  <Message severity="sucess">losuhdfliuh</Message>
 </template>
 
 <style scoped lang="sass"></style>
