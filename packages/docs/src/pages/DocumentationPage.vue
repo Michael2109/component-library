@@ -3,12 +3,7 @@
     <template #header>
       <Header>
         <template #left>
-          <div
-            style="display: flex; margin-left: 10px; justify-content: center"
-          >
-            <img class="aurora-logo" src="/aurora-original.png" />
-            <h1 id="header" @click="goTo('Home')">Aurora UI</h1>
-          </div>
+          <AuroraLogo></AuroraLogo>
         </template>
         <template #right>
           <div style="display: flex; margin-left: 10px; align-items: center">
@@ -31,9 +26,7 @@
       <template #sidebar>
         <Sidebar
           ><template #top>
-            <div class="content">
-              <Menu :selected-key="selectedKey" :items="items" />
-            </div>
+            <Menu v-model="selectedKey" :items="items" />
           </template>
         </Sidebar>
       </template>
@@ -53,6 +46,7 @@ import { computed, ref, watch } from 'vue';
 import { TextField } from '@aurora_ui/vue';
 import { Layout } from '@aurora_ui/vue';
 import { Header } from '@aurora_ui/vue';
+import AuroraLogo from '@/components/logo/AuroraLogo.vue';
 
 const router = useRouter();
 
@@ -114,11 +108,6 @@ const items: Array<MenuItem> = [
         key: 'TextField',
         label: 'TextField',
         command: () => goTo('TextField')
-      },
-      {
-        key: 'IconButton',
-        label: 'IconButton',
-        command: () => goTo('IconButton')
       }
     ]
   },
@@ -161,15 +150,6 @@ function goTo(name: string) {
 :deep(.aurora-layout-content)
   background-color: var(--colors-surface-100)
 
-.aurora-logo
-  width: 48px
-  height: 48px
-
-#header
-  margin-left: 10px
-  margin-top: 0
-  margin-bottom: 0
-  cursor: pointer
 .content
   padding-left: 15px
   padding-right: 15px

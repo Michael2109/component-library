@@ -61,15 +61,15 @@ const emits = defineEmits(['click']);
 
 const className = computed(() => {
   return {
-    button: true,
-    'button-xlg': props.size === 'xlg',
-    'button-lg': props.size === 'lg',
-    'button-sm': props.size === 'sm',
-    'button-xsm': props.size === 'xs',
-    'button-solid': props.variant === 'solid',
-    'button-outlined': props.variant === 'outlined',
-    'button-text': props.variant === 'text',
-    'button-link': props.variant === 'link'
+    'aurora-button': true,
+    'aurora-button-xlg': props.size === 'xlg',
+    'aurora-button-lg': props.size === 'lg',
+    'aurora-button-sm': props.size === 'sm',
+    'aurora-button-xsm': props.size === 'xs',
+    'aurora-button-solid': props.variant === 'solid',
+    'aurora-button-outlined': props.variant === 'outlined',
+    'aurora-button-text': props.variant === 'text',
+    'aurora-button-link': props.variant === 'link'
   };
 });
 
@@ -105,14 +105,14 @@ function onClick() {
   <button :href="href" @click="onClick" :class="className">
     <div v-if="icon" :class="icon"></div>
     <slot name="leftIcon"></slot>
-    <div v-if="loading && iconPosition === 'left'" class="button-icon">
-      <div class="mdi mdi-loading button-loading" />
+    <div v-if="loading && iconPosition === 'left'" class="aurora-button-icon">
+      <div class="mdi mdi-loading aurora-button-loading" />
     </div>
     <slot name="prepend" />
     <slot />
     <slot name="append" />
 
-    <div v-if="iconPosition === 'right'" class="button-icon">
+    <div v-if="iconPosition === 'right'" class="aurora-button-icon">
       <div class="mdi mdi-loading button-loading" />
     </div>
     <slot name="rightIcon"></slot>
@@ -120,30 +120,30 @@ function onClick() {
 </template>
 
 <style scoped lang="sass">
-.button
+.aurora-button
   display: flex
   justify-content: center
   background-color: v-bind('backgroundColorCssVariable')
   color: v-bind('fontColor')
   font-family: var(--button-font-family, var(--font-family))
-  font-size: var(--input-font-size, --font-size)
+  font-size: 16px
   font-weight: 600
-  padding: 12px
-  border-radius: 10px
+  padding: 5px 12px 5px 12px
+  border-radius: 4px
   border: none
   cursor: pointer
   animation-duration: 1s
   transition: background-color 0.3s ease
 
-.button:hover
+.aurora-button:hover
   background-color: v-bind("hoverColor")
 
-.button-icon
+.aurora-button-icon
   padding-left: 2px
   padding-right: 2px
 
 // Loading
-.button-loading
+.aurora-button-loading
   animation: spin 1s linear infinite
 
 @keyframes spin
@@ -153,38 +153,42 @@ function onClick() {
     transform: rotate(360deg)
 
 // Size
-.button-xsm
-  padding: 5px
+.aurora-button-xsm
+  padding: 4px 8px 4px 8px
+  font-size: 12px
 
-.button-sm
-  padding: 8px
+.aurora-button-sm
+  padding: 4px 10px 4px 10px
+  font-size: 14px
 
-.button-lg
-  padding: 16px
+.aurora-button-lg
+  padding: 8px 14px 8px 14px
+  font-size: 18px
 
-.button-xlg
-  padding: 18px
+.aurora-button-xlg
+  padding: 10px 18px 10px 18px
+  font-size: 20px
 
 // Variant
-.button-outlined
+.aurora-button-outlined
   border: 1px solid black
   color: var(--typographies-black)
   background-color: transparent
 
-.button-text
+.aurora-button-text
   background-color: transparent
   border: none
 
-.button-text:hover
+.aurora-button-text:hover
   background-color: rgba(0, 0, 0, 0.05)
 
-.button-link
+.aurora-button-link
   background: none !important
   border: none
   padding: 0 !important
   color: #8e8e8e
   cursor: pointer
 
-.button-link:hover
+.aurora-button-link:hover
   text-decoration: underline
 </style>

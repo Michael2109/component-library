@@ -10,12 +10,8 @@ const code: DocUsageSectionCode = {
 </script>
 
 <template>
-  <DocSection title="Basic" :code="code">
-    <TextField>
-      <template #left-icon> Left Icon </template>
-
-      <template #right-icon> Right Icon </template>
-    </TextField>
+  <DocSection title="Postfix" :code="code">
+    <TextField postfix="mdi mdi-circle">< </TextField>
 
     <template #description> A table.</template>
   </DocSection>

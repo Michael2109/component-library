@@ -2,7 +2,7 @@
 import ComponentDoc from '@/components/docs/ComponentDoc.vue';
 import Props from '@/components/docs/components/button/api/Props.vue';
 import BasicDoc from '@/components/docs/components/tag/BasicDoc.vue';
-import ColorsDoc from '@/components/docs/components/tag/ColorsDoc.vue';
+import SeverityDoc from '@/components/docs/components/tag/ColorsDoc.vue';
 import CloseableDoc from '@/components/docs/components/tag/CloseableDoc.vue';
 </script>
 
@@ -13,7 +13,7 @@ import CloseableDoc from '@/components/docs/components/tag/CloseableDoc.vue';
   >
     <template #usage>
       <BasicDoc></BasicDoc>
-      <ColorsDoc></ColorsDoc>
+      <SeverityDoc></SeverityDoc>
       <CloseableDoc></CloseableDoc>
     </template>
 

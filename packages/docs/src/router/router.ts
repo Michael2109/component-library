@@ -70,12 +70,6 @@ const routes = [
             name: 'TextField',
             component: TextFieldView,
             meta: { title: 'TextField' }
-          },
-          {
-            path: 'icon-button',
-            name: 'IconButton',
-            component: IconButtonView,
-            meta: { title: 'IconButton' }
           }
         ]
       },

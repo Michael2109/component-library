@@ -20,7 +20,7 @@ export const LIGHT_THEME: Theme = {
       text: '#000'
     },
     primary: {
-      background: '#3181CE',
+      background: '#228BE6',
       border: '#000000',
       hover: '#3694ea',
       text: '#fff'

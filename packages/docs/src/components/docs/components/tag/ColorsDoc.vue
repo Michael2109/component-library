@@ -9,8 +9,7 @@ const code: DocUsageSectionCode = {
 <Tag severity="success">Success</Tag>
 <Tag severity="info">Info</Tag>
 <Tag severity="warning">Warning</Tag>
-<Tag severity="danger">Danger</Tag>
-<Tag severity="contrast">Contrast</Tag>`
+<Tag severity="danger">Danger</Tag>`
 };
 </script>
 
@@ -22,7 +21,6 @@ const code: DocUsageSectionCode = {
     <Tag severity="info">Info</Tag>
     <Tag severity="warning">Warning</Tag>
     <Tag severity="danger">Danger</Tag>
-    <Tag severity="contrast">Contrast</Tag>
     <template #description> A table.</template>
   </DocSection>
 </template>

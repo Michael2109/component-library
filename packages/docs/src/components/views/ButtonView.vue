@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import SizesDoc from '@/components/docs/components/button/SizesDoc.vue';
 import VariantsDoc from '@/components/docs/components/button/VariantsDoc.vue';
-import ColorsDoc from '@/components/docs/components/button/ColorsDoc.vue';
+import SeverityDoc from '@/components/docs/components/button/ColorsDoc.vue';
 import IconsDoc from '@/components/docs/components/button/IconsDoc.vue';
 import ComponentDoc from '@/components/docs/ComponentDoc.vue';
 import Props from '@/components/docs/components/button/api/Props.vue';

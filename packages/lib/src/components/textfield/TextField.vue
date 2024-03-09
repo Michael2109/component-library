@@ -30,6 +30,16 @@ const props = defineProps({
   variant: {
     type: String,
     required: false
+  },
+  prefix: {
+    type: String,
+    required: false,
+    default: undefined
+  },
+  postfix: {
+    type: String,
+    required: false,
+    default: undefined
   }
 });
 
@@ -59,7 +69,7 @@ const sizeClass = computed(() => {
 </script>
 
 <template>
-  <slot name="prefix"></slot>
+  <slot name="prefix"><div :class="prefix"></div></slot>
 
   <input
     :placeholder="placeholder"

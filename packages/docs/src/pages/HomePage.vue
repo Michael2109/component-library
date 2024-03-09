@@ -1,7 +1,7 @@
 <template>
   <Header>
     <template #left>
-      <div class="homepage-header">Aurora UI</div>
+      <AuroraLogo></AuroraLogo>
     </template>
   </Header>
   <div class="hero">
@@ -18,6 +18,7 @@
 <script setup lang="ts">
 import { Button, Header } from '@aurora_ui/vue';
 import { useRouter } from 'vue-router';
+import AuroraLogo from '@/components/logo/AuroraLogo.vue';
 
 const router = useRouter();
 </script>
