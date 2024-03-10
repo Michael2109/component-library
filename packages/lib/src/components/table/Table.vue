@@ -61,11 +61,13 @@ th
   font-weight: 500
   border-bottom: 1px solid var(--colors-surface-200)
   text-align: left
+  color: var(--typographies-black)
   padding: 8px
 
 td
   border-top: 1px solid var(--colors-surface-200)
   border-bottom: 1px solid var(--colors-surface-200)
+  color: var(--typographies-black)
   text-align: left
   padding: 8px
 

@@ -43,91 +43,86 @@ const props = defineProps({
   }
 });
 
-const variantClass = computed(() => {
-  if (props.variant === 'filled') {
-    return 'input-filled';
-  } else if (props.variant === 'outlined') {
-    return 'input-outlined';
-  } else {
-    return '';
-  }
-});
-
-const sizeClass = computed(() => {
-  if (props.size === 'xs') {
-    return 'input-xs';
-  } else if (props.size === 'md') {
-    return 'input-md';
-  } else if (props.size === 'lg') {
-    return 'input-lg';
-  } else if (props.size === 'xlg') {
-    return 'input-xlg';
-  } else {
-    return '';
-  }
+const inputClass = computed(() => {
+  return {
+    'aurora-text-field': true,
+    'aurora-text-field-filled': props.variant === 'filled',
+    'aurora-text-field-outlined': props.variant === 'outlined',
+    'aurora-text-field-xs': props.size === 'xs',
+    'aurora-text-field-md': props.size === 'md',
+    'aurora-text-field-lg': props.size === 'lg',
+    'aurora-text-field-xlg': props.size === 'xlg',
+    'aurora-text-field-include-prefix': props.prefix
+  };
 });
 </script>
 
 <template>
-  <slot name="prefix"><div :class="prefix"></div></slot>
-
-  <input
-    :placeholder="placeholder"
-    type="text"
-    :class="variantClass + ' ' + sizeClass"
-  />
+  <div class="aurora-text-field-prefix">
+    <slot name="prefix"><div :class="prefix"></div></slot>
+  </div>
+  <input :placeholder="placeholder" type="text" :class="inputClass" />
 
   <div class="aurora-text-field-postfix">
-    <slot name="postfix"></slot>
+    <slot name="postfix"><div :class="postfix"></div></slot>
   </div>
 </template>
 
 <style scoped lang="sass">
 
+.aurora-text-field
+  width: 150px
+  border-radius: 6px
+  padding: 10px
+
 .icon
   font-size: 100px
 
-.input-xlg
+.aurora-text-field-xlg
   width: 300px
   border-radius: 10px
   padding: 6px
   font-size: 20px
 
-.input-lg
+.aurora-text-field-lg
   width: 400px
   border-radius: 20px
   padding: 20px
   font-size: 50px
 
-.input-md
+.aurora-text-field-md
   padding: 5px
   font-size: 14px
 
-.input-sm
+.aurora-text-field-sm
   width: 250px
   border-radius: 10px
   padding: 10px
   font-size: 20px
 
-.input-xs
+.aurora-text-field-xs
   width: 175px
   border-radius: 5px
   padding: 5px
   font-size: 10px
 
-.input-filled
+.aurora-text-field-filled
   background-color: #dcdcdc
   border: 1px
 
-.input-outlined
+.aurora-text-field-outlined
   background-color: transparent
   border: 1px solid #1a1a1a
 
-input
-  width: 150px
-  border-radius: 6px
-  padding: 10px
+.aurora-text-field-include-prefix
+  padding-left: 28px
+
+.aurora-text-field-prefix
+  position: absolute
+  padding-left: 10px
 
 .aurora-text-field-postfix
   position: absolute
+  right: 10px
+  padding-left: 10px
 </style>

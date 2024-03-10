@@ -17,7 +17,7 @@ import BasicDoc from '@/components/docs/components/button/BasicDoc.vue';
       <BasicDoc></BasicDoc>
       <SizesDoc></SizesDoc>
       <VariantsDoc></VariantsDoc>
-      <ColorsDoc></ColorsDoc>
+      <SeverityDoc></SeverityDoc>
       <IconsDoc></IconsDoc>
     </template>
 

@@ -11,7 +11,6 @@ import TextFieldPostfixDoc from '@/components/docs/components/textfield/TextFiel
     <template #usage>
       <BasicDoc></BasicDoc>
       <TextFieldPrefixDoc></TextFieldPrefixDoc>
-      <TextFieldPostfixDoc></TextFieldPostfixDoc>
     </template>
 
     <template #api>
