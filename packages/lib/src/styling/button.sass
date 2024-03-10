@@ -1,0 +1,79 @@
+.aurora-button
+  display: flex
+  justify-content: center
+  background-color: v-bind('backgroundColorCssVariable')
+  color: v-bind('fontColor')
+  font-family: var(--button-font-family, var(--font-family))
+  font-size: 16px
+  font-weight: 600
+  padding: 5px 12px 5px 12px
+  border-radius: 4px
+  border: none
+  cursor: pointer
+  animation-duration: 1s
+  transition: background-color 0.3s ease
+
+.aurora-button:hover
+  background-color: v-bind("hoverColor")
+
+.aurora-button-icon
+  padding-left: 2px
+  padding-right: 2px
+
+.aurora-button-primary
+  background-color: var(--colors-primary-background)
+
+.aurora-button-secondary
+  background-color: var(--colors-secondary-background)
+
+.aurora-button-success
+  background-color: var(--colors-success-background)
+
+.aurora-button-info
+  background-color: var(--colors-info-background)
+
+.aurora-button-warning
+  background-color: var(--colors-warning-background)
+
+.aurora-button-danger
+  background-color: var(--colors-danger-background)
+
+// Size
+.aurora-button-xsm
+  padding: 4px 8px 4px 8px
+  font-size: 12px
+
+.aurora-button-sm
+  padding: 4px 10px 4px 10px
+  font-size: 14px
+
+.aurora-button-lg
+  padding: 8px 14px 8px 14px
+  font-size: 18px
+
+.aurora-button-xlg
+  padding: 10px 18px 10px 18px
+  font-size: 20px
+
+// Variant
+.aurora-button-outlined
+  border: 1px solid black
+  color: var(--typographies-black)
+  background-color: transparent
+
+.aurora-button-text
+  background-color: transparent
+  border: none
+
+.aurora-button-text:hover
+  background-color: rgba(0, 0, 0, 0.05)
+
+.aurora-button-link
+  background: none !important
+  border: none
+  padding: 0 !important
+  color: #8e8e8e
+  cursor: pointer
+
+.aurora-button-link:hover
+  text-decoration: underline

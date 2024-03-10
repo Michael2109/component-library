@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import { computed } from 'vue';
 import type { PropType } from 'vue';
+import { computed } from 'vue';
 
 import { useTheme } from '../../plugins/components-plugin';
 import type { Theme } from '@/theme/theme';
 import {
   getBackgroundColor,
-  getHoverColor,
-  calculateFontColor,
-  getFontColor
+  getFontColor,
+  getHoverColor
 } from '@/common/color-to-css-variable';
 import type { Sizes } from '@/common/sizes';
 
@@ -69,7 +68,13 @@ const className = computed(() => {
     'aurora-button-solid': props.variant === 'solid',
     'aurora-button-outlined': props.variant === 'outlined',
     'aurora-button-text': props.variant === 'text',
-    'aurora-button-link': props.variant === 'link'
+    'aurora-button-link': props.variant === 'link',
+    'aurora-button-primary': props.severity === 'primary',
+    'aurora-button-secondary': props.severity === 'secondary',
+    'aurora-button-success': props.severity === 'success',
+    'aurora-button-info': props.severity === 'info',
+    'aurora-button-warning': props.severity === 'warning',
+    'aurora-button-danger': props.severity === 'danger'
   };
 });
 
@@ -119,76 +124,4 @@ function onClick() {
   </button>
 </template>
 
-<style scoped lang="sass">
-.aurora-button
-  display: flex
-  justify-content: center
-  background-color: v-bind('backgroundColorCssVariable')
-  color: v-bind('fontColor')
-  font-family: var(--button-font-family, var(--font-family))
-  font-size: 16px
-  font-weight: 600
-  padding: 5px 12px 5px 12px
-  border-radius: 4px
-  border: none
-  cursor: pointer
-  animation-duration: 1s
-  transition: background-color 0.3s ease
-
-.aurora-button:hover
-  background-color: v-bind("hoverColor")
-
-.aurora-button-icon
-  padding-left: 2px
-  padding-right: 2px
-
-// Loading
-.aurora-button-loading
-  animation: spin 1s linear infinite
-
-@keyframes spin
-  0%
-    transform: rotate(0deg)
-  100%
-    transform: rotate(360deg)
-
-// Size
-.aurora-button-xsm
-  padding: 4px 8px 4px 8px
-  font-size: 12px
-
-.aurora-button-sm
-  padding: 4px 10px 4px 10px
-  font-size: 14px
-
-.aurora-button-lg
-  padding: 8px 14px 8px 14px
-  font-size: 18px
-
-.aurora-button-xlg
-  padding: 10px 18px 10px 18px
-  font-size: 20px
-
-// Variant
-.aurora-button-outlined
-  border: 1px solid black
-  color: var(--typographies-black)
-  background-color: transparent
-
-.aurora-button-text
-  background-color: transparent
-  border: none
-
-.aurora-button-text:hover
-  background-color: rgba(0, 0, 0, 0.05)
-
-.aurora-button-link
-  background: none !important
-  border: none
-  padding: 0 !important
-  color: #8e8e8e
-  cursor: pointer
-
-.aurora-button-link:hover
-  text-decoration: underline
-</style>
+<style scoped lang="sass"></style>

@@ -24,5 +24,3 @@ import BasicDoc from '@/components/docs/components/button/BasicDoc.vue';
     <template #api><Props></Props> </template>
   </ComponentDoc>
 </template>
-
-<style scoped lang="sass"></style>

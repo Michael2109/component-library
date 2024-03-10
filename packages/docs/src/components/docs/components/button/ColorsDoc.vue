@@ -8,8 +8,7 @@ const code: DocUsageSectionCode = {
 <Button severity="success">Orange</Button>
 <Button severity="info">Yellow</Button>
 <Button severity="warning">Green</Button>
-<Button severity="danger">Teal</Button>
-<Button severity="contrast">Blue</Button>`
+<Button severity="danger">Teal</Button>`
 };
 </script>
 
@@ -21,7 +20,6 @@ const code: DocUsageSectionCode = {
     <Button severity="info">Info</Button>
     <Button severity="warning">Warning</Button>
     <Button severity="danger">Danger</Button>
-    <Button severity="contrast">Contrast</Button>
 
     <template #description>
       Use the color prop to change the color of the button.

@@ -18,7 +18,8 @@ import TextField from '@/components/textfield/TextField.vue';
 import Column from '@/components/table/Column.vue';
 import ComponentsPlugin from '@/plugins/components-plugin';
 import IconButton from '@/components/iconbutton/IconButton.vue';
-import Panel from "@/components/panel/Panel.vue";
+import Panel from '@/components/panel/Panel.vue';
+import '@/styling/style.sass';
 
 export type { MenuItem };
 
