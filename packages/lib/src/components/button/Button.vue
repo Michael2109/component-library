@@ -59,7 +59,7 @@ const props = defineProps({
 const emits = defineEmits(['click']);
 
 const className = computed(() => {
-  return {
+  let name = {
     'aurora-button': true,
     'aurora-button-xlg': props.size === 'xlg',
     'aurora-button-lg': props.size === 'lg',
@@ -68,14 +68,23 @@ const className = computed(() => {
     'aurora-button-solid': props.variant === 'solid',
     'aurora-button-outlined': props.variant === 'outlined',
     'aurora-button-text': props.variant === 'text',
-    'aurora-button-link': props.variant === 'link',
-    'aurora-button-primary': props.severity === 'primary',
-    'aurora-button-secondary': props.severity === 'secondary',
-    'aurora-button-success': props.severity === 'success',
-    'aurora-button-info': props.severity === 'info',
-    'aurora-button-warning': props.severity === 'warning',
-    'aurora-button-danger': props.severity === 'danger'
+    'aurora-button-link': props.variant === 'link'
   };
+
+  if (props.variant !== 'text') {
+    name = {
+      ...name,
+      ...{
+        'aurora-button-primary': props.severity === 'primary',
+        'aurora-button-secondary': props.severity === 'secondary',
+        'aurora-button-success': props.severity === 'success',
+        'aurora-button-info': props.severity === 'info',
+        'aurora-button-warning': props.severity === 'warning',
+        'aurora-button-danger': props.severity === 'danger'
+      }
+    };
+  }
+  return name;
 });
 
 const backgroundColorCssVariable = computed(() => {
