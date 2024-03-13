@@ -31,9 +31,7 @@
         </Sidebar>
       </template>
 
-      <div style="margin-left: 20px; margin-right: 20px">
-        <router-view></router-view>
-      </div> </Layout
+      <router-view></router-view> </Layout
   ></Layout>
 </template>
 

@@ -5,9 +5,16 @@
 
   <p class="component-description">{{ description }}</p>
 
-  <Tabs selected-key="usage">
+  <Tabs selected-key="usage" variant="outlined">
     <Tab label="Usage" value="usage">
-      <div style="display: flex; height: 100%">
+      <div
+        style="
+          display: flex;
+          height: 100%;
+          padding-left: 10px;
+          padding-right: 10px;
+        "
+      >
         <div class="usage" style="flex: 1">
           <h2>Import</h2>
 
