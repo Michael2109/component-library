@@ -70,14 +70,9 @@ const tabHeaderButtonClass = computed(() => {
       <div
         v-for="{ label, value, active } in tabHeaders"
         :class="tabHeaderClasses(active)"
+        @click="selected = value"
       >
-        <Button
-          @click="selected = value"
-          variant="text"
-          :class="tabHeaderButtonClass"
-        >
-          {{ label }}</Button
-        >
+        {{ label }}
       </div>
     </div>
     <div class="aurora-tab-header-border"></div>
@@ -110,12 +105,13 @@ const tabHeaderButtonClass = computed(() => {
   color: var(--typographies-black)
   border-radius: 8px 8px 0 0
   display: inline-block
-  padding: 4px
   border-bottom: none
 
   position: relative
   bottom: -1px
   z-index: 0
+  padding: 12px
+  cursor: pointer
 
 .tab-header-active
   background-color: var(--colors-surface-50)
