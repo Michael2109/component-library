@@ -1,9 +1,11 @@
 <template>
-  <h1 class="component-title">
-    {{ title }}
-  </h1>
+  <div class="component-doc-summary">
+    <h1 class="component-title">
+      {{ title }}
+    </h1>
 
-  <p class="component-description">{{ description }}</p>
+    <p class="component-description">{{ description }}</p>
+  </div>
 
   <Tabs selected-key="usage" variant="outlined">
     <Tab label="Usage" value="usage">
@@ -11,8 +13,8 @@
         style="
           display: flex;
           height: 100%;
-          padding-left: 10px;
-          padding-right: 10px;
+          padding-left: 64px;
+          padding-right: 64px;
         "
       >
         <div class="usage" style="flex: 1">
@@ -76,6 +78,10 @@ onMounted(() => {
 });
 </script>
 <style lang="sass">
+
+.component-doc-summary
+  margin-left: 64px
+  margin-bottom: 32px
 
 .component-title
   padding-top: 20px

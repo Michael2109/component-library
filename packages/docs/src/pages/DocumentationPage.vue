@@ -6,7 +6,14 @@
           <AuroraLogo></AuroraLogo>
         </template>
         <template #right>
-          <div style="display: flex; margin-left: 10px; align-items: center">
+          <div
+            style="
+              display: flex;
+              margin-left: 10px;
+              align-items: center;
+              margin-right: 15px;
+            "
+          >
             <Button
               icon="mdi mdi-github mdi-24px"
               variant="text"

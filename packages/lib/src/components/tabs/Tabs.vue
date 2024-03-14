@@ -96,29 +96,31 @@ const tabHeaderButtonClass = computed(() => {
 
 .aurora-tab-content
   background-color: var(--colors-surface-50)
-  //border-top: solid rgba(38, 38, 38, 0.2) 1px
+  position: relative
+  padding: 4px
+  border-top: 1px solid var(--colors-surface-300)
+  z-index: 1
 
 .tab-headers
   display: flex
-  margin-bottom: 1px
-
-.aurora-tab-header-border
-  position: absolute
-  width: 100%
-  bottom: 0
-  left: 0
-  border-bottom: 1px solid #ccc /* Add border along the bottom */
+  margin: 0 0 0 64px
 
 .tab-header
   font-weight: 550
   color: var(--typographies-black)
-  border-radius: 5px 5px 0 0
-  outline: none
-  background-color: #f1f1f1
-  cursor: pointer
-  margin-right: -1px /* compensate for the border width */
+  border-radius: 8px 8px 0 0
+  display: inline-block
+  padding: 4px
+  border-bottom: none
 
+  position: relative
+  bottom: -1px
+  z-index: 0
 
 .tab-header-active
   background-color: var(--colors-surface-50)
+  border-top: 2px solid var(--colors-surface-300)
+  border-left: 2px solid var(--colors-surface-300)
+  border-right: 2px solid var(--colors-surface-300)
+  z-index: 2
 </style>
